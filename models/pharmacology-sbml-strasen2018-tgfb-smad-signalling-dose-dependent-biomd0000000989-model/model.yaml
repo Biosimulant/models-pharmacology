@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000989
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000989?filename=MODEL1712050001.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model:Strasen2018TgfbSmadSignallingDoseDependentBiomd0000000989Model
   init_kwargs:
     model_path: data/BIOMD0000000989.xml

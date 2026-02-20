@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2405080005?filename=BioModelsMetadata
     - eos4cxk.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zeng2022_prediction_of_molecular_properties_and_model2405080005_model:Zeng2022PredictionOfMolecularPropertiesAndModel2405080005Model
   init_kwargs:
     model_path: data/MODEL2405080005.xml

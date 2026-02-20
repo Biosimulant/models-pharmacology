@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2404220003?filename=BioModelsMetadata
     - eos74bo.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sun2019_predictive_models_of_aqueous_solubility_model2404220003_model:Sun2019PredictiveModelsOfAqueousSolubilityModel2404220003Model
   init_kwargs:
     model_path: data/MODEL2404220003.xml

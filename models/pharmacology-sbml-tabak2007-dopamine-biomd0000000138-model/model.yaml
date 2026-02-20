@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000138
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000138?filename=BIOMD0000000138_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.tabak2007_dopamine_biomd0000000138_model:Tabak2007DopamineBiomd0000000138Model
   init_kwargs:
     model_path: data/BIOMD0000000138.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1507180029
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1507180029?filename=MODEL1507180029_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kim2009_genome_scale_metabolic_network_of_acinet_model1507180029_model:Kim2009GenomeScaleMetabolicNetworkOfAcinetModel1507180029Model
   init_kwargs:
     model_path: data/MODEL1507180029.xml

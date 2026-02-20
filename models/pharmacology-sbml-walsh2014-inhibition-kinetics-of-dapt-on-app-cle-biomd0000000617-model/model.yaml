@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000617
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000617?filename=BIOMD0000000617_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model:Walsh2014InhibitionKineticsOfDaptOnAppCleBiomd0000000617Model
   init_kwargs:
     model_path: data/BIOMD0000000617.xml

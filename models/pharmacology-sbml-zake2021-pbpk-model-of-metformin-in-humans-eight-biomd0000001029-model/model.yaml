@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001029
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001029?filename=Zake2021_Metformin_Human_multiple_PO_dose.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zake2021_pbpk_model_of_metformin_in_humans_eight_biomd0000001029_model:Zake2021PbpkModelOfMetforminInHumansEightBiomd0000001029Model
   init_kwargs:
     model_path: data/BIOMD0000001029.xml

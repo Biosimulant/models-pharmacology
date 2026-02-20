@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2208040001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2208040001?filename=Monkeypox_KG_2ndSep.pkl
   license: CC0
-bsim:
+biosim:
   entrypoint: src.monkeypox_knowledge_graph_a_comprehensive_repres_model2208040001_model:MonkeypoxKnowledgeGraphAComprehensiveRepresModel2208040001Model
   init_kwargs:
     model_path: data/MODEL2208040001.xml

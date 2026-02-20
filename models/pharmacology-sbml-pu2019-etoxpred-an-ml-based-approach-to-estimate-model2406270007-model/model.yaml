@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2406270007?filename=BioModelsMetadata
     - eos92sw.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.pu2019_etoxpred_an_ml_based_approach_to_estimate_model2406270007_model:Pu2019EtoxpredAnMlBasedApproachToEstimateModel2406270007Model
   init_kwargs:
     model_path: data/MODEL2406270007.xml

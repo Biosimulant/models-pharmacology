@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2301090002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2301090002?filename=dextromethorphan_body_flat.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model:Grzegorzewski2022PbpkModelOfDextromethorphanModel2301090002Model
   init_kwargs:
     model_path: data/MODEL2301090002.xml

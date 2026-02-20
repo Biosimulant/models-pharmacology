@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2402290003
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2402290003?filename=iRV973.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.model_irv973_cauris2023_model2402290003_model:ModelIrv973Cauris2023Model2402290003Model
   init_kwargs:
     model_path: data/MODEL2402290003.xml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2209260001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2209260001?filename=Grignard2022_Tyrosination_Cycle_Mathematical_Model_Neurons.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.grignard2022_detyrosination_tyrosination_model_i_model2209260001_model:Grignard2022DetyrosinationTyrosinationModelIModel2209260001Model
   init_kwargs:
     model_path: data/MODEL2209260001.xml

@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2405130001?filename=BioModelsMetadata
     - eos6hy3.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zeng2022_prediction_of_hiv_growth_inhibition_usi_model2405130001_model:Zeng2022PredictionOfHivGrowthInhibitionUsiModel2405130001Model
   init_kwargs:
     model_path: data/MODEL2405130001.xml

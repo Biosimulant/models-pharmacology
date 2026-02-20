@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000241
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000241?filename=BIOMD0000000241_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.shi1993_caffeine_pressor_tolerance_biomd0000000241_model:Shi1993CaffeinePressorToleranceBiomd0000000241Model
   init_kwargs:
     model_path: data/BIOMD0000000241.xml

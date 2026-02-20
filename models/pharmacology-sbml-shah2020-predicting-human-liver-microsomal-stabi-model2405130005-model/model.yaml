@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2405130005?filename=BioModelsMetadata
     - eos31ve.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.shah2020_predicting_human_liver_microsomal_stabi_model2405130005_model:Shah2020PredictingHumanLiverMicrosomalStabiModel2405130005Model
   init_kwargs:
     model_path: data/MODEL2405130005.xml

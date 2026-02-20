@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1111240001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1111240001?filename=MODEL1111240001_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model:Huthmacher2010HumanerythrocyteMetabolicnetworkModel1111240001Model
   init_kwargs:
     model_path: data/MODEL1111240001.xml

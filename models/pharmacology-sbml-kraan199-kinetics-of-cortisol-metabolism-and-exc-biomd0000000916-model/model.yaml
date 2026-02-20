@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000916
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000916?filename=Kraan1992.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model:Kraan199KineticsOfCortisolMetabolismAndExcBiomd0000000916Model
   init_kwargs:
     model_path: data/BIOMD0000000916.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000320
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000320?filename=BIOMD0000000320_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model:Grange2001PkInteractionOfLDopaAndBenserazBiomd0000000320Model
   init_kwargs:
     model_path: data/BIOMD0000000320.xml

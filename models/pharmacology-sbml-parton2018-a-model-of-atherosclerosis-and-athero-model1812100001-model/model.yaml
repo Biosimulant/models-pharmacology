@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1812100001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812100001?filename=S2_Model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model:Parton2018AModelOfAtherosclerosisAndAtheroModel1812100001Model
   init_kwargs:
     model_path: data/MODEL1812100001.xml

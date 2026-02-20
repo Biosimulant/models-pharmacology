@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000588
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000588?filename=BIOMD0000000588_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.benson2013_identification_of_key_drug_targets_in_biomd0000000588_model:Benson2013IdentificationOfKeyDrugTargetsInBiomd0000000588Model
   init_kwargs:
     model_path: data/BIOMD0000000588.xml

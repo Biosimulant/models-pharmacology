@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1011080004
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1011080004?filename=MODEL1011080004_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chang2010_reduced_kidney_fba_model1011080004_model:Chang2010ReducedKidneyFbaModel1011080004Model
   init_kwargs:
     model_path: data/MODEL1011080004.xml

@@ -23,7 +23,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2408070001?filename=BioModelsMetadata
     - eos2hbd.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.menichetti2019_drug_membrane_permeability_across_model2408070001_model:Menichetti2019DrugMembranePermeabilityAcrossModel2408070001Model
   init_kwargs:
     model_path: data/MODEL2408070001.xml

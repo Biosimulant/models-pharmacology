@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000765
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000765?filename=Mager2005.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model:Mager2005QuasiEquilibriumPharmacokineticModeBiomd0000000765Model
   init_kwargs:
     model_path: data/BIOMD0000000765.xml

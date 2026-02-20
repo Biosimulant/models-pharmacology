@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2205090001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2205090001?filename=iSD1509.omex
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dahal2022_genome_scale_metabolic_model_of_pseudo_model2205090001_model:Dahal2022GenomeScaleMetabolicModelOfPseudoModel2205090001Model
   init_kwargs:
     model_path: data/MODEL2205090001.xml

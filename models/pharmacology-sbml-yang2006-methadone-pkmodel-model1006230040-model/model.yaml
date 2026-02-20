@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1006230040
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1006230040?filename=MODEL1006230040_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.yang2006_methadone_pkmodel_model1006230040_model:Yang2006MethadonePkmodelModel1006230040Model
   init_kwargs:
     model_path: data/MODEL1006230040.xml

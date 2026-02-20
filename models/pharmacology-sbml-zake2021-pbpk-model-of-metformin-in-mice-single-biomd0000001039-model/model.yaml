@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001039
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001039?filename=Zake2021_Metformin_Mice_IV.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zake2021_pbpk_model_of_metformin_in_mice_single_biomd0000001039_model:Zake2021PbpkModelOfMetforminInMiceSingleBiomd0000001039Model
   init_kwargs:
     model_path: data/BIOMD0000001039.xml

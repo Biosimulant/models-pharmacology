@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2404220005?filename=BioModelsMetadata
     - eos9yy1.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.shah2020_predicting_liver_cytosol_stability_of_s_model2404220005_model:Shah2020PredictingLiverCytosolStabilityOfSModel2404220005Model
   init_kwargs:
     model_path: data/MODEL2404220005.xml

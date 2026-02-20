@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000840
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000840?filename=Caldwell2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model:Caldwell2019TheVicodinAbuseProblemBiomd0000000840Model
   init_kwargs:
     model_path: data/BIOMD0000000840.xml

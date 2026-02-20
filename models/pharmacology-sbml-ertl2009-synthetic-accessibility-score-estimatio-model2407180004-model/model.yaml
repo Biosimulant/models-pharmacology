@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2407180004?filename=BioModelsMetadata
     - eos9ei3.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ertl2009_synthetic_accessibility_score_estimatio_model2407180004_model:Ertl2009SyntheticAccessibilityScoreEstimatioModel2407180004Model
   init_kwargs:
     model_path: data/MODEL2407180004.xml

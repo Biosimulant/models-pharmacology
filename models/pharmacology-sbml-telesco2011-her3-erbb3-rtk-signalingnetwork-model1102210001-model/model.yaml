@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1102210001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1102210001?filename=MODEL1102210001_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model:Telesco2011Her3Erbb3RtkSignalingnetworkModel1102210001Model
   init_kwargs:
     model_path: data/MODEL1102210001.xml

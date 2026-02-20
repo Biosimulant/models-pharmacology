@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2404220002?filename=BioModelsMetadata
     - eos5505.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.siramshetty2020_assessment_of_rat_liver_microsom_model2404220002_model:Siramshetty2020AssessmentOfRatLiverMicrosomModel2404220002Model
   init_kwargs:
     model_path: data/MODEL2404220002.xml

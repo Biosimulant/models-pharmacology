@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1111240000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1111240000?filename=MODEL1111240000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.huthmacher2010_metabolicnetwork_p_falciparum_model1111240000_model:Huthmacher2010MetabolicnetworkPFalciparumModel1111240000Model
   init_kwargs:
     model_path: data/MODEL1111240000.xml

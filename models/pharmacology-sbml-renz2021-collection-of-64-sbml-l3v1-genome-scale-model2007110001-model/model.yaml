@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2007110001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2007110001?filename=Staphylococcus_aureus_(Bosi_et_al._2016).omex
   license: CC0
-bsim:
+biosim:
   entrypoint: src.renz2021_collection_of_64_sbml_l3v1_genome_scale_model2007110001_model:Renz2021CollectionOf64SbmlL3v1GenomeScaleModel2007110001Model
   init_kwargs:
     model_path: data/MODEL2007110001.xml

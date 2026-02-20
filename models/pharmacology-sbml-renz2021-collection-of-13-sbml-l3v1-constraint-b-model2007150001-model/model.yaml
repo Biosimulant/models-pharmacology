@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2007150001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2007150001?filename=Staphyloccus_aureus_(Lee_et_al._2009).omex
   license: CC0
-bsim:
+biosim:
   entrypoint: src.renz2021_collection_of_13_sbml_l3v1_constraint_b_model2007150001_model:Renz2021CollectionOf13SbmlL3v1ConstraintBModel2007150001Model
   init_kwargs:
     model_path: data/MODEL2007150001.xml

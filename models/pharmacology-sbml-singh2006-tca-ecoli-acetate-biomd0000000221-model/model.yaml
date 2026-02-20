@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000221
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000221?filename=BIOMD0000000221_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.singh2006_tca_ecoli_acetate_biomd0000000221_model:Singh2006TcaEcoliAcetateBiomd0000000221Model
   init_kwargs:
     model_path: data/BIOMD0000000221.xml

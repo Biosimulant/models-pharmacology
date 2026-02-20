@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2111050001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2111050001?filename=PBPK_GSMN_NR.ctrl.txt
   license: CC0
-bsim:
+biosim:
   entrypoint: src.maldonado2017_integration_of_genome_scale_metabo_model2111050001_model:Maldonado2017IntegrationOfGenomeScaleMetaboModel2111050001Model
   init_kwargs:
     model_path: data/MODEL2111050001.xml

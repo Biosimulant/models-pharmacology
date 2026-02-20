@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1907310001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1907310001?filename=DoldanMartelli2013.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model:DoldNmartelli2013AMathematicalModelForTheModel1907310001Model
   init_kwargs:
     model_path: data/MODEL1907310001.xml

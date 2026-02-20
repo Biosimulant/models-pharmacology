@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1206070000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1206070000?filename=MODEL1206070000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bazzani2012_genome_scale_networks_of_p_falciparu_model1206070000_model:Bazzani2012GenomeScaleNetworksOfPFalciparuModel1206070000Model
   init_kwargs:
     model_path: data/MODEL1206070000.xml

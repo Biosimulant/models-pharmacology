@@ -21,7 +21,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2408060002?filename=BioModelsMetadata
     - eos9sa2.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.beker2020_drug_likeness_prediction_based_on_baye_model2408060002_model:Beker2020DrugLikenessPredictionBasedOnBayeModel2408060002Model
   init_kwargs:
     model_path: data/MODEL2408060002.xml

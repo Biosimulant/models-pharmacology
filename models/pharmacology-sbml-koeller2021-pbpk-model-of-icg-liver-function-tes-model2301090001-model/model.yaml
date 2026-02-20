@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2301090001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2301090001?filename=icg_body_flat.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model:Koeller2021PbpkModelOfIcgLiverFunctionTesModel2301090001Model
   init_kwargs:
     model_path: data/MODEL2301090001.xml

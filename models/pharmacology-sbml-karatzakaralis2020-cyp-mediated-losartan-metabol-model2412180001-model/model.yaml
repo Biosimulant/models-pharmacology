@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2412180001?filename=KaratzaKaralis2020
     - CYP mediated losartan metabolism.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model:Karatzakaralis2020CypMediatedLosartanMetabolModel2412180001Model
   init_kwargs:
     model_path: data/MODEL2412180001.xml

@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003190006
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003190006?filename=Peng2013.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.peng2013_melatonin_effects_of_light_and_routes_o_model2003190006_model:Peng2013MelatoninEffectsOfLightAndRoutesOModel2003190006Model
   init_kwargs:
     model_path: data/MODEL2003190006.xml

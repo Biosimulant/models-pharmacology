@@ -19,7 +19,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2510140001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2510140001?filename=glimepiride_body_flat.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.elias2025_physiologically_based_pharmacokinetics_model2510140001_model:Elias2025PhysiologicallyBasedPharmacokineticsModel2510140001Model
   init_kwargs:
     model_path: data/MODEL2510140001.xml

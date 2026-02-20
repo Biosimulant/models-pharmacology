@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1409240002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1409240002?filename=MODEL1409240002_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model:Qosa2014MechanisticModelingThatDescribesAmyModel1409240002Model
   init_kwargs:
     model_path: data/MODEL1409240002.xml

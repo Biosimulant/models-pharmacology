@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000868
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000868?filename=simon2019_model2.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.simon2019_nik_dependent_p100_processing_into_p52_biomd0000000868_model:Simon2019NikDependentP100ProcessingIntoP52Biomd0000000868Model
   init_kwargs:
     model_path: data/BIOMD0000000868.xml

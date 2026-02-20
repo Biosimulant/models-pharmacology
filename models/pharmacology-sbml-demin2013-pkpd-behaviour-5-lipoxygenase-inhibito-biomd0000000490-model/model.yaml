@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000490
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000490?filename=BIOMD0000000490_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.demin2013_pkpd_behaviour_5_lipoxygenase_inhibito_biomd0000000490_model:Demin2013PkpdBehaviour5LipoxygenaseInhibitoBiomd0000000490Model
   init_kwargs:
     model_path: data/BIOMD0000000490.xml

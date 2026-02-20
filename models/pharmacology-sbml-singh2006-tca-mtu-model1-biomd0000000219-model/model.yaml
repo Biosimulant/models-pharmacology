@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000219
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000219?filename=BIOMD0000000219_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.singh2006_tca_mtu_model1_biomd0000000219_model:Singh2006TcaMtuModel1Biomd0000000219Model
   init_kwargs:
     model_path: data/BIOMD0000000219.xml
