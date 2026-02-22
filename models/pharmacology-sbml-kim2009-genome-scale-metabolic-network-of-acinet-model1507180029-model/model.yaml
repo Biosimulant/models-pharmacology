@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Kim2009GenomeScaleMetabolicNetworkOfAcinetModel1507180029Model'
-description: 'Kim2009 - Genome-scale metabolic network ofAcinetobacter baumannii (AbyMBEL891)
-  This model is described in the article: Genome-scale metabolic network analysis
-  and drug targeting of multi-drug resista'
+description: "Kim2009 - Genome-scale metabolic network ofAcinetobacter baumannii (AbyMBEL891) This model is described in the article: Genome-scale metabolic network analysis and drug targeting of multi-drug resista. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

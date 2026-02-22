@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Qosa2014MechanisticModelingThatDescribesAmyModel1409240002Model'
-description: "Qosa2014 - Mechanistic modeling thatdescribes A\u03B2 clearance across\
-  \ BBB Qosa2014 - Mechanistic modeling thatdescribes A\u03B2 clearance across BBB.\
-  \ Encoded non-curated model. Issues: - Confusing equation 6 -"
+description: "Qosa2014 - Mechanistic modeling thatdescribes A\u03b2 clearance across BBB Qosa2014 - Mechanistic modeling thatdescribes A\u03b2 clearance across BBB. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

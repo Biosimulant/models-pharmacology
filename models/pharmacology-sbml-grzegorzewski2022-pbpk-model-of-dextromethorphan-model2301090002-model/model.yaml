@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Grzegorzewski2022PbpkModelOfDextromethorphanModel2301090002Model'
-description: Physiologically based pharmacokinetic (PBPK) modeling of the role of
-  CYP2D6 polymorphism for metabolic phenotyping with dextromethorphan
+description: "Physiologically based pharmacokinetic (PBPK) modeling of the role of CYP2D6 polymorphism for metabolic phenotyping with dextromethorphan. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

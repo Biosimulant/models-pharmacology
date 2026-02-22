@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Caldwell2019TheVicodinAbuseProblemBiomd0000000840Model'
-description: This is a mathematical model of Vicodin use and abuse used to investigate
-  methods of combating Vicodin abuse in a population of patients who have obtained
-  the drug through prescription. Mathematical d
+description: "This is a mathematical model of Vicodin use and abuse used to investigate methods of combating Vicodin abuse in a population of patients who have obtained the drug through prescription. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

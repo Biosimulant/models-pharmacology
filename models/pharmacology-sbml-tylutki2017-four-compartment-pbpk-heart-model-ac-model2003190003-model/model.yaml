@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Tylutki2017FourCompartmentPbpkHeartModelAcModel2003190003Model'
-description: In the field of cardiac drug efficacy and safety assessment, information
-  on drug concentration in heart tissue is desirable. Because measuring drug concentrations
-  in human cardiac tissue is challengin
+description: "In the field of cardiac drug efficacy and safety assessment, information on drug concentration in heart tissue is desirable. Because measuring drug concentrations in human cardiac tissue is challengin."
 standard: other
 tags:
 - pharmacology

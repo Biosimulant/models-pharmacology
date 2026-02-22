@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Siramshetty2020AssessmentOfRatLiverMicrosomModel2404220002Model'
-description: "Hepatic metabolic stability is key to ensure the drug attains the desired\
-  \ concentration in the body. The Rat Liver Microsomal (RLM) stability is a good\
-  \ approximation of a compound\u2019s stability in the h"
+description: "Hepatic metabolic stability is key to ensure the drug attains the desired concentration in the body. The Rat Liver Microsomal (RLM) stability is a good approximation of a compound\u2019s stability in the h."
 standard: other
 tags:
 - pharmacology

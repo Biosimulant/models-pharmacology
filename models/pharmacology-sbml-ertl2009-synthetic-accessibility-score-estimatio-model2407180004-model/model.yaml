@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Ertl2009SyntheticAccessibilityScoreEstimatioModel2407180004Model'
-description: 'Estimation of synthetic accessibility score (SAScore) of drug-like molecules
-  based on molecular complexity and fragment contributions. The fragment contributions
-  are based on a 1M sample from PubChem '
+description: "Estimation of synthetic accessibility score (SAScore) of drug-like molecules based on molecular complexity and fragment contributions. The fragment contributions are based on a 1M sample from PubChem."
 standard: other
 tags:
 - pharmacology

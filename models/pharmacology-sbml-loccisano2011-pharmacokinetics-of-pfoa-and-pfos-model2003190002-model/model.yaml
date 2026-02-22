@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Loccisano2011PharmacokineticsOfPfoaAndPfosModel2003190002Model'
-description: Perfluoroalkyl acid carboxylates and sulfonates (PFAAs) have many consumer
-  and industrial applications. The persistence and widespread distribution of these
-  compounds in humans have brought them under
+description: "Perfluoroalkyl acid carboxylates and sulfonates (PFAAs) have many consumer and industrial applications. The persistence and widespread distribution of these compounds in humans have brought them under."
 standard: other
 tags:
 - pharmacology

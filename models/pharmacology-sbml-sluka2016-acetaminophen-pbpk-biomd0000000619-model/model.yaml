@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Sluka2016AcetaminophenPbpkBiomd0000000619Model'
-description: Basic PBPK (Physiologically Based PharmacoKinetic) model of Acetaminophen.
-  This is a basic model of Acetaminophen (APAP, Paracetamol) pharmacokinetics in humans.
-  Many of the model parameters (compartm
+description: "Basic PBPK (Physiologically Based PharmacoKinetic) model of Acetaminophen. This is a basic model of Acetaminophen (APAP, Paracetamol) pharmacokinetics in humans."
 standard: other
 tags:
 - pharmacology

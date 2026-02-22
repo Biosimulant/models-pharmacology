@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Singh2006TcaEcoliAcetateBiomd0000000221Model'
-description: 'This a model from the article: Kinetic modeling of tricarboxylic acid
-  cycle and glyoxylate bypass in Mycobacterium tuberculosis, and its application to
-  assessment of drug targets. Singh VK , Ghosh I T'
+description: "This a model from the article: Kinetic modeling of tricarboxylic acid cycle and glyoxylate bypass in Mycobacterium tuberculosis, and its application to assessment of drug targets. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

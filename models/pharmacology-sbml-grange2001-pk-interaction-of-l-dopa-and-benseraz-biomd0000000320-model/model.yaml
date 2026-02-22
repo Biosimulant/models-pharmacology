@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Grange2001PkInteractionOfLDopaAndBenserazBiomd0000000320Model'
-description: Grange2001 - PK interaction of L-dopa and benserazide A pharmacokinetics
-  of L-dopa in rats after administration of L-dopa alone (BIOMD0000000321) or L-dopa
-  combined with a peripheral AADC (amino-acid-
+description: "Grange2001 - PK interaction of L-dopa and benserazide A pharmacokinetics of L-dopa in rats after administration of L-dopa alone (BIOMD0000000321) or L-dopa combined with a peripheral AADC (amino-acid-. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Demin2013PkpdBehaviour5LipoxygenaseInhibitoBiomd0000000490Model'
-description: 'Demin2013 - PKPD behaviour - 5-Lipoxygenaseinhibitors This model is
-  described in the article: Systems pharmacology models can be used to understand
-  complex pharmacokinetic-pharmacodynamic behavior: an'
+description: "Demin2013 - PKPD behaviour - 5-Lipoxygenaseinhibitors This model is described in the article: Systems pharmacology models can be used to understand complex pharmacokinetic-pharmacodynamic behavior: an. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

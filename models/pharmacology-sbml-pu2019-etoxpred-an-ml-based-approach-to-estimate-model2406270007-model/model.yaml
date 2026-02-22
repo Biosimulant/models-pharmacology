@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Pu2019EtoxpredAnMlBasedApproachToEstimateModel2406270007Model'
-description: The eToxPred tool has been developed to predict, on one hand, the synthetic
-  accessibility (SA) score, or how easy it is to make the molecule in the laboratory,
-  and, on the other hand, the toxicity (To
+description: "The eToxPred tool has been developed to predict, on one hand, the synthetic accessibility (SA) score, or how easy it is to make the molecule in the laboratory, and, on the other hand, the toxicity (To. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

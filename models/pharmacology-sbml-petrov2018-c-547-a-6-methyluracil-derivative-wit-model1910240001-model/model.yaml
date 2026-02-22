@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Petrov2018C547A6MethyluracilDerivativeWitModel1910240001Model'
-description: C-547, a candidate drug, is a potent slow-binding inhibitor of acetyl-cholinesterase,
-  and the focus of this PK/PD model, which investigates the metabolism and clinical
-  effect of C-547 when it is no lo
+description: "C-547, a candidate drug, is a potent slow-binding inhibitor of acetyl-cholinesterase, and the focus of this PK/PD model, which investigates the metabolism and clinical effect of C-547 when it is no lo. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

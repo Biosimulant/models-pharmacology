@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Karatzakaralis2020CypMediatedLosartanMetabolModel2412180001Model'
-description: A four-compartment pharmacokinetic model that describes the disposition
-  of losartan and E-3174 (Karatza and Karalis, 2020). The main objective of this model
-  is to describe the secondary maxima observe
+description: "A four-compartment pharmacokinetic model that describes the disposition of losartan and E-3174 (Karatza and Karalis, 2020). The main objective of this model is to describe the secondary maxima observe."
 standard: other
 tags:
 - pharmacology

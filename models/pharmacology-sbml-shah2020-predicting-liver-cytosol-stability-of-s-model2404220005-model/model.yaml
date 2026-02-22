@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Shah2020PredictingLiverCytosolStabilityOfSModel2404220005Model'
-description: The human liver cytosol stability model is used for predicting the stability
-  of a drug in the cytosol of human liver cells, which is beneficial for identifying
-  potential drug candidates early during t
+description: "The human liver cytosol stability model is used for predicting the stability of a drug in the cytosol of human liver cells, which is beneficial for identifying potential drug candidates early during t. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

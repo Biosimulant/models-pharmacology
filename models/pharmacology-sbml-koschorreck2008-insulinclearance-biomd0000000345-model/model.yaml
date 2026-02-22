@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Koschorreck2008InsulinclearanceBiomd0000000345Model'
-description: 'This model is from the article: Mathematical modeling and analysis of
-  insulin clearance in vivo. Koschorreck M, Gilles ED. BMC Syst Biol. 2008 May 13;2:43.
-  18477391 , Abstract: BACKGROUND:Analyzing th'
+description: "This model is from the article: Mathematical modeling and analysis of insulin clearance in vivo. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Huthmacher2010HumanerythrocyteMetabolicnetworkModel1111240001Model'
-description: "This model is from the article: Antimalarial drug targets in Plasmodium\
-  \ falciparum predicted by stage-specific metabolic network analysis. Huthmacher\
-  \ C, Hoppe A, Bulik S, Holzh\xFCtter HG. BMC Syst Biol."
+description: "This model is from the article: Antimalarial drug targets in Plasmodium falciparum predicted by stage-specific metabolic network analysis. Huthmacher C, Hoppe A, Bulik S, Holzh\u00fctter HG."
 standard: other
 tags:
 - pharmacology

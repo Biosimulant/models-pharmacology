@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Schropp2019TargetMediatedDrugDispositionModBiomd0000000788Model'
-description: 'This model presents a general target-mediated drug disposition (TMDD)
-  model for bispecific antibodies (BsAbs), which bind to two different targets on
-  different cell membranes. The model includes four '
+description: "This model presents a general target-mediated drug disposition (TMDD) model for bispecific antibodies (BsAbs), which bind to two different targets on different cell membranes. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

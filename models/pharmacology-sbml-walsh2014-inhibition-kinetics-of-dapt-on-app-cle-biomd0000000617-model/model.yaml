@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Walsh2014InhibitionKineticsOfDaptOnAppCleBiomd0000000617Model'
-description: 'Walsh2014 - Inhibition kinetics of DAPT onAPP Cleavage This model is
-  described in the article: Are improper kinetic models hampering drug development?
-  Walsh R. PeerJ 2014; 2: e649 Abstract: Reproducib'
+description: "Walsh2014 - Inhibition kinetics of DAPT onAPP Cleavage This model is described in the article: Are improper kinetic models hampering drug development? It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

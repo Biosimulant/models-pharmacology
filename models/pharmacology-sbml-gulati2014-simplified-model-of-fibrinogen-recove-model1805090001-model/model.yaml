@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Gulati2014SimplifiedModelOfFibrinogenRecoveModel1805090001Model'
-description: "Bridging systems biology and pharmacokinetics\u2013pharmacodynamics\
-  \ has resulted in models that are highly complex and complicated. They usually contain\
-  \ large numbers of states and parameters and describe "
+description: "Bridging systems biology and pharmacokinetics\u2013pharmacodynamics has resulted in models that are highly complex and complicated. They usually contain large numbers of states and parameters and describe."
 standard: other
 tags:
 - pharmacology

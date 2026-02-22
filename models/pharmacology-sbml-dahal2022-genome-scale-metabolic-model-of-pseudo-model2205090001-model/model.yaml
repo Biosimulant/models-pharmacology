@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Dahal2022GenomeScaleMetabolicModelOfPseudoModel2205090001Model'
-description: Genome-scale modeling of Pseudomonas aeruginosa PA14 unveils its broad
-  metabolic capabilities and role of metabolism in drug potentiation
+description: "Genome-scale modeling of Pseudomonas aeruginosa PA14 unveils its broad metabolic capabilities and role of metabolism in drug potentiation. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

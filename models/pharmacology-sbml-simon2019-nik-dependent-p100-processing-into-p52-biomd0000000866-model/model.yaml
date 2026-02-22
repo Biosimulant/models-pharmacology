@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Simon2019NikDependentP100ProcessingIntoP52Biomd0000000866Model'
-description: 'This model represents NIK-dependent p100 processing into p52 with Michaelis-Menten
-  kinetics. While this model shows identical dose-response to the mass action representation,
-  when IkBd degradation is '
+description: "This model represents NIK-dependent p100 processing into p52 with Michaelis-Menten kinetics. While this model shows identical dose-response to the mass action representation, when IkBd degradation is."
 standard: other
 tags:
 - pharmacology

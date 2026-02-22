@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Grange2001LDopaPkModelBiomd0000000321Model'
-description: 'Grange2001 - L-dopa PK model A pharmacokinetics of L-dopa in rats after
-  administration of L-dopa alone (this model: BIOMD0000000321) or L-dopa combined
-  with a peripheral AADC (amino-acid-decarboxylase'
+description: "Grange2001 - L-dopa PK model A pharmacokinetics of L-dopa in rats after administration of L-dopa alone (this model: BIOMD0000000321) or L-dopa combined with a peripheral AADC (amino-acid-decarboxylase. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

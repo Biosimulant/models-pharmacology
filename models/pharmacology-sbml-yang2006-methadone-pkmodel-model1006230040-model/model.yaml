@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Yang2006MethadonePkmodelModel1006230040Model'
-description: 'This a model from the article: Population-based analysis of methadone
-  distribution and metabolism using anage-dependent physiologically based pharmacokinetic
-  model. Yang F, Tong X, McCarver DG, Hines '
+description: "This a model from the article: Population-based analysis of methadone distribution and metabolism using anage-dependent physiologically based pharmacokinetic model. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

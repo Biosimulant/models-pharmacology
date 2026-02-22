@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Zeng2022PredictionOfMolecularPropertiesAndModel2405080005Model'
-description: ImageMol is a Representation Learning Framework that utilizes molecule
-  images for encoding molecular inputs as machine readable vectors for downstream
-  tasks such as bio-activity prediction, drug metab
+description: "ImageMol is a Representation Learning Framework that utilizes molecule images for encoding molecular inputs as machine readable vectors for downstream tasks such as bio-activity prediction, drug metab. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

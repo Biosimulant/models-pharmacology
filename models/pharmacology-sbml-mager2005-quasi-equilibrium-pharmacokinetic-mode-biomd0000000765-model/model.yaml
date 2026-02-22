@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Mager2005QuasiEquilibriumPharmacokineticModeBiomd0000000765Model'
-description: This model was developed with the aim of constructing an equilibrium
-  model of the pharmacokinetic behaviour of a drug exhibiting target-mediated drug
-  disposition (TMDD). TMDD involves the inclusion of
+description: "This model was developed with the aim of constructing an equilibrium model of the pharmacokinetic behaviour of a drug exhibiting target-mediated drug disposition (TMDD). It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

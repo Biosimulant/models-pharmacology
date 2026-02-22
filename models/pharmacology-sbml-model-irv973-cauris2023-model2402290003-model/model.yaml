@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: ModelIrv973Cauris2023Model2402290003Model'
-description: Genome-scale metabolic model of Human pathogen Candida auris, used for
-  drug targeting prediction.
+description: "Genome-scale metabolic model of Human pathogen Candida auris, used for drug targeting prediction. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

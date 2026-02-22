@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Grignard2022DetyrosinationTyrosinationModelIModel2209260001Model'
-description: SBML files for the mathematical model from the publication 'Mathematical
-  modeling of the microtubule detyrosination/tyrosination cycle for cell-based drug
-  screening design'
+description: "SBML files for the mathematical model from the publication 'Mathematical modeling of the microtubule detyrosination/tyrosination cycle for cell-based drug screening design'. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

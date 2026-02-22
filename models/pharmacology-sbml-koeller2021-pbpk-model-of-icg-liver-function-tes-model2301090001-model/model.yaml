@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Koeller2021PbpkModelOfIcgLiverFunctionTesModel2301090001Model'
-description: Physiollogically based pharmacokinetic (PBPK) model of indocyanine-green
-  (ICG) liver function tests.
+description: "Physiollogically based pharmacokinetic (PBPK) model of indocyanine-green (ICG) liver function tests. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Rong2020GroverSiderPredictionOfThePutativeModel2406050007Model'
-description: The model predicts the putative adverse drug reactions (ADR) of a molecule,
-  using the SIDER database (MoleculeNet) that contains pairs of marketed drugs and
-  their described ADRs.This model has been tr
+description: "The model predicts the putative adverse drug reactions (ADR) of a molecule, using the SIDER database (MoleculeNet) that contains pairs of marketed drugs and their described ADRs.This model has been tr. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

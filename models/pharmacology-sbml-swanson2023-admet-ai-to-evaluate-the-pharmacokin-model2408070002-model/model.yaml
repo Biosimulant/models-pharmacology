@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Swanson2023AdmetAiToEvaluateThePharmacokinModel2408070002Model'
-description: 'A framework based on ensemble of five Chemprop-RDKit models, for fast
-  batch prediction of ADMET properties of small molecules. Model Type: Predictive
-  machine learning model. Model Relevance: Fast batc'
+description: "A framework based on ensemble of five Chemprop-RDKit models, for fast batch prediction of ADMET properties of small molecules. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

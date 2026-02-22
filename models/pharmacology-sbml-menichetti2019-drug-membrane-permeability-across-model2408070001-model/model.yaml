@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Menichetti2019DrugMembranePermeabilityAcrossModel2408070001Model'
-description: 'Using Coarse Grained (CG) models, where several atoms are aggregated
-  into a single bead, the authors obtain a set of 500,000 compounds with their simulated
-  permeability across a single-component DOPC '
+description: "Using Coarse Grained (CG) models, where several atoms are aggregated into a single bead, the authors obtain a set of 500,000 compounds with their simulated permeability across a single-component DOPC. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

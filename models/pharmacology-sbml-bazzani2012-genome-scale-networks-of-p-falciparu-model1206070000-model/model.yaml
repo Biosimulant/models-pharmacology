@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Bazzani2012GenomeScaleNetworksOfPFalciparuModel1206070000Model'
-description: 'Bazzani2012 - Genome scale networks of P.falciparum and human hepatocyte
-  This model is described in the article: Network-based assessment of the selectivity
-  of metabolic drug targets in Plasmodium fal'
+description: "Bazzani2012 - Genome scale networks of P.falciparum and human hepatocyte This model is described in the article: Network-based assessment of the selectivity of metabolic drug targets in Plasmodium fal. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

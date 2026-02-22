@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: MonkeypoxKnowledgeGraphAComprehensiveRepresModel2208040001Model'
-description: We collected and rationally assembled several biological study results,
-  assays, drug candidates, and preclinical evidence to form a dynamic and comprehensive
-  network. In this process, we used active c
+description: "We collected and rationally assembled several biological study results, assays, drug candidates, and preclinical evidence to form a dynamic and comprehensive network. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

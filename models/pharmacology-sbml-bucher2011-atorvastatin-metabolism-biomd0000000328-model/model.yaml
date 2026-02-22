@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Bucher2011AtorvastatinMetabolismBiomd0000000328Model'
-description: 'This is the model of atorvastatin metabolism in hepaitc cells described
-  in the article: A systems biology approach to dynamic modeling and inter-subject
-  variability of statin pharmacokinetics in human'
+description: "This is the model of atorvastatin metabolism in hepaitc cells described in the article: A systems biology approach to dynamic modeling and inter-subject variability of statin pharmacokinetics in human. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

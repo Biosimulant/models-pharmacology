@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Landberg2009AlkylresorcinolDoseResponseBiomd0000000948Model'
-description: Pharmacokinetic model of alkylresorcinols. Both plasma AR concentrations
-  and urinary metabolites in 24-h samples showed a dose-response relation to increased
-  AR intake, which strongly supports the hyp
+description: "Pharmacokinetic model of alkylresorcinols. Both plasma AR concentrations and urinary metabolites in 24-h samples showed a dose-response relation to increased AR intake, which strongly supports the hyp."
 standard: other
 tags:
 - pharmacology

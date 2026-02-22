@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Peng2013MelatoninEffectsOfLightAndRoutesOModel2003190006Model'
-description: "Physiologically based pharmacokinetic (PBPK) models were developed using\
-  \ MATLAB Simulink(\xAE) to predict diurnal variations of endogenous melatonin with\
-  \ light as well as pharmacokinetics of exogenous me"
+description: "Physiologically based pharmacokinetic (PBPK) models were developed using MATLAB Simulink(\u00ae) to predict diurnal variations of endogenous melatonin with light as well as pharmacokinetics of exogenous me. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

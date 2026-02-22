@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Sun2019PredictiveModelsOfAqueousSolubilityModel2404220003Model'
-description: "Kinetic aqueous solubility (\u03BCg/mL) was experimentally determined\
-  \ using the same SOP in over 200 NCATS drug discovery projects. A final dataset\
-  \ of 11780 non-redundant molecules and their associated sol"
+description: "Kinetic aqueous solubility (\u03bcg/mL) was experimentally determined using the same SOP in over 200 NCATS drug discovery projects. A final dataset of 11780 non-redundant molecules and their associated sol."
 standard: other
 tags:
 - pharmacology

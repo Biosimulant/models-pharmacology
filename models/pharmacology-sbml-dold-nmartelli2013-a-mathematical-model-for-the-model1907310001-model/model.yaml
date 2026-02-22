@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: DoldNmartelli2013AMathematicalModelForTheModel1907310001Model'
-description: This model attempts to provide a mathematical framework for describing
-  the dynamics of receptor-drug complex formation of chimeric drugs.
+description: "This model attempts to provide a mathematical framework for describing the dynamics of receptor-drug complex formation of chimeric drugs. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology

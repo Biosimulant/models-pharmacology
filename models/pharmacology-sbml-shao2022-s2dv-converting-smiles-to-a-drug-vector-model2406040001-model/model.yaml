@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Shao2022S2dvConvertingSmilesToADrugVectorModel2406040001Model'
-description: The model uses Word2Vec, a natural language processing technique to represent
-  SMILES strings. The model was trained on over 4000 small molecules with associated
-  experimental HBV inhibition data (IC50)
+description: "The model uses Word2Vec, a natural language processing technique to represent SMILES strings. The model was trained on over 4000 small molecules with associated experimental HBV inhibition data (IC50)."
 standard: other
 tags:
 - pharmacology

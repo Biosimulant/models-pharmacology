@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Elias2025PhysiologicallyBasedPharmacokineticsModel2510140001Model'
-description: Initial model release
+description: "Pharmacology Elias2025Physiologically Based Pharmacokinetics Model2510140001Model models core biological dynamics as a OTHER simulation curated from biomodels_ebi (biomodels_ebi:MODEL2510140001), focused on pha. When you run it, you can track state over time and compare response patterns across parameter settings."
 standard: other
 tags:
 - pharmacology

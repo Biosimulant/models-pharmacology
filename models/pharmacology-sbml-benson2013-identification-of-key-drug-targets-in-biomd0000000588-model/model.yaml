@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Pharmacology: Benson2013IdentificationOfKeyDrugTargetsInBiomd0000000588Model'
-description: 'Benson2013 - Identification of key drug targets in nerve growth factor
-  pathway This model is described in the article: Systems pharmacology of the nerve
-  growth factor pathway: use of a systems biology'
+description: "Benson2013 - Identification of key drug targets in nerve growth factor pathway This model is described in the article: Systems pharmacology of the nerve growth factor pathway: use of a systems biology. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
 - pharmacology
