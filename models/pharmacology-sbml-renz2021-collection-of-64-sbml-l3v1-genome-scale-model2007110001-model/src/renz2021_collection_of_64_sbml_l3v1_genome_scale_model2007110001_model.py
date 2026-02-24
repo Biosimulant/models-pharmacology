@@ -17,6 +17,10 @@ if TYPE_CHECKING:  # pragma: no cover - typing only
 import biosim
 from biosim.signals import BioSignal, SignalMetadata
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 class SbmlRenz2021CollectionOf64SbmlL3v1GenomeScaleMetabolic(biosim.BioModule):
     """BioModule wrapper for SBML model: Renz2021 -  Collection of 64 SBML L3V1 genome-scale metabolic models (FBC Version 2) of Staphylococcus aureus."""
 
@@ -60,7 +64,8 @@ class SbmlRenz2021CollectionOf64SbmlL3v1GenomeScaleMetabolic(biosim.BioModule):
         for sid in self._species_ids:
             try:
                 concentrations[sid] = float(self._rr[sid])
-            except Exception:
+            except (KeyError, ValueError, TypeError):  # narrowed from bare Exception
+                logger.warning("Failed to read species %s, defaulting to 0.0", sid)
                 concentrations[sid] = 0.0
         self._outputs = {
             "state": BioSignal(
