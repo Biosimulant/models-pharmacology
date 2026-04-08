@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Shah2020PredictingHumanLiverMicrosomalStabiModel2405130005Model'
+title: "Shah2020 - Predicting Human Liver Microsomal Stability of small molecules"
 description: "The Human Liver Microsomal assay takes into account the liver-mediated drug metabolism to assess the stability of a compound in the human body. The NIH-NCATS group took a proprietary dataset of 4300 c."
 standard: other
 tags:

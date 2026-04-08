@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Telesco2011Her3Erbb3RtkSignalingnetworkModel1102210001Model'
+title: "Telesco2011_HER3-ErbB3-RTK_SignalingNetwork"
 description: "This model is from the article: A multiscale modeling approach to investigate molecular mechanisms of pseudokinase activation and drug resistance in the HER3/ErbB3 receptor tyrosine kinase signaling n. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:

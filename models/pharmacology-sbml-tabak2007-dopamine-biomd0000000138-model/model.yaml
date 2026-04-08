@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Tabak2007DopamineBiomd0000000138Model'
+title: "Tabak2007_dopamine"
 description: "The model is encoded according to the paper Low dose of dopamine may stimulate prolactin secretion by increasing fast potassium currents Figure5 has been reproduced by MathSBML. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:

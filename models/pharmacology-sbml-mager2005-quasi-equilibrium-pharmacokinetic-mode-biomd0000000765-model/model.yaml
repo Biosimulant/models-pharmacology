@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Mager2005QuasiEquilibriumPharmacokineticModeBiomd0000000765Model'
+title: "Mager2005 - Quasi-equilibrium pharmacokinetic model for drugs exhibiting target-mediated drug disposition"
 description: "This model was developed with the aim of constructing an equilibrium model of the pharmacokinetic behaviour of a drug exhibiting target-mediated drug disposition (TMDD). It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:

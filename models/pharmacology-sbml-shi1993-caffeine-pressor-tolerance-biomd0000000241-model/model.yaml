@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Shi1993CaffeinePressorToleranceBiomd0000000241Model'
+title: "Shi1993_Caffeine_pressor_tolerance"
 description: "described in: Pharmacokinetic-pharmacodynamic modeling of caffeine: Tolerance to pressor effects Shi J, Benowitz NL, Denaro CP and Sheiner LB. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:

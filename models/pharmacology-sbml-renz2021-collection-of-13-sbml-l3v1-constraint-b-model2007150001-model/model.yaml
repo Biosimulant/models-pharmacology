@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Renz2021CollectionOf13SbmlL3v1ConstraintBModel2007150001Model'
+title: "Renz2021 - Collection of 13 SBML L3V1 constraint-based models (FBC Version 2) of Staphylococcus aureus"
 description: "Staphylococcus aureus is a high-priority pathogen causing severe infections with high morbidity and mortality worldwide. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:

@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Parton2018AModelOfAtherosclerosisAndAtheroModel1812100001Model'
+title: "Parton2018 - A model of Atherosclerosis and atheroma formation."
 description: "SBML and SBGN-ML models of atherosclerosis and atheroma formation. This model is described in the publication: New models of atherosclerosis and multi-drug therapeutic interventions."
 standard: other
 tags:

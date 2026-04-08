@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Swanson2023AdmetAiToEvaluateThePharmacokinModel2408070002Model'
+title: "Swanson2023 - ADMET-AI: To evaluate the pharmacokinetics property of large-scale chemical libraries"
 description: "A framework based on ensemble of five Chemprop-RDKit models, for fast batch prediction of ADMET properties of small molecules. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:

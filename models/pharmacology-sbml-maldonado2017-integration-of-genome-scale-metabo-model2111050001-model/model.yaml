@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Maldonado2017IntegrationOfGenomeScaleMetaboModel2111050001Model'
+title: "Maldonado2017 - Integration of Genome Scale Metabolic Networks and Gene Regulation of Metabolic Enzymes With Physiologically Based Pharmacokinetics"
 description: "Example models of ongoing work on integration of PBPK, GSMNs, and metabolic gene regulation. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:

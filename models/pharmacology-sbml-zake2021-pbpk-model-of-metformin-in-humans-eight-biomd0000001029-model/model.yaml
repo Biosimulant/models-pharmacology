@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Zake2021PbpkModelOfMetforminInHumansEightBiomd0000001029Model'
+title: "Zake2021 - PBPK model of metformin in humans, eight PO administrations with 12h interval"
 description: "This model is supplementary material of publication 'Physiologically based metformin pharmacokinetics model of mice and scale-up to humans for the estimation of concentrations in various tissues'by Da. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:

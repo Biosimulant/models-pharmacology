@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Chang2010ReducedKidneyFbaModel1011080004Model'
+title: "Chang2010_Reduced_Kidney_FBA"
 description: "This is the reduced kidney metabolic network described in the article Drug off-target effects predicted using structural analysis in the context of a metabolic network model. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:

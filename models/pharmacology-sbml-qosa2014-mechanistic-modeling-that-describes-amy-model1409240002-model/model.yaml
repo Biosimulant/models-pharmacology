@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Pharmacology: Qosa2014MechanisticModelingThatDescribesAmyModel1409240002Model'
+title: "Qosa2014 - Mechanistic modeling that describes amyloid-Beta clearance across BBB"
 description: "Qosa2014 - Mechanistic modeling thatdescribes A\u03b2 clearance across BBB Qosa2014 - Mechanistic modeling thatdescribes A\u03b2 clearance across BBB. It can be used to explore dose-response dynamics and compare treatment scenarios across conditions."
 standard: other
 tags:
