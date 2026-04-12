@@ -11,14 +11,13 @@ This model simulates TGFb dose dependent kinetics of The SMADs. TGFb ligand dose
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-strasen2018-tgfb-smad-signalling-dose-dependent-biomd0000000989-model
     alias: model
-    manifest_path: models/pharmacology-sbml-strasen2018-tgfb-smad-signalling-dose-dependent-biomd0000000989-model/model.yaml
 ```
 
 ## Tags

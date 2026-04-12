@@ -11,14 +11,13 @@ Qosa2014 - Mechanistic modeling thatdescribes Aβ clearance across BBB Qosa2014 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-qosa2014-mechanistic-modeling-that-describes-amy-model1409240002-model
     alias: model
-    manifest_path: models/pharmacology-sbml-qosa2014-mechanistic-modeling-that-describes-amy-model1409240002-model/model.yaml
 ```
 
 ## Tags

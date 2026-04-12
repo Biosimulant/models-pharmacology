@@ -11,14 +11,13 @@ This is the model of atorvastatin metabolism in hepaitc cells described in the a
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-bucher2011-atorvastatin-metabolism-biomd0000000328-model
     alias: model
-    manifest_path: models/pharmacology-sbml-bucher2011-atorvastatin-metabolism-biomd0000000328-model/model.yaml
 ```
 
 ## Tags

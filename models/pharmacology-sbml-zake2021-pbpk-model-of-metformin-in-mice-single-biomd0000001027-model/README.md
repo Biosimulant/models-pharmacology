@@ -11,14 +11,13 @@ This model is supplementary material of publication 'Physiologically based metfo
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-zake2021-pbpk-model-of-metformin-in-mice-single-biomd0000001027-model
     alias: model
-    manifest_path: models/pharmacology-sbml-zake2021-pbpk-model-of-metformin-in-mice-single-biomd0000001027-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Hepatic metabolic stability is key to ensure the drug attains the desired concen
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-siramshetty2020-assessment-of-rat-liver-microsom-model2404220002-model
     alias: model
-    manifest_path: models/pharmacology-sbml-siramshetty2020-assessment-of-rat-liver-microsom-model2404220002-model/model.yaml
 ```
 
 ## Tags

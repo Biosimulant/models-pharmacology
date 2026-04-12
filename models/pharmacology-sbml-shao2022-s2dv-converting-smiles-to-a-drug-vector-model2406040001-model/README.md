@@ -11,14 +11,13 @@ The model uses Word2Vec, a natural language processing technique to represent SM
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-shao2022-s2dv-converting-smiles-to-a-drug-vector-model2406040001-model
     alias: model
-    manifest_path: models/pharmacology-sbml-shao2022-s2dv-converting-smiles-to-a-drug-vector-model2406040001-model/model.yaml
 ```
 
 ## Tags

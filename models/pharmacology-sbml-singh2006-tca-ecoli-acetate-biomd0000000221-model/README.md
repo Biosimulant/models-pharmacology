@@ -11,14 +11,13 @@ This a model from the article: Kinetic modeling of tricarboxylic acid cycle and 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-singh2006-tca-ecoli-acetate-biomd0000000221-model
     alias: model
-    manifest_path: models/pharmacology-sbml-singh2006-tca-ecoli-acetate-biomd0000000221-model/model.yaml
 ```
 
 ## Tags

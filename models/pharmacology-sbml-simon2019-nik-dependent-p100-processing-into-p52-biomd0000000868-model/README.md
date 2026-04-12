@@ -11,14 +11,13 @@ This model represents NIK-dependent p100 processing into p52 with mass action ki
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-simon2019-nik-dependent-p100-processing-into-p52-biomd0000000868-model
     alias: model
-    manifest_path: models/pharmacology-sbml-simon2019-nik-dependent-p100-processing-into-p52-biomd0000000868-model/model.yaml
 ```
 
 ## Tags

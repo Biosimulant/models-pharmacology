@@ -11,14 +11,13 @@ SBML files for the mathematical model from the publication 'Mathematical modelin
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-grignard2022-detyrosination-tyrosination-model-i-model2209260001-model
     alias: model
-    manifest_path: models/pharmacology-sbml-grignard2022-detyrosination-tyrosination-model-i-model2209260001-model/model.yaml
 ```
 
 ## Tags

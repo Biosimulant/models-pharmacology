@@ -11,14 +11,13 @@ Bazzani2012 - Genome scale networks of P.falciparum and human hepatocyte This mo
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-bazzani2012-genome-scale-networks-of-p-falciparu-model1206070000-model
     alias: model
-    manifest_path: models/pharmacology-sbml-bazzani2012-genome-scale-networks-of-p-falciparu-model1206070000-model/model.yaml
 ```
 
 ## Tags

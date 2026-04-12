@@ -11,14 +11,13 @@ Staphylococcus aureus is a high-priority pathogen causing severe infections with
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-renz2021-collection-of-33-sbml-l3v1-fbc-version-model2007150002-model
     alias: model
-    manifest_path: models/pharmacology-sbml-renz2021-collection-of-33-sbml-l3v1-fbc-version-model2007150002-model/model.yaml
 ```
 
 ## Tags

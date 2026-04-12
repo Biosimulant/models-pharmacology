@@ -11,14 +11,13 @@ The eToxPred tool has been developed to predict, on one hand, the synthetic acce
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-pu2019-etoxpred-an-ml-based-approach-to-estimate-model2406270007-model
     alias: model
-    manifest_path: models/pharmacology-sbml-pu2019-etoxpred-an-ml-based-approach-to-estimate-model2406270007-model/model.yaml
 ```
 
 ## Tags

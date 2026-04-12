@@ -11,14 +11,13 @@ Kim2009 - Genome-scale metabolic network ofAcinetobacter baumannii (AbyMBEL891) 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-kim2009-genome-scale-metabolic-network-of-acinet-model1507180029-model
     alias: model
-    manifest_path: models/pharmacology-sbml-kim2009-genome-scale-metabolic-network-of-acinet-model1507180029-model/model.yaml
 ```
 
 ## Tags

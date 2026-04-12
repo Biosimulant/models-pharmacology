@@ -11,14 +11,13 @@ Benson2013 - Identification of key drug targets in nerve growth factor pathway T
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-benson2013-identification-of-key-drug-targets-in-biomd0000000588-model
     alias: model
-    manifest_path: models/pharmacology-sbml-benson2013-identification-of-key-drug-targets-in-biomd0000000588-model/model.yaml
 ```
 
 ## Tags

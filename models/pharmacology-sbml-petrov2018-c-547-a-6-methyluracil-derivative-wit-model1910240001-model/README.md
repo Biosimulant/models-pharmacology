@@ -11,14 +11,13 @@ C-547, a candidate drug, is a potent slow-binding inhibitor of acetyl-cholineste
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-petrov2018-c-547-a-6-methyluracil-derivative-wit-model1910240001-model
     alias: model
-    manifest_path: models/pharmacology-sbml-petrov2018-c-547-a-6-methyluracil-derivative-wit-model1910240001-model/model.yaml
 ```
 
 ## Tags

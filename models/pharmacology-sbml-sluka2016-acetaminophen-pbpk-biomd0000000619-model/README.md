@@ -11,14 +11,13 @@ Basic PBPK (Physiologically Based PharmacoKinetic) model of Acetaminophen. This 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-sluka2016-acetaminophen-pbpk-biomd0000000619-model
     alias: model
-    manifest_path: models/pharmacology-sbml-sluka2016-acetaminophen-pbpk-biomd0000000619-model/model.yaml
 ```
 
 ## Tags

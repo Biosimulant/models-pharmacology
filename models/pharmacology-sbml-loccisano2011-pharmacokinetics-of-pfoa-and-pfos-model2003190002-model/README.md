@@ -11,14 +11,13 @@ Perfluoroalkyl acid carboxylates and sulfonates (PFAAs) have many consumer and i
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-loccisano2011-pharmacokinetics-of-pfoa-and-pfos-model2003190002-model
     alias: model
-    manifest_path: models/pharmacology-sbml-loccisano2011-pharmacokinetics-of-pfoa-and-pfos-model2003190002-model/model.yaml
 ```
 
 ## Tags

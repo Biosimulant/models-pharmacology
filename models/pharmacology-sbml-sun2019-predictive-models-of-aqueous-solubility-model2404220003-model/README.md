@@ -11,14 +11,13 @@ Kinetic aqueous solubility (μg/mL) was experimentally determined using the same
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-sun2019-predictive-models-of-aqueous-solubility-model2404220003-model
     alias: model
-    manifest_path: models/pharmacology-sbml-sun2019-predictive-models-of-aqueous-solubility-model2404220003-model/model.yaml
 ```
 
 ## Tags

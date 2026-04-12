@@ -11,14 +11,13 @@ ImageMol is a Representation Learning Framework that utilizes molecule images fo
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-zeng2022-prediction-of-molecular-properties-and-model2405080005-model
     alias: model
-    manifest_path: models/pharmacology-sbml-zeng2022-prediction-of-molecular-properties-and-model2405080005-model/model.yaml
 ```
 
 ## Tags

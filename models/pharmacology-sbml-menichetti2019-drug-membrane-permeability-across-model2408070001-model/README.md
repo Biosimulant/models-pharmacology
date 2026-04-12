@@ -11,14 +11,13 @@ Using Coarse Grained (CG) models, where several atoms are aggregated into a sing
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-menichetti2019-drug-membrane-permeability-across-model2408070001-model
     alias: model
-    manifest_path: models/pharmacology-sbml-menichetti2019-drug-membrane-permeability-across-model2408070001-model/model.yaml
 ```
 
 ## Tags

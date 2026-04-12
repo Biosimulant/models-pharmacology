@@ -11,14 +11,13 @@ This model was developed with the aim of constructing an equilibrium model of th
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-mager2005-quasi-equilibrium-pharmacokinetic-mode-biomd0000000765-model
     alias: model
-    manifest_path: models/pharmacology-sbml-mager2005-quasi-equilibrium-pharmacokinetic-mode-biomd0000000765-model/model.yaml
 ```
 
 ## Tags

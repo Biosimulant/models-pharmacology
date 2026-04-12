@@ -11,14 +11,13 @@ The model is encoded according to the paper Low dose of dopamine may stimulate p
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-tabak2007-dopamine-biomd0000000138-model
     alias: model
-    manifest_path: models/pharmacology-sbml-tabak2007-dopamine-biomd0000000138-model/model.yaml
 ```
 
 ## Tags

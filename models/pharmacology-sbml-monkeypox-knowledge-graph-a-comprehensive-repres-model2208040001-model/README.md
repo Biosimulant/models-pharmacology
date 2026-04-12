@@ -11,14 +11,13 @@ We collected and rationally assembled several biological study results, assays, 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-monkeypox-knowledge-graph-a-comprehensive-repres-model2208040001-model
     alias: model
-    manifest_path: models/pharmacology-sbml-monkeypox-knowledge-graph-a-comprehensive-repres-model2208040001-model/model.yaml
 ```
 
 ## Tags

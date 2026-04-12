@@ -11,14 +11,13 @@ Grange2001 - L-dopa PK model A pharmacokinetics of L-dopa in rats after administ
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-grange2001-l-dopa-pk-model-biomd0000000321-model
     alias: model
-    manifest_path: models/pharmacology-sbml-grange2001-l-dopa-pk-model-biomd0000000321-model/model.yaml
 ```
 
 ## Tags

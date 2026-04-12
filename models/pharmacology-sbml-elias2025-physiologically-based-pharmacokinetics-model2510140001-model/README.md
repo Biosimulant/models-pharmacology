@@ -11,14 +11,13 @@ Initial model release
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-elias2025-physiologically-based-pharmacokinetics-model2510140001-model
     alias: model
-    manifest_path: models/pharmacology-sbml-elias2025-physiologically-based-pharmacokinetics-model2510140001-model/model.yaml
 ```
 
 ## Tags

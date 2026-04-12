@@ -11,14 +11,13 @@ Estimation of synthetic accessibility score (SAScore) of drug-like molecules bas
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-ertl2009-synthetic-accessibility-score-estimatio-model2407180004-model
     alias: model
-    manifest_path: models/pharmacology-sbml-ertl2009-synthetic-accessibility-score-estimatio-model2407180004-model/model.yaml
 ```
 
 ## Tags

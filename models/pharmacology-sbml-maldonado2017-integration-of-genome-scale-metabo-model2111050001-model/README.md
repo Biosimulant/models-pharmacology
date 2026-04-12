@@ -11,14 +11,13 @@ Example models of ongoing work on integration of PBPK, GSMNs, and metabolic gene
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-maldonado2017-integration-of-genome-scale-metabo-model2111050001-model
     alias: model
-    manifest_path: models/pharmacology-sbml-maldonado2017-integration-of-genome-scale-metabo-model2111050001-model/model.yaml
 ```
 
 ## Tags

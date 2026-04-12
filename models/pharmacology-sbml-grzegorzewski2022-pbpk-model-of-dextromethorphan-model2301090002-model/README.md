@@ -11,14 +11,13 @@ Physiologically based pharmacokinetic (PBPK) modeling of the role of CYP2D6 poly
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-grzegorzewski2022-pbpk-model-of-dextromethorphan-model2301090002-model
     alias: model
-    manifest_path: models/pharmacology-sbml-grzegorzewski2022-pbpk-model-of-dextromethorphan-model2301090002-model/model.yaml
 ```
 
 ## Tags

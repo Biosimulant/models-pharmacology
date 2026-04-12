@@ -11,14 +11,13 @@ Grange2001 - PK interaction of L-dopa and benserazide A pharmacokinetics of L-do
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-grange2001-pk-interaction-of-l-dopa-and-benseraz-biomd0000000320-model
     alias: model
-    manifest_path: models/pharmacology-sbml-grange2001-pk-interaction-of-l-dopa-and-benseraz-biomd0000000320-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ This model presents a general target-mediated drug disposition (TMDD) model for 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-schropp2019-target-mediated-drug-disposition-mod-biomd0000000788-model
     alias: model
-    manifest_path: models/pharmacology-sbml-schropp2019-target-mediated-drug-disposition-mod-biomd0000000788-model/model.yaml
 ```
 
 ## Tags

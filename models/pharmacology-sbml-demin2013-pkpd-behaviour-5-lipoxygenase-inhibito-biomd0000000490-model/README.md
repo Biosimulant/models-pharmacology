@@ -11,14 +11,13 @@ Demin2013 - PKPD behaviour - 5-Lipoxygenaseinhibitors This model is described in
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-demin2013-pkpd-behaviour-5-lipoxygenase-inhibito-biomd0000000490-model
     alias: model
-    manifest_path: models/pharmacology-sbml-demin2013-pkpd-behaviour-5-lipoxygenase-inhibito-biomd0000000490-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ described in: Pharmacokinetic-pharmacodynamic modeling of caffeine: Tolerance to
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-shi1993-caffeine-pressor-tolerance-biomd0000000241-model
     alias: model
-    manifest_path: models/pharmacology-sbml-shi1993-caffeine-pressor-tolerance-biomd0000000241-model/model.yaml
 ```
 
 ## Tags

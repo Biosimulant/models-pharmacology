@@ -11,14 +11,13 @@ This model is from the article: Mathematical modeling and analysis of insulin cl
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/pharmacology-sbml-koschorreck2008-insulinclearance-biomd0000000345-model
     alias: model
-    manifest_path: models/pharmacology-sbml-koschorreck2008-insulinclearance-biomd0000000345-model/model.yaml
 ```
 
 ## Tags
