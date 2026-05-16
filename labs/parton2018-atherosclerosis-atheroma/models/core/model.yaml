@@ -1,0 +1,120 @@
+schema_version: '2.0'
+title: Parton2018 - A model of Atherosclerosis and atheroma formation.
+description: 'SBML and SBGN-ML models of atherosclerosis and atheroma formation. This
+  model is described in the publication: New models of atherosclerosis and multi-drug
+  therapeutic interventions.'
+standard: sbml
+tags:
+- pharmacology
+- cardiovascular
+- physiology
+- inflammation
+- systems-biology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Andrew Parton
+- Victoria McGilligan
+- Melody Chemaly
+- "Maurice O\u2019Kane"
+- Steven Watterson
+upstream:
+  id: biomodels_ebi:MODEL1812100001
+  source_db: biomodels_ebi
+  source_id: MODEL1812100001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1812100001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812100001?filename=S2_Model.xml
+  license: CC0
+biosim:
+  entrypoint: src.parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model:Parton2018AModelOfAtherosclerosisAndAtheroModel1812100001Model
+  init_kwargs:
+    model_path: data/MODEL1812100001.xml
+    integration_step: 0.05
+  communication_step: 0.5
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_ldl
+    maps_to: s5
+    label: Initial LDL
+    description: initial LDL pool. Maps to SBML symbol `s5`.
+  - name: initial_hdl
+    maps_to: s6
+    label: Initial HDL
+    description: initial HDL pool. Maps to SBML symbol `s6`.
+  - name: initial_free_oxygen_radicals
+    maps_to: s10
+    label: Initial Free Oxygen Radicals
+    description: oxidative burden pool. Maps to SBML symbol `s10`.
+  - name: initial_monocytes
+    maps_to: s16
+    label: Initial Monocytes
+    description: monocyte pool. Maps to SBML symbol `s16`.
+  - name: initial_t_cells
+    maps_to: s39
+    label: Initial T Cells
+    description: T-cell pool. Maps to SBML symbol `s39`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: hdl
+    maps_to: s1
+    label: HDL
+    description: HDL. Maps to SBML symbol `s1`.
+  - name: ldl
+    maps_to: s2
+    label: LDL
+    description: LDL. Maps to SBML symbol `s2`.
+  - name: blood_ldl
+    maps_to: s5
+    label: Blood LDL
+    description: Blood LDL. Maps to SBML symbol `s5`.
+  - name: blood_hdl
+    maps_to: s6
+    label: Blood HDL
+    description: Blood HDL. Maps to SBML symbol `s6`.
+  - name: oxidized_ldl
+    maps_to: s14
+    label: Oxidized LDL
+    description: Oxidized LDL. Maps to SBML symbol `s14`.
+  - name: oxidized_hdl
+    maps_to: s15
+    label: Oxidized HDL
+    description: Oxidized HDL. Maps to SBML symbol `s15`.
+  - name: monocytes
+    maps_to: s16
+    label: Monocytes
+    description: Monocytes. Maps to SBML symbol `s16`.
+  - name: macrophages
+    maps_to: s19
+    label: Macrophages
+    description: Macrophages. Maps to SBML symbol `s19`.
+  - name: foam_cells
+    maps_to: s21
+    label: Foam Cells
+    description: Foam Cells. Maps to SBML symbol `s21`.
+parameters:
+- name: integration_step
+  value: 0.05
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

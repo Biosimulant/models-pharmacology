@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: "Dold\xE1nMartelli2013 - A Mathematical Model for the Rational Design of Chimeric\
+  \ Ligands in Selective Drug Therapies Visualisation"
+description: "Desktop visualisation for Dold\xE1nMartelli2013 - A Mathematical Model\
+  \ for the Rational Design of Chimeric Ligands in Selective Drug Therapies."
+standard: other
+tags:
+- pharmacology
+- drug-discovery
+- receptor-binding
+- systems-biology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 2.0
+    lab_title: "Dold\xE1nMartelli2013 - A Mathematical Model for the Rational Design\
+      \ of Chimeric Ligands in Selective Drug Therapies"
+    question: Does the chimeric ligand preferentially engage target 1 or target 2?
+    answer_focus: mutant-specific target-2 rates should only be exposed if the UI
+      can clearly label wild-type versus K133A/R144A variants.
+    sources:
+    - alias: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model
+      title: "Dold\xE1nMartelli2013 - A Mathematical Model for the Rational Design\
+        \ of Chimeric Ligands in Selective Drug Therapies"
+      visual_group: binding
+      observables:
+      - id: R_1_D
+        port: target_1_drug_complex
+        label: Target 1 Drug Complex
+        group: binding
+      - id: R_2_D
+        port: target_2_drug_complex
+        label: Target 2 Drug Complex
+        group: binding
+      - id: R_1_DE
+        port: target_1_drug_effector_complex
+        label: Target 1 Drug Effector Complex
+        group: binding
+      - id: R_2_DE
+        port: target_2_drug_effector_complex
+        label: Target 2 Drug Effector Complex
+        group: binding
+      - id: C_1
+        port: selectivity_complex_1
+        label: Selectivity Complex 1
+        group: binding
+      - id: C_2
+        port: selectivity_complex_2
+        label: Selectivity Complex 2
+        group: binding
+      - id: C_3
+        port: selectivity_complex_3
+        label: Selectivity Complex 3
+        group: binding
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

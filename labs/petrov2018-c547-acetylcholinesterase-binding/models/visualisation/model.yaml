@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Petrov2018 - C-547 a 6-methyluracil derivative with long-lasting binding and
+  rebinding on acetylcholinesterase Visualisation
+description: Desktop visualisation for Petrov2018 - C-547 a 6-methyluracil derivative
+  with long-lasting binding and rebinding on acetylcholinesterase.
+standard: other
+tags:
+- pharmacology
+- receptor-binding
+- neuroscience
+- toxicology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 2.0
+    lab_title: Petrov2018 - C-547 a 6-methyluracil derivative with long-lasting binding
+      and rebinding on acetylcholinesterase
+    question: Does long-lasting C-547 binding/rebinding persist in the simulated state
+      trajectory?
+    answer_focus: 'Initial-state controls: source state labels `y1`-`y5` are not mechanistic
+      names; public labels must keep them as binding-state indices.'
+    sources:
+    - alias: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model
+      title: Petrov2018 - C-547 a 6-methyluracil derivative with long-lasting binding
+        and rebinding on acetylcholinesterase
+      visual_group: binding
+      observables:
+      - id: y1
+        port: c547_binding_state_y1
+        label: C547 Binding State Y1
+        group: binding
+      - id: y2
+        port: c547_binding_state_y2
+        label: C547 Binding State Y2
+        group: binding
+      - id: y3
+        port: c547_binding_state_y3
+        label: C547 Binding State Y3
+        group: binding
+      - id: y4
+        port: c547_binding_state_y4
+        label: C547 Binding State Y4
+        group: binding
+      - id: y5
+        port: c547_binding_state_y5
+        label: C547 Binding State Y5
+        group: binding
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: KaratzaKaralis2020 - CYP mediated losartan metabolism Visualisation
+description: Desktop visualisation for KaratzaKaralis2020 - CYP mediated losartan
+  metabolism.
+standard: other
+tags:
+- pharmacology
+- metabolism
+- cyp-metabolism
+- pharmacokinetics
+- cardiovascular
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: KaratzaKaralis2020 - CYP mediated losartan metabolism
+    question: How does CYP2C9-mediated metabolism transform losartan into E3174?
+    answer_focus: compartment names should stay conservative because SBML symbol names
+      do not fully define anatomy.
+    sources:
+    - alias: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model
+      title: KaratzaKaralis2020 - CYP mediated losartan metabolism
+      visual_group: metabolism
+      observables:
+      - id: losartan_cc
+        port: losartan_cellular_compartment
+        label: Losartan Cellular Compartment
+        group: metabolism
+      - id: losartan_int
+        port: losartan_intracellular
+        label: Losartan Intracellular
+        group: metabolism
+      - id: losartan_out
+        port: losartan_outflow
+        label: Losartan Outflow
+        group: metabolism
+      - id: losartan_pc
+        port: losartan_portal_compartment
+        label: Losartan Portal Compartment
+        group: metabolism
+      - id: losartan_stm
+        port: losartan_stomach
+        label: Losartan Stomach
+        group: metabolism
+      - id: E3174_out
+        port: e3174_outflow
+        label: E3174 Outflow
+        group: metabolism
+      - id: E3174_cc
+        port: e3174_cellular_compartment
+        label: E3174 Cellular Compartment
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

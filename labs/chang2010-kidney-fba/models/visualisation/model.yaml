@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: Chang2010_Reduced_Kidney_FBA Visualisation
+description: Desktop visualisation for Chang2010_Reduced_Kidney_FBA.
+standard: other
+tags:
+- pharmacology
+- metabolism
+- kidney
+- systems-biology
+- fba
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 0.5
+    lab_title: Chang2010_Reduced_Kidney_FBA
+    question: Which kidney metabolic pools move most under the selected initial metabolic
+      state?
+    answer_focus: 'Initial-state controls: this is not an intervention/dose model;
+      controls are initial metabolic pools.'
+    sources:
+    - alias: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model
+      title: Chang2010_Reduced_Kidney_FBA
+      visual_group: metabolism
+      observables:
+      - id: M_atp_c
+        port: cytosolic_atp
+        label: Cytosolic ATP
+        group: metabolism
+      - id: M_atp_m
+        port: mitochondrial_atp
+        label: Mitochondrial ATP
+        group: metabolism
+      - id: M_glc_DASH_D_c
+        port: cytosolic_glucose
+        label: Cytosolic Glucose
+        group: metabolism
+      - id: M_glc_DASH_D_e
+        port: extracellular_glucose
+        label: Extracellular Glucose
+        group: metabolism
+      - id: M_lac_DASH_L_c
+        port: cytosolic_lactate
+        label: Cytosolic Lactate
+        group: metabolism
+      - id: M_lac_DASH_L_e
+        port: extracellular_lactate
+        label: Extracellular Lactate
+        group: metabolism
+      - id: M_urea_c
+        port: cytosolic_urea
+        label: Cytosolic Urea
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

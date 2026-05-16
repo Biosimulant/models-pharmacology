@@ -1,0 +1,85 @@
+schema_version: '2.0'
+title: "Dold\xE1nMartelli2013 - A Mathematical Model for the Rational Design of Chimeric\
+  \ Ligands in Selective Drug Therapies Lab"
+description: This model attempts to provide a mathematical framework for describing
+  the dynamics of receptor-drug complex formation of chimeric drugs. It can be used
+  to explore dose-response dynamics and compare treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1907310001.xml
+    integration_step: 0.2
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.state
+  to:
+  - visualisation.pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model_state
+- from: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.summary
+  to:
+  - visualisation.pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model_summary
+- from: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model_species_labels
+runtime:
+  duration: 60.0
+  communication_step: 2.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- drug-discovery
+- receptor-binding
+- systems-biology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: ligand_concentration
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.ligand_concentration
+    label: Ligand Concentration
+  - name: target_1_association_rate
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.target_1_association_rate
+    label: Target 1 Association Rate
+  - name: target_1_dissociation_rate
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.target_1_dissociation_rate
+    label: Target 1 Dissociation Rate
+  - name: target_2_association_rate
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.target_2_association_rate
+    label: Target 2 Association Rate
+  - name: target_2_dissociation_rate
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.target_2_dissociation_rate
+    label: Target 2 Dissociation Rate
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.species_labels
+    label: Observable labels
+  - name: target_1_drug_complex
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.target_1_drug_complex
+    label: Target 1 Drug Complex
+  - name: target_2_drug_complex
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.target_2_drug_complex
+    label: Target 2 Drug Complex
+  - name: target_1_drug_effector_complex
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.target_1_drug_effector_complex
+    label: Target 1 Drug Effector Complex
+  - name: target_2_drug_effector_complex
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.target_2_drug_effector_complex
+    label: Target 2 Drug Effector Complex
+  - name: selectivity_complex_1
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.selectivity_complex_1
+    label: Selectivity Complex 1
+  - name: selectivity_complex_2
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.selectivity_complex_2
+    label: Selectivity Complex 2
+  - name: selectivity_complex_3
+    maps_to: pharmacology_sbml_dold_nmartelli2013_a_mathematical_model_for_the_model1907310001_model.selectivity_complex_3
+    label: Selectivity Complex 3

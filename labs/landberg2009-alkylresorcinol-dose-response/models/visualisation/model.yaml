@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Landberg2009 - Alkylresorcinol Dose Response Visualisation
+description: Desktop visualisation for Landberg2009 - Alkylresorcinol Dose Response.
+standard: other
+tags:
+- pharmacology
+- pharmacokinetics
+- nutrition
+- dose-response
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Landberg2009 - Alkylresorcinol Dose Response
+    question: Does alkylresorcinol exposure scale with the selected dose and absorption
+      profile?
+    answer_focus: '`F1`/`F2` should be labeled as source bioavailability/route fractions
+      only if source annotations confirm; otherwise keep conservative.'
+    sources:
+    - alias: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model
+      title: Landberg2009 - Alkylresorcinol Dose Response
+      visual_group: pk
+      observables:
+      - id: AR_Dose
+        port: alkylresorcinol_dose_pool
+        label: Alkylresorcinol Dose Pool
+        group: pk
+      - id: AR_A1
+        port: alkylresorcinol_absorption_pool_1
+        label: Alkylresorcinol Absorption Pool 1
+        group: pk
+      - id: AR_A2
+        port: alkylresorcinol_absorption_pool_2
+        label: Alkylresorcinol Absorption Pool 2
+        group: pk
+      - id: AR_Central
+        port: alkylresorcinol_central_concentration
+        label: Alkylresorcinol Central Concentration
+        group: pk
+      - id: F1
+        port: bioavailability_fraction_1
+        label: Bioavailability Fraction 1
+        group: pk
+      - id: F2
+        port: bioavailability_fraction_2
+        label: Bioavailability Fraction 2
+        group: pk
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

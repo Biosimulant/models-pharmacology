@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "a42f873c-b356-4713-aab5-19cdf8160f63",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "6e935345-7d39-42dd-8194-78bd7603e318",
+  "created_at": "2026-05-15T19:13:24.306450160+00:00",
+  "last_synced_at": "2026-05-16T09:34:00.517977+00:00",
+  "hub_manifest_hash": "90206b90c1e469b12b76b2f69529a4adfc1fbea7a601d17d00663b2d9b0f1f1f",
+  "package_name": "strasen2018-tgfb-smad-signalling-dose-dependent-dynamics-upon-tg"
+}

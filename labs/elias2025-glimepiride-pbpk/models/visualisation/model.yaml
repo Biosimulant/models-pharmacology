@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Elias2025 - Physiologically based pharmacokinetics (PBPK) model glimepiride
+  Visualisation
+description: Desktop visualisation for Elias2025 - Physiologically based pharmacokinetics
+  (PBPK) model glimepiride.
+standard: other
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- physiology
+- endocrine
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Elias2025 - Physiologically based pharmacokinetics (PBPK) model glimepiride
+    question: How do dose, absorption, and CYP2C9 activity shape glimepiride/metabolite
+      exposure?
+    answer_focus: do not expose low-level organ volumes/flows unless making a physiology-tuning
+      view.
+    sources:
+    - alias: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model
+      title: Elias2025 - Physiologically based pharmacokinetics (PBPK) model glimepiride
+      visual_group: physiology
+      observables:
+      - id: Cli_plasma_gli
+        port: glimepiride_liver_plasma
+        label: Glimepiride Liver Plasma
+        group: physiology
+      - id: Car_gli
+        port: glimepiride_arterial_plasma
+        label: Glimepiride Arterial Plasma
+        group: physiology
+      - id: Cve_gli
+        port: glimepiride_venous_plasma
+        label: Glimepiride Venous Plasma
+        group: physiology
+      - id: Cki_plasma_gli
+        port: glimepiride_kidney_plasma
+        label: Glimepiride Kidney Plasma
+        group: physiology
+      - id: Cgu_plasma_gli
+        port: glimepiride_gut_plasma
+        label: Glimepiride Gut Plasma
+        group: physiology
+      - id: Cli_plasma_m1
+        port: m1_liver_plasma
+        label: M1 Liver Plasma
+        group: physiology
+      - id: Car_m1
+        port: m1_arterial_plasma
+        label: M1 Arterial Plasma
+        group: physiology
+      - id: Cve_m1
+        port: m1_venous_plasma
+        label: M1 Venous Plasma
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

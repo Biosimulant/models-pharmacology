@@ -1,0 +1,87 @@
+schema_version: '2.0'
+title: Qosa2014 - Mechanistic modeling that describes amyloid-Beta clearance across
+  BBB Lab
+description: "Qosa2014 - Mechanistic modeling thatdescribes A\u03B2 clearance across\
+  \ BBB Qosa2014 - Mechanistic modeling thatdescribes A\u03B2 clearance across BBB.\
+  \ It can be used to explore dose-response dynamics and compare treatment scenarios\
+  \ across conditions."
+models:
+- alias: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1409240002.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.state
+  to:
+  - visualisation.pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model_state
+- from: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.summary
+  to:
+  - visualisation.pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model_summary
+- from: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- neuroscience
+- pbpk
+- physiology
+- blood-brain-barrier
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_cellular_amyloid_beta_hcmec_d3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.initial_cellular_amyloid_beta_hcmec_d3
+    label: Initial Cellular Amyloid Beta Hcmec D3
+  - name: initial_cellular_amyloid_beta_bend3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.initial_cellular_amyloid_beta_bend3
+    label: Initial Cellular Amyloid Beta Bend3
+  - name: initial_media_amyloid_beta_hcmec_d3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.initial_media_amyloid_beta_hcmec_d3
+    label: Initial Media Amyloid Beta Hcmec D3
+  - name: initial_media_amyloid_beta_bend3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.initial_media_amyloid_beta_bend3
+    label: Initial Media Amyloid Beta Bend3
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.species_labels
+    label: Observable labels
+  - name: intact_amyloid_beta_hcmec_d3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.intact_amyloid_beta_hcmec_d3
+    label: Intact Amyloid Beta Hcmec D3
+  - name: intact_amyloid_beta_bend3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.intact_amyloid_beta_bend3
+    label: Intact Amyloid Beta Bend3
+  - name: cellular_amyloid_beta_hcmec_d3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.cellular_amyloid_beta_hcmec_d3
+    label: Cellular Amyloid Beta Hcmec D3
+  - name: degraded_amyloid_beta_hcmec_d3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.degraded_amyloid_beta_hcmec_d3
+    label: Degraded Amyloid Beta Hcmec D3
+  - name: cellular_amyloid_beta_bend3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.cellular_amyloid_beta_bend3
+    label: Cellular Amyloid Beta Bend3
+  - name: degraded_amyloid_beta_bend3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.degraded_amyloid_beta_bend3
+    label: Degraded Amyloid Beta Bend3
+  - name: media_amyloid_beta_hcmec_d3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.media_amyloid_beta_hcmec_d3
+    label: Media Amyloid Beta Hcmec D3
+  - name: media_amyloid_beta_bend3
+    maps_to: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model.media_amyloid_beta_bend3
+    label: Media Amyloid Beta Bend3

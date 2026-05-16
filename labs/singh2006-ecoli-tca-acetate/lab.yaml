@@ -1,0 +1,85 @@
+schema_version: '2.0'
+title: Singh2006_TCA_Ecoli_acetate Lab
+description: 'This a model from the article: Kinetic modeling of tricarboxylic acid
+  cycle and glyoxylate bypass in Mycobacterium tuberculosis, and its application to
+  assessment of drug targets. It can be used to explore dose-response dynamics and
+  compare treatment scenarios across conditions.'
+models:
+- alias: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000221.xml
+    integration_step: 0.05
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.state
+  to:
+  - visualisation.pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model_state
+- from: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.summary
+  to:
+  - visualisation.pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model_summary
+- from: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model_species_labels
+runtime:
+  duration: 5.0
+  communication_step: 0.5
+  initial_inputs: {}
+tags:
+- pharmacology
+- metabolism
+- microbiology
+- systems-biology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_acetyl_coa_or_acetate_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.initial_acetyl_coa_or_acetate_pool
+    label: Initial Acetyl Coa Or Acetate Pool
+  - name: initial_oxaloacetate_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.initial_oxaloacetate_pool
+    label: Initial Oxaloacetate Pool
+  - name: initial_coa_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.initial_coa_pool
+    label: Initial Coa Pool
+  - name: initial_citrate_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.initial_citrate_pool
+    label: Initial Citrate Pool
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.species_labels
+    label: Observable labels
+  - name: acetate_or_acetyl_coa_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.acetate_or_acetyl_coa_pool
+    label: Acetate Or Acetyl Coa Pool
+  - name: oxaloacetate_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.oxaloacetate_pool
+    label: Oxaloacetate Pool
+  - name: coa_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.coa_pool
+    label: Coa Pool
+  - name: citrate_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.citrate_pool
+    label: Citrate Pool
+  - name: isocitrate_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.isocitrate_pool
+    label: Isocitrate Pool
+  - name: alpha_ketoglutarate_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.alpha_ketoglutarate_pool
+    label: Alpha Ketoglutarate Pool
+  - name: succinyl_coa_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.succinyl_coa_pool
+    label: Succinyl Coa Pool
+  - name: succinate_pool
+    maps_to: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model.succinate_pool
+    label: Succinate Pool

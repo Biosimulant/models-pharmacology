@@ -1,0 +1,110 @@
+schema_version: '2.0'
+title: Grignard2022 - Detyrosination/Tyrosination Model in neurons and proliferative
+  cells
+description: SBML files for the mathematical model from the publication 'Mathematical
+  modeling of the microtubule detyrosination/tyrosination cycle for cell-based drug
+  screening design'. It can be used to explore dose-response dynamics and compare
+  treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- cell-biology
+- neuroscience
+- systems-biology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Grignard
+- Lamamy V
+- Vermersch E
+- Delagrange P
+- Stephan JP
+upstream:
+  id: biomodels_ebi:MODEL2209260001
+  source_db: biomodels_ebi
+  source_id: MODEL2209260001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2209260001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2209260001?filename=Grignard2022_Tyrosination_Cycle_Mathematical_Model_Neurons.xml
+  license: CC0
+biosim:
+  entrypoint: src.grignard2022_detyrosination_tyrosination_model_i_model2209260001_model:Grignard2022DetyrosinationTyrosinationModelIModel2209260001Model
+  init_kwargs:
+    model_path: data/MODEL2209260001.xml
+    integration_step: 0.05
+  communication_step: 0.5
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_detyrosinated_tubulin
+    maps_to: s0
+    label: Initial Detyrosinated Tubulin
+    description: initial detyrosinated tubulin pool. Maps to SBML symbol `s0`.
+  - name: initial_tyrosinated_tubulin
+    maps_to: s2
+    label: Initial Tyrosinated Tubulin
+    description: initial tyrosinated tubulin pool. Maps to SBML symbol `s2`.
+  - name: initial_tcp_enzyme_pool
+    maps_to: s4
+    label: Initial Tcp Enzyme Pool
+    description: initial TCP enzyme pool. Maps to SBML symbol `s4`.
+  - name: initial_ttl_enzyme_pool
+    maps_to: s5
+    label: Initial Ttl Enzyme Pool
+    description: initial TTL enzyme pool. Maps to SBML symbol `s5`.
+  - name: detyrosination_affinity_km
+    maps_to: p8
+    label: Detyrosination Affinity KM
+    description: source Km2 affinity parameter, if source annotation confirms detyrosination
+      step. Maps to SBML symbol `p8`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: detyrosinated_tubulin
+    maps_to: s0
+    label: Detyrosinated Tubulin
+    description: Detyrosinated Tubulin. Maps to SBML symbol `s0`.
+  - name: detyrosinated_microtubules
+    maps_to: s1
+    label: Detyrosinated Microtubules
+    description: Detyrosinated Microtubules. Maps to SBML symbol `s1`.
+  - name: tyrosinated_tubulin
+    maps_to: s2
+    label: Tyrosinated Tubulin
+    description: Tyrosinated Tubulin. Maps to SBML symbol `s2`.
+  - name: tyrosinated_microtubules
+    maps_to: s3
+    label: Tyrosinated Microtubules
+    description: Tyrosinated Microtubules. Maps to SBML symbol `s3`.
+  - name: tcp_enzyme_pool
+    maps_to: s4
+    label: Tcp Enzyme Pool
+    description: Tcp Enzyme Pool. Maps to SBML symbol `s4`.
+  - name: ttl_enzyme_pool
+    maps_to: s5
+    label: Ttl Enzyme Pool
+    description: Ttl Enzyme Pool. Maps to SBML symbol `s5`.
+parameters:
+- name: integration_step
+  value: 0.05
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

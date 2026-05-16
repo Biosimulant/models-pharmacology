@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Caldwell2019 - The Vicodin abuse problem Visualisation
+description: Desktop visualisation for Caldwell2019 - The Vicodin abuse problem.
+standard: other
+tags:
+- pharmacology
+- systems-biology
+- addiction
+- public-health
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 0.5
+    lab_title: Caldwell2019 - The Vicodin abuse problem
+    question: Does the modeled population shift from medical use toward chronic use,
+      abuse, or treatment?
+    answer_focus: 'Initial-state controls: no source-backed policy or prescribing
+      intervention parameter is exposed unless the source paper/annotation clarifies
+      `rho` and related rates.'
+    sources:
+    - alias: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model
+      title: Caldwell2019 - The Vicodin abuse problem
+      visual_group: population
+      observables:
+      - id: M
+        port: medical_vicodin_population
+        label: Medical Vicodin Population
+        group: population
+      - id: C1
+        port: early_chronic_vicodin_population
+        label: Early Chronic Vicodin Population
+        group: population
+      - id: C2
+        port: late_chronic_vicodin_population
+        label: Late Chronic Vicodin Population
+        group: population
+      - id: A
+        port: vicodin_abuse_population
+        label: Vicodin Abuse Population
+        group: population
+      - id: T
+        port: vicodin_treatment_population
+        label: Vicodin Treatment Population
+        group: population
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

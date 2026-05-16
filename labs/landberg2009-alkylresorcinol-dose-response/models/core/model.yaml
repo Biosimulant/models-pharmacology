@@ -1,0 +1,108 @@
+schema_version: '2.0'
+title: Landberg2009 - Alkylresorcinol Dose Response
+description: Pharmacokinetic model of alkylresorcinols. Both plasma AR concentrations
+  and urinary metabolites in 24-h samples showed a dose-response relation to increased
+  AR intake, which strongly supports the hyp.
+standard: sbml
+tags:
+- pharmacology
+- pharmacokinetics
+- nutrition
+- dose-response
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Rikard Landberg
+- Per Aman
+- Lena E Friberg
+- Bengt Vessby
+- Herman Adlercreutz
+upstream:
+  id: biomodels_ebi:BIOMD0000000948
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000948
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000948
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000948?filename=Landberg2009.xml
+  license: CC0
+biosim:
+  entrypoint: src.landberg2009_alkylresorcinol_dose_response_biomd0000000948_model:Landberg2009AlkylresorcinolDoseResponseBiomd0000000948Model
+  init_kwargs:
+    model_path: data/BIOMD0000000948.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: alkylresorcinol_dose
+    maps_to: AR_Dose
+    label: Alkylresorcinol Dose
+    description: Initial setting for alkylresorcinol dose state. Maps to SBML symbol
+      `AR_Dose`.
+  - name: fast_absorption_rate
+    maps_to: k_a_1
+    label: Fast Absorption Rate
+    description: first absorption-rate constant. Maps to SBML symbol `k_a_1`.
+  - name: slow_absorption_rate
+    maps_to: k_a_2
+    label: Slow Absorption Rate
+    description: second absorption-rate constant. Maps to SBML symbol `k_a_2`.
+  - name: clearance_over_volume
+    maps_to: CL_V
+    label: Clearance Over Volume
+    description: apparent clearance over volume. Maps to SBML symbol `CL_V`.
+  - name: baseline_concentration
+    maps_to: base
+    label: Baseline Concentration
+    description: baseline concentration. Maps to SBML symbol `base`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: alkylresorcinol_dose_pool
+    maps_to: AR_Dose
+    label: Alkylresorcinol Dose Pool
+    description: Alkylresorcinol Dose Pool. Maps to SBML symbol `AR_Dose`.
+  - name: alkylresorcinol_absorption_pool_1
+    maps_to: AR_A1
+    label: Alkylresorcinol Absorption Pool 1
+    description: Alkylresorcinol Absorption Pool 1. Maps to SBML symbol `AR_A1`.
+  - name: alkylresorcinol_absorption_pool_2
+    maps_to: AR_A2
+    label: Alkylresorcinol Absorption Pool 2
+    description: Alkylresorcinol Absorption Pool 2. Maps to SBML symbol `AR_A2`.
+  - name: alkylresorcinol_central_concentration
+    maps_to: AR_Central
+    label: Alkylresorcinol Central Concentration
+    description: Alkylresorcinol Central Concentration. Maps to SBML symbol `AR_Central`.
+  - name: bioavailability_fraction_1
+    maps_to: F1
+    label: Bioavailability Fraction 1
+    description: Bioavailability Fraction 1. Maps to SBML symbol `F1`.
+  - name: bioavailability_fraction_2
+    maps_to: F2
+    label: Bioavailability Fraction 2
+    description: Bioavailability Fraction 2. Maps to SBML symbol `F2`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

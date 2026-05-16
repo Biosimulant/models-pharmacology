@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Yang2006_Methadone_PKmodel Lab
+description: 'This a model from the article: Population-based analysis of methadone
+  distribution and metabolism using anage-dependent physiologically based pharmacokinetic
+  model. It can be used to explore dose-response dynamics and compare treatment scenarios
+  across conditions.'
+models:
+- alias: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1006230040.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.state
+  to:
+  - visualisation.pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model_state
+- from: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.summary
+  to:
+  - visualisation.pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model_summary
+- from: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pharmacokinetics
+- opioid
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_methadone_absorption_state
+    maps_to: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.initial_methadone_absorption_state
+    label: Initial Methadone Absorption State
+  - name: initial_methadone_concentration
+    maps_to: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.initial_methadone_concentration
+    label: Initial Methadone Concentration
+  - name: metabolism_vmax
+    maps_to: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.metabolism_vmax
+    label: Metabolism VMAX
+  - name: metabolism_km
+    maps_to: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.metabolism_km
+    label: Metabolism KM
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.species_labels
+    label: Observable labels
+  - name: methadone_absorption_state
+    maps_to: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.methadone_absorption_state
+    label: Methadone Absorption State
+  - name: methadone_concentration
+    maps_to: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model.methadone_concentration
+    label: Methadone Concentration

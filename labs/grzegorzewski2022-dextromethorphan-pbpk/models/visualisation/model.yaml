@@ -1,0 +1,61 @@
+schema_version: '2.0'
+title: Grzegorzewski2022 - PBPK model of dextromethorphan Visualisation
+description: Desktop visualisation for Grzegorzewski2022 - PBPK model of dextromethorphan.
+standard: other
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- physiology
+- cyp-metabolism
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Grzegorzewski2022 - PBPK model of dextromethorphan
+    question: How do route and CYP2D6 activity shape dextromethorphan and metabolite
+      exposure?
+    answer_focus: full allele selection is source-backed but too large for the default
+      lab; expose custom activity first.
+    sources:
+    - alias: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model
+      title: Grzegorzewski2022 - PBPK model of dextromethorphan
+      visual_group: physiology
+      observables:
+      - id: Cli_plasma_dxm
+        port: dextromethorphan_liver_plasma
+        label: Dextromethorphan Liver Plasma
+        group: physiology
+      - id: Cgu_plasma_dxm
+        port: dextromethorphan_gut_plasma
+        label: Dextromethorphan Gut Plasma
+        group: physiology
+      - id: Cki_plasma_dxm
+        port: dextromethorphan_kidney_plasma
+        label: Dextromethorphan Kidney Plasma
+        group: physiology
+      - id: Clu_plasma_dxm
+        port: dextromethorphan_lung_plasma
+        label: Dextromethorphan Lung Plasma
+        group: physiology
+      - id: Cli_plasma_dxo
+        port: dextorphan_liver_plasma
+        label: Dextorphan Liver Plasma
+        group: physiology
+      - id: Cli_plasma_dxo_glu
+        port: dextorphan_glucuronide_liver_plasma
+        label: Dextorphan Glucuronide Liver Plasma
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

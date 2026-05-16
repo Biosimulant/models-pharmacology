@@ -1,0 +1,100 @@
+schema_version: '2.0'
+title: Shi1993_Caffeine_pressor_tolerance
+description: 'described in: Pharmacokinetic-pharmacodynamic modeling of caffeine:
+  Tolerance to pressor effects Shi J, Benowitz NL, Denaro CP and Sheiner LB. It can
+  be used to explore dose-response dynamics and compare treatment scenarios across
+  conditions.'
+standard: sbml
+tags:
+- pharmacology
+- pharmacodynamics
+- cardiovascular
+- physiology
+- tolerance
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- J Shi
+- N L Benowitz
+- C P Denaro
+- L B Sheiner
+upstream:
+  id: biomodels_ebi:BIOMD0000000241
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000241
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000241
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000241?filename=BIOMD0000000241_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.shi1993_caffeine_pressor_tolerance_biomd0000000241_model:Shi1993CaffeinePressorToleranceBiomd0000000241Model
+  init_kwargs:
+    model_path: data/BIOMD0000000241.xml
+    integration_step: 0.2
+  communication_step: 2.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_gut_caffeine_amount
+    maps_to: X_gut
+    label: Initial Gut Caffeine Amount
+    description: initial gut caffeine amount. Maps to SBML symbol `X_gut`.
+  - name: initial_plasma_caffeine_concentration
+    maps_to: C_p
+    label: Initial Plasma Caffeine Concentration
+    description: initial plasma caffeine concentration. Maps to SBML symbol `C_p`.
+  - name: initial_effect_site_caffeine
+    maps_to: C_e
+    label: Initial Effect Site Caffeine
+    description: initial effect-site caffeine concentration. Maps to SBML symbol `C_e`.
+  - name: initial_tolerance_state
+    maps_to: C_t
+    label: Initial Tolerance State
+    description: initial tolerance-state variable. Maps to SBML symbol `C_t`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: gut_caffeine_amount
+    maps_to: X_gut
+    label: Gut Caffeine Amount
+    description: Gut Caffeine Amount. Maps to SBML symbol `X_gut`.
+  - name: plasma_caffeine_concentration
+    maps_to: C_p
+    label: Plasma Caffeine Concentration
+    description: Plasma Caffeine Concentration. Maps to SBML symbol `C_p`.
+  - name: peripheral_caffeine_concentration
+    maps_to: C_per
+    label: Peripheral Caffeine Concentration
+    description: Peripheral Caffeine Concentration. Maps to SBML symbol `C_per`.
+  - name: effect_site_caffeine_concentration
+    maps_to: C_e
+    label: Effect Site Caffeine Concentration
+    description: Effect Site Caffeine Concentration. Maps to SBML symbol `C_e`.
+  - name: tolerance_state
+    maps_to: C_t
+    label: Tolerance State
+    description: Tolerance State. Maps to SBML symbol `C_t`.
+parameters:
+- name: integration_step
+  value: 0.2
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

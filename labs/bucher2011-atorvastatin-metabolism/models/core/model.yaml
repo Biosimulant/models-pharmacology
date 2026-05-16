@@ -1,0 +1,108 @@
+schema_version: '2.0'
+title: Bucher2011_Atorvastatin_Metabolism
+description: 'This is the model of atorvastatin metabolism in hepaitc cells described
+  in the article: A systems biology approach to dynamic modeling and inter-subject
+  variability of statin pharmacokinetics in human. It can be used to explore dose-response
+  dynamics and compare treatment scenarios across conditions.'
+standard: sbml
+tags:
+- pharmacology
+- metabolism
+- pharmacokinetics
+- cardiovascular
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Joachim Bucher
+- Stephan Riedmaier
+- Anke Schnabel
+- Katrin Marcus
+- Gabriele Vacun
+upstream:
+  id: biomodels_ebi:BIOMD0000000328
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000328
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000328
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000328?filename=BIOMD0000000328_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.bucher2011_atorvastatin_metabolism_biomd0000000328_model:Bucher2011AtorvastatinMetabolismBiomd0000000328Model
+  init_kwargs:
+    model_path: data/BIOMD0000000328.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: cyp3a4_para_hydroxylation_capacity
+    maps_to: CYP3A4_ASpOH_Vmax
+    label: CYP3A4 Para Hydroxylation Capacity
+    description: CYP3A4 capacity for para-hydroxy atorvastatin formation. Maps to
+      SBML symbol `CYP3A4_ASpOH_Vmax`.
+  - name: cyp3a4_ortho_hydroxylation_capacity
+    maps_to: CYP3A4_ASoOH_Vmax
+    label: CYP3A4 Ortho Hydroxylation Capacity
+    description: CYP3A4 capacity for ortho-hydroxy atorvastatin formation. Maps to
+      SBML symbol `CYP3A4_ASoOH_Vmax`.
+  - name: ugt1a3_lactonization_capacity
+    maps_to: UGT1A3_AS_Vmax
+    label: UGT1A3 Lactonization Capacity
+    description: UGT1A3 capacity for atorvastatin lactonization. Maps to SBML symbol
+      `UGT1A3_AS_Vmax`.
+  - name: pon_lactone_hydrolysis_rate
+    maps_to: k_PON_ASL_c
+    label: Pon Lactone Hydrolysis Rate
+    description: cytosolic PON-mediated atorvastatin lactone hydrolysis rate. Maps
+      to SBML symbol `k_PON_ASL_c`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: mitochondrial_atorvastatin_acid
+    maps_to: AS_m
+    label: Mitochondrial Atorvastatin Acid
+    description: Mitochondrial Atorvastatin Acid. Maps to SBML symbol `AS_m`.
+  - name: mitochondrial_atorvastatin_lactone
+    maps_to: ASL_m
+    label: Mitochondrial Atorvastatin Lactone
+    description: Mitochondrial Atorvastatin Lactone. Maps to SBML symbol `ASL_m`.
+  - name: mitochondrial_para_hydroxy_atorvastatin
+    maps_to: ASpOH_m
+    label: Mitochondrial Para Hydroxy Atorvastatin
+    description: Mitochondrial Para Hydroxy Atorvastatin. Maps to SBML symbol `ASpOH_m`.
+  - name: mitochondrial_ortho_hydroxy_atorvastatin
+    maps_to: ASoOH_m
+    label: Mitochondrial Ortho Hydroxy Atorvastatin
+    description: Mitochondrial Ortho Hydroxy Atorvastatin. Maps to SBML symbol `ASoOH_m`.
+  - name: cytosolic_atorvastatin_acid
+    maps_to: AS_c
+    label: Cytosolic Atorvastatin Acid
+    description: Cytosolic Atorvastatin Acid. Maps to SBML symbol `AS_c`.
+  - name: cytosolic_atorvastatin_lactone
+    maps_to: ASL_c
+    label: Cytosolic Atorvastatin Lactone
+    description: Cytosolic Atorvastatin Lactone. Maps to SBML symbol `ASL_c`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

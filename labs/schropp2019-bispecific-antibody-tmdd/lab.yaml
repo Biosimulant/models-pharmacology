@@ -1,0 +1,93 @@
+schema_version: '2.0'
+title: Schropp2019 - Target-Mediated Drug Disposition Model for Bispecific Antibodies
+  Lab
+description: This model presents a general target-mediated drug disposition (TMDD)
+  model for bispecific antibodies (BsAbs), which bind to two different targets on
+  different cell membranes. It can be used to explore dose-response dynamics and compare
+  treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000788.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.state
+  to:
+  - visualisation.pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model_state
+- from: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.summary
+  to:
+  - visualisation.pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model_summary
+- from: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pharmacokinetics
+- tmdd
+- biologics
+- immunology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_free_bispecific_antibody
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.initial_free_bispecific_antibody
+    label: Initial Free Bispecific Antibody
+  - name: initial_target_a_concentration
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.initial_target_a_concentration
+    label: Initial Target A Concentration
+  - name: initial_target_b_concentration
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.initial_target_b_concentration
+    label: Initial Target B Concentration
+  - name: target_a_association_rate
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.target_a_association_rate
+    label: Target A Association Rate
+  - name: target_b_association_rate
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.target_b_association_rate
+    label: Target B Association Rate
+  - name: central_elimination_rate
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.central_elimination_rate
+    label: Central Elimination Rate
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.species_labels
+    label: Observable labels
+  - name: free_bispecific_antibody
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.free_bispecific_antibody
+    label: Free Bispecific Antibody
+  - name: free_target_a
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.free_target_a
+    label: Free Target A
+  - name: free_target_b
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.free_target_b
+    label: Free Target B
+  - name: antibody_target_a_complex
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.antibody_target_a_complex
+    label: Antibody Target A Complex
+  - name: antibody_target_b_complex
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.antibody_target_b_complex
+    label: Antibody Target B Complex
+  - name: bispecific_bridge_complex
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.bispecific_bridge_complex
+    label: Bispecific Bridge Complex
+  - name: peripheral_antibody
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.peripheral_antibody
+    label: Peripheral Antibody
+  - name: depot_antibody
+    maps_to: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model.depot_antibody
+    label: Depot Antibody

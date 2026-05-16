@@ -1,0 +1,73 @@
+schema_version: '2.0'
+title: Tylutki2017-four-compartment PBPK heart model accounting for cardiac metabolism
+  Visualisation
+description: Desktop visualisation for Tylutki2017-four-compartment PBPK heart model
+  accounting for cardiac metabolism.
+standard: other
+tags:
+- pharmacology
+- pbpk
+- cardiovascular
+- metabolism
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Tylutki2017-four-compartment PBPK heart model accounting for cardiac
+      metabolism
+    question: How does cardiac metabolism and clearance distribute drug across heart-related
+      compartments?
+    answer_focus: CYP labels are source symbols; confirm exact enzyme role before
+      presenting as patient phenotype controls.
+    sources:
+    - alias: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model
+      title: Tylutki2017-four-compartment PBPK heart model accounting for cardiac
+        metabolism
+      visual_group: metabolism
+      observables:
+      - id: A_ad
+        port: adipose_drug_amount
+        label: Adipose Drug Amount
+        group: metabolism
+      - id: A_bo
+        port: bone_drug_amount
+        label: Bone Drug Amount
+        group: metabolism
+      - id: A_br
+        port: brain_drug_amount
+        label: Brain Drug Amount
+        group: metabolism
+      - id: A_gu
+        port: gut_drug_amount
+        label: Gut Drug Amount
+        group: metabolism
+      - id: A_epi
+        port: epicardium_drug_amount
+        label: Epicardium Drug Amount
+        group: metabolism
+      - id: A_mid
+        port: myocardium_drug_amount
+        label: Myocardium Drug Amount
+        group: metabolism
+      - id: A_endo
+        port: endocardium_drug_amount
+        label: Endocardium Drug Amount
+        group: metabolism
+      - id: A_pf
+        port: perfusate_drug_amount
+        label: Perfusate Drug Amount
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

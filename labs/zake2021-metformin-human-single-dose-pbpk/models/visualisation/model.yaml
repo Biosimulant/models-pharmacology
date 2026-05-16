@@ -1,0 +1,62 @@
+schema_version: '2.0'
+title: Zake2021 - PBPK model of metformin in humans, single PO dose Visualisation
+description: Desktop visualisation for Zake2021 - PBPK model of metformin in humans,
+  single PO dose.
+standard: other
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- endocrine
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Zake2021 - PBPK model of metformin in humans, single PO dose
+    question: Where does single-dose metformin exposure peak across plasma, liver,
+      and kidney compartments?
+    answer_focus: source model uses body-weight and flow initial values; changing
+      them should be clearly labeled as physiology scaling.
+    sources:
+    - alias: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model
+      title: Zake2021 - PBPK model of metformin in humans, single PO dose
+      visual_group: physiology
+      observables:
+      - id: mKidneyPlasma
+        port: kidney_plasma_metformin
+        label: Kidney Plasma Metformin
+        group: physiology
+      - id: mLiver
+        port: liver_metformin
+        label: Liver Metformin
+        group: physiology
+      - id: mPlasmaVenous
+        port: venous_plasma_metformin
+        label: Venous Plasma Metformin
+        group: physiology
+      - id: mPlasmaArterial
+        port: arterial_plasma_metformin
+        label: Arterial Plasma Metformin
+        group: physiology
+      - id: mKidneyTissue
+        port: kidney_tissue_metformin
+        label: Kidney Tissue Metformin
+        group: physiology
+      - id: mKidneyTubular
+        port: kidney_tubular_metformin
+        label: Kidney Tubular Metformin
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

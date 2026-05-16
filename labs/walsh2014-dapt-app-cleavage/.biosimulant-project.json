@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "bdcc703a-7928-4967-9c6e-f4dd39b0fcaa",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "edef9f05-ab62-4b43-9d72-cc557807a244",
+  "created_at": "2026-05-15T19:31:40.576492778+00:00",
+  "last_synced_at": "2026-05-16T09:37:03.796558+00:00",
+  "hub_manifest_hash": "c5d4f848474db2ef8199c2fe9316506a11b0f713de33240a392cd57b926ca49f",
+  "package_name": "walsh2014-inhibition-kinetics-of-dapt-on-app-cleavage-lab"
+}

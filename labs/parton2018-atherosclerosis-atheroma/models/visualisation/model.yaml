@@ -1,0 +1,73 @@
+schema_version: '2.0'
+title: Parton2018 - A model of Atherosclerosis and atheroma formation. Visualisation
+description: Desktop visualisation for Parton2018 - A model of Atherosclerosis and
+  atheroma formation..
+standard: other
+tags:
+- pharmacology
+- cardiovascular
+- physiology
+- inflammation
+- systems-biology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 0.5
+    lab_title: Parton2018 - A model of Atherosclerosis and atheroma formation.
+    question: Which lipid/inflammatory process dominates modeled atheroma progression?
+    answer_focus: 'Initial-state controls: many source species are broad pathway states;
+      avoid presenting them as clinical biomarkers.'
+    sources:
+    - alias: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model
+      title: Parton2018 - A model of Atherosclerosis and atheroma formation.
+      visual_group: physiology
+      observables:
+      - id: s1
+        port: hdl
+        label: HDL
+        group: physiology
+      - id: s2
+        port: ldl
+        label: LDL
+        group: physiology
+      - id: s5
+        port: blood_ldl
+        label: Blood LDL
+        group: physiology
+      - id: s6
+        port: blood_hdl
+        label: Blood HDL
+        group: physiology
+      - id: s14
+        port: oxidized_ldl
+        label: Oxidized LDL
+        group: physiology
+      - id: s15
+        port: oxidized_hdl
+        label: Oxidized HDL
+        group: physiology
+      - id: s16
+        port: monocytes
+        label: Monocytes
+        group: physiology
+      - id: s19
+        port: macrophages
+        label: Macrophages
+        group: physiology
+      - id: s21
+        port: foam_cells
+        label: Foam Cells
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

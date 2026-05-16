@@ -1,10 +1,15 @@
 # models-pharmacology
 
-Curated collection of **pharmacology** and **pharmacokinetics** simulation models for the **biosim** platform. This repository contains 66 computational models of drug absorption, distribution, metabolism, excretion (ADME), pharmacodynamics, and drug-target interactions.
+> Clean lab repo: kept runnable pharmacology simulators live under
+> `labs/<slug>/models/core/` with companion desktop visualisations in
+> `labs/<slug>/models/visualisation/`. Non-runnable source-data and scope
+> mismatches have been moved to the shared orphan area with evidence READMEs.
+
+Curated collection of **pharmacology** and **pharmacokinetics** simulation models for the **biosim** platform. The kept labs expose runnable SBML-backed models of drug absorption, distribution, metabolism, excretion (ADME), pharmacodynamics, and drug-target interactions.
 
 ## What's Inside
 
-### Models (66 packages)
+### Models
 
 **Pharmacology** — drug kinetics, pharmacodynamics, and therapeutic modeling:
 

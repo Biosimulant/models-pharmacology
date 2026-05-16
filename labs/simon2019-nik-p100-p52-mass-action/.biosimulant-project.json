@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "bfafc0fb-7b99-4261-87d7-72029ea4df2c",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "e793c6f0-660a-4698-a579-487d73f6a4f6",
+  "created_at": "2026-05-15T19:13:24.218876429+00:00",
+  "last_synced_at": "2026-05-16T09:29:13.457429+00:00",
+  "hub_manifest_hash": "6e47a3c604357d2f5c815367cd4033daf8678875c69a94576785da4d1e2cfd3c",
+  "package_name": "simon2019-nik-dependent-p100-processing-into-p52-mass-action-sbm"
+}

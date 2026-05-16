@@ -1,0 +1,87 @@
+schema_version: '2.0'
+title: Strasen2018 - TGFb SMAD Signalling - Dose dependent dynamics upon TGFb stimulation
+  Lab
+description: This model simulates TGFb dose dependent kinetics of The SMADs. TGFb
+  ligand dose applied are 1pM, 2.5pM, 5pM, 25pM, and 100pM as explained in the manuscript.
+models:
+- alias: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000989.xml
+    integration_step: 0.2
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.state
+  to:
+  - visualisation.pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model_state
+- from: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.summary
+  to:
+  - visualisation.pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model_summary
+- from: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model_species_labels
+runtime:
+  duration: 60.0
+  communication_step: 2.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- signaling
+- oncology
+- dose-response
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: tgfb_ligand_dose
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.tgfb_ligand_dose
+    label: TGFB Ligand Dose
+  - name: initial_surface_tgf_beta_receptor_1
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.initial_surface_tgf_beta_receptor_1
+    label: Initial Surface TGF Beta Receptor 1
+  - name: initial_surface_tgf_beta_receptor_2
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.initial_surface_tgf_beta_receptor_2
+    label: Initial Surface TGF Beta Receptor 2
+  - name: receptor_phosphorylation_rate
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.receptor_phosphorylation_rate
+    label: Receptor Phosphorylation Rate
+  - name: ligand_degradation_rate
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.ligand_degradation_rate
+    label: Ligand Degradation Rate
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.species_labels
+    label: Observable labels
+  - name: surface_tgf_beta_receptor_1
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.surface_tgf_beta_receptor_1
+    label: Surface TGF Beta Receptor 1
+  - name: surface_tgf_beta_receptor_2
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.surface_tgf_beta_receptor_2
+    label: Surface TGF Beta Receptor 2
+  - name: endosomal_tgf_beta_receptor_1
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.endosomal_tgf_beta_receptor_1
+    label: Endosomal TGF Beta Receptor 1
+  - name: endosomal_tgf_beta_receptor_2
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.endosomal_tgf_beta_receptor_2
+    label: Endosomal TGF Beta Receptor 2
+  - name: tgf_beta_ligand
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.tgf_beta_ligand
+    label: TGF Beta Ligand
+  - name: internalized_tgf_beta
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.internalized_tgf_beta
+    label: Internalized TGF Beta
+  - name: active_receptor_2
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.active_receptor_2
+    label: Active Receptor 2
+  - name: active_tgf_beta_receptor_complex
+    maps_to: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model.active_tgf_beta_receptor_complex
+    label: Active TGF Beta Receptor Complex

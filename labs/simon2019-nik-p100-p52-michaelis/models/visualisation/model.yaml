@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Simon2019 - NIK-dependent p100 processing into p52, Michaelis-Menten, SBML
+  2v4 Visualisation
+description: Desktop visualisation for Simon2019 - NIK-dependent p100 processing into
+  p52, Michaelis-Menten, SBML 2v4.
+standard: other
+tags:
+- pharmacology
+- signaling
+- immunology
+- nfkb
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 2.0
+    lab_title: Simon2019 - NIK-dependent p100 processing into p52, Michaelis-Menten,
+      SBML 2v4
+    question: Does NIK drive p100-to-p52 processing in the Michaelis-Menten variant?
+    answer_focus: compare with the mass-action variant only if both labs are run under
+      comparable initial states.
+    sources:
+    - alias: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model
+      title: Simon2019 - NIK-dependent p100 processing into p52, Michaelis-Menten,
+        SBML 2v4
+      visual_group: signaling
+      observables:
+      - id: p100
+        port: p100_pool
+        label: P100 Pool
+        group: signaling
+      - id: p52
+        port: p52_pool
+        label: P52 Pool
+        group: signaling
+      - id: NIK
+        port: nik_pool
+        label: NIK Pool
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

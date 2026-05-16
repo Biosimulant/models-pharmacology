@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Loccisano2011-pharmacokinetics of PFOA and PFOS in the monkey Visualisation
+description: Desktop visualisation for Loccisano2011-pharmacokinetics of PFOA and
+  PFOS in the monkey.
+standard: other
+tags:
+- pharmacology
+- toxicology
+- pharmacokinetics
+- pbpk
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Loccisano2011-pharmacokinetics of PFOA and PFOS in the monkey
+    question: Which compartments retain the modeled PFOA/PFOS burden longest?
+    answer_focus: the model title combines PFOA/PFOS; do not claim species-specific
+      separation unless source variables distinguish them.
+    sources:
+    - alias: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model
+      title: Loccisano2011-pharmacokinetics of PFOA and PFOS in the monkey
+      visual_group: physiology
+      observables:
+      - id: Plasma_0
+        port: plasma_toxicant_burden
+        label: Plasma Toxicant Burden
+        group: physiology
+      - id: Liver_0
+        port: liver_toxicant_burden
+        label: Liver Toxicant Burden
+        group: physiology
+      - id: Kidney_0
+        port: kidney_toxicant_burden
+        label: Kidney Toxicant Burden
+        group: physiology
+      - id: Gut_0
+        port: gut_toxicant_burden
+        label: Gut Toxicant Burden
+        group: physiology
+      - id: Fat_0
+        port: fat_toxicant_burden
+        label: Fat Toxicant Burden
+        group: physiology
+      - id: Skin_0
+        port: skin_toxicant_burden
+        label: Skin Toxicant Burden
+        group: physiology
+      - id: Urine
+        port: urine_toxicant_burden
+        label: Urine Toxicant Burden
+        group: physiology
+      - id: FIltrate
+        port: filtrate_toxicant_burden
+        label: Filtrate Toxicant Burden
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

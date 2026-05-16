@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f44029cf-e57d-449c-b359-1b0edb41ada7",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "c7ad054c-bdf4-48d1-ba8d-46bef0dab5ef",
+  "created_at": "2026-05-15T19:31:40.325880510+00:00",
+  "last_synced_at": "2026-05-16T09:23:35.810460+00:00",
+  "hub_manifest_hash": "1be0a507c33d79a90f6a3e766b5114406c447b8e504f162444333720dc463f4d",
+  "package_name": "mager2005-quasi-equilibrium-pharmacokinetic-model-for-drugs-exhi"
+}

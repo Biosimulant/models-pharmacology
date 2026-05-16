@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Grignard2022 - Detyrosination/Tyrosination Model in neurons and proliferative
+  cells Lab
+description: SBML files for the mathematical model from the publication 'Mathematical
+  modeling of the microtubule detyrosination/tyrosination cycle for cell-based drug
+  screening design'. It can be used to explore dose-response dynamics and compare
+  treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL2209260001.xml
+    integration_step: 0.05
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.state
+  to:
+  - visualisation.pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model_state
+- from: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.summary
+  to:
+  - visualisation.pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model_summary
+- from: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 0.5
+  initial_inputs: {}
+tags:
+- pharmacology
+- cell-biology
+- neuroscience
+- systems-biology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_detyrosinated_tubulin
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.initial_detyrosinated_tubulin
+    label: Initial Detyrosinated Tubulin
+  - name: initial_tyrosinated_tubulin
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.initial_tyrosinated_tubulin
+    label: Initial Tyrosinated Tubulin
+  - name: initial_tcp_enzyme_pool
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.initial_tcp_enzyme_pool
+    label: Initial Tcp Enzyme Pool
+  - name: initial_ttl_enzyme_pool
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.initial_ttl_enzyme_pool
+    label: Initial Ttl Enzyme Pool
+  - name: detyrosination_affinity_km
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.detyrosination_affinity_km
+    label: Detyrosination Affinity KM
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.species_labels
+    label: Observable labels
+  - name: detyrosinated_tubulin
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.detyrosinated_tubulin
+    label: Detyrosinated Tubulin
+  - name: detyrosinated_microtubules
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.detyrosinated_microtubules
+    label: Detyrosinated Microtubules
+  - name: tyrosinated_tubulin
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.tyrosinated_tubulin
+    label: Tyrosinated Tubulin
+  - name: tyrosinated_microtubules
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.tyrosinated_microtubules
+    label: Tyrosinated Microtubules
+  - name: tcp_enzyme_pool
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.tcp_enzyme_pool
+    label: Tcp Enzyme Pool
+  - name: ttl_enzyme_pool
+    maps_to: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model.ttl_enzyme_pool
+    label: Ttl Enzyme Pool

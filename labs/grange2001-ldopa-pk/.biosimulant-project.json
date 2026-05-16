@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "50ef690e-fe5a-41d9-9e3c-0af9e47db3f3",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "81d5a157-025c-4f04-be2c-681c1ff90cf8",
+  "created_at": "2026-05-15T19:31:40.700066527+00:00",
+  "last_synced_at": "2026-05-16T09:13:46.057984+00:00",
+  "hub_manifest_hash": "9edb07d99b6accfadc1792b0d42a6be6e095b361137cfe4bc2db99d3e27b7db4",
+  "package_name": "grange2001-l-dopa-pk-model-lab"
+}

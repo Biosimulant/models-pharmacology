@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "fa9d47a6-d9e0-4781-a3e8-4d2d5e0cc066",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "639d25f1-cb74-4bed-bfc2-a4452584d91b",
+  "created_at": "2026-05-15T19:31:40.629249903+00:00",
+  "last_synced_at": "2026-05-16T09:37:50.143804+00:00",
+  "hub_manifest_hash": "82ba37363dbb1b72eedab95517dd95d95305e0cfde2ea2fb0e21d62b7a031672",
+  "package_name": "yang2006-methadone-pkmodel-lab"
+}

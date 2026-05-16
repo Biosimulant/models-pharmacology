@@ -1,0 +1,120 @@
+schema_version: '2.0'
+title: Schropp2019 - Target-Mediated Drug Disposition Model for Bispecific Antibodies
+description: This model presents a general target-mediated drug disposition (TMDD)
+  model for bispecific antibodies (BsAbs), which bind to two different targets on
+  different cell membranes. It can be used to explore dose-response dynamics and compare
+  treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- pharmacokinetics
+- tmdd
+- biologics
+- immunology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Johannes Schropp
+- Antari Khot
+- Dhaval K Shah
+- Gilbert Koch
+upstream:
+  id: biomodels_ebi:BIOMD0000000788
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000788
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000788
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000788?filename=Schropp2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model:Schropp2019TargetMediatedDrugDispositionModBiomd0000000788Model
+  init_kwargs:
+    model_path: data/BIOMD0000000788.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_free_bispecific_antibody
+    maps_to: C_free
+    label: Initial Free Bispecific Antibody
+    description: initial free antibody concentration. Maps to SBML symbol `C_free`.
+  - name: initial_target_a_concentration
+    maps_to: R_A
+    label: Initial Target A Concentration
+    description: initial target A concentration. Maps to SBML symbol `R_A`.
+  - name: initial_target_b_concentration
+    maps_to: R_B
+    label: Initial Target B Concentration
+    description: initial target B concentration. Maps to SBML symbol `R_B`.
+  - name: target_a_association_rate
+    maps_to: k_on_1
+    label: Target A Association Rate
+    description: antibody-target A association rate. Maps to SBML symbol `k_on_1`.
+  - name: target_b_association_rate
+    maps_to: k_on_2
+    label: Target B Association Rate
+    description: antibody-target B association rate. Maps to SBML symbol `k_on_2`.
+  - name: central_elimination_rate
+    maps_to: k_el
+    label: Central Elimination Rate
+    description: central antibody elimination rate. Maps to SBML symbol `k_el`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: free_bispecific_antibody
+    maps_to: C_free
+    label: Free Bispecific Antibody
+    description: Free Bispecific Antibody. Maps to SBML symbol `C_free`.
+  - name: free_target_a
+    maps_to: R_A
+    label: Free Target A
+    description: Free Target A. Maps to SBML symbol `R_A`.
+  - name: free_target_b
+    maps_to: R_B
+    label: Free Target B
+    description: Free Target B. Maps to SBML symbol `R_B`.
+  - name: antibody_target_a_complex
+    maps_to: RC_A
+    label: Antibody Target A Complex
+    description: Antibody Target A Complex. Maps to SBML symbol `RC_A`.
+  - name: antibody_target_b_complex
+    maps_to: RC_B
+    label: Antibody Target B Complex
+    description: Antibody Target B Complex. Maps to SBML symbol `RC_B`.
+  - name: bispecific_bridge_complex
+    maps_to: RC_AB
+    label: Bispecific Bridge Complex
+    description: Bispecific Bridge Complex. Maps to SBML symbol `RC_AB`.
+  - name: peripheral_antibody
+    maps_to: AP
+    label: Peripheral Antibody
+    description: Peripheral Antibody. Maps to SBML symbol `AP`.
+  - name: depot_antibody
+    maps_to: AD
+    label: Depot Antibody
+    description: Depot Antibody. Maps to SBML symbol `AD`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

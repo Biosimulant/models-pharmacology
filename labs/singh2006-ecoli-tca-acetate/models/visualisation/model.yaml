@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Singh2006_TCA_Ecoli_acetate Visualisation
+description: Desktop visualisation for Singh2006_TCA_Ecoli_acetate.
+standard: other
+tags:
+- pharmacology
+- metabolism
+- microbiology
+- systems-biology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 0.5
+    lab_title: Singh2006_TCA_Ecoli_acetate
+    question: How does acetate-supported TCA activity evolve across core intermediates?
+    answer_focus: 'Initial-state controls: `aca` should be described conservatively
+      unless source paper confirms acetate versus acetyl-CoA naming.'
+    sources:
+    - alias: pharmacology_sbml_singh2006_tca_ecoli_acetate_biomd0000000221_model
+      title: Singh2006_TCA_Ecoli_acetate
+      visual_group: metabolism
+      observables:
+      - id: aca
+        port: acetate_or_acetyl_coa_pool
+        label: Acetate Or Acetyl Coa Pool
+        group: metabolism
+      - id: oaa
+        port: oxaloacetate_pool
+        label: Oxaloacetate Pool
+        group: metabolism
+      - id: coa
+        port: coa_pool
+        label: Coa Pool
+        group: metabolism
+      - id: cit
+        port: citrate_pool
+        label: Citrate Pool
+        group: metabolism
+      - id: icit
+        port: isocitrate_pool
+        label: Isocitrate Pool
+        group: metabolism
+      - id: akg
+        port: alpha_ketoglutarate_pool
+        label: Alpha Ketoglutarate Pool
+        group: metabolism
+      - id: sca
+        port: succinyl_coa_pool
+        label: Succinyl Coa Pool
+        group: metabolism
+      - id: suc
+        port: succinate_pool
+        label: Succinate Pool
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

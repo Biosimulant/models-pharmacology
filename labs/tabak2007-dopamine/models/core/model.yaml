@@ -1,0 +1,87 @@
+schema_version: '2.0'
+title: Tabak2007_dopamine
+description: The model is encoded according to the paper Low dose of dopamine may
+  stimulate prolactin secretion by increasing fast potassium currents Figure5 has
+  been reproduced by MathSBML. It can be used to explore dose-response dynamics and
+  compare treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- neuroscience
+- pharmacodynamics
+- signaling
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- "Jo\xEBl Tabak"
+- Natalia Toporikova
+- Marc E Freeman
+- Richard Bertram
+upstream:
+  id: biomodels_ebi:BIOMD0000000138
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000138
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000138
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000138?filename=BIOMD0000000138_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.tabak2007_dopamine_biomd0000000138_model:Tabak2007DopamineBiomd0000000138Model
+  init_kwargs:
+    model_path: data/BIOMD0000000138.xml
+    integration_step: 0.2
+  communication_step: 2.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_calcium_concentration
+    maps_to: c
+    label: Initial Calcium Concentration
+    description: initial calcium concentration. Maps to SBML symbol `c`.
+  - name: calcium_conductance
+    maps_to: gcal
+    label: Calcium Conductance
+    description: calcium conductance. Maps to SBML symbol `gcal`.
+  - name: potassium_conductance
+    maps_to: gk
+    label: Potassium Conductance
+    description: potassium conductance. Maps to SBML symbol `gk`.
+  - name: sk_conductance
+    maps_to: gsk
+    label: Sk Conductance
+    description: SK conductance. Maps to SBML symbol `gsk`.
+  - name: membrane_capacitance
+    maps_to: Cm
+    label: Membrane Capacitance
+    description: membrane capacitance. Maps to SBML symbol `Cm`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: calcium_concentration
+    maps_to: c
+    label: Calcium Concentration
+    description: Calcium Concentration. Maps to SBML symbol `c`.
+parameters:
+- name: integration_step
+  value: 0.2
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

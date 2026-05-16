@@ -1,0 +1,84 @@
+schema_version: '2.0'
+title: Walsh2014 - Inhibition kinetics of DAPT on APP Cleavage
+description: 'Walsh2014 - Inhibition kinetics of DAPT onAPP Cleavage This model is
+  described in the article: Are improper kinetic models hampering drug development?
+  It can be used to explore dose-response dynamics and compare treatment scenarios
+  across conditions.'
+standard: sbml
+tags:
+- pharmacology
+- neuroscience
+- enzyme-inhibition
+- amyloid
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Ryan Walsh
+upstream:
+  id: biomodels_ebi:BIOMD0000000617
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000617
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000617
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000617?filename=BIOMD0000000617_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model:Walsh2014InhibitionKineticsOfDaptOnAppCleBiomd0000000617Model
+  init_kwargs:
+    model_path: data/BIOMD0000000617.xml
+    integration_step: 0.2
+  communication_step: 2.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: dapt_inhibitor_concentration
+    maps_to: Ii
+    label: Dapt Inhibitor Concentration
+    description: inhibitor concentration. Maps to SBML symbol `Ii`.
+  - name: substrate_concentration
+    maps_to: S
+    label: Substrate Concentration
+    description: APP substrate concentration. Maps to SBML symbol `S`.
+  - name: cleavage_state
+    maps_to: v
+    label: Cleavage State
+    description: Initial setting for model cleavage state. Maps to SBML symbol `v`.
+  - name: cleavage_vmax_1
+    maps_to: V1
+    label: Cleavage VMAX 1
+    description: first cleavage Vmax. Maps to SBML symbol `V1`.
+  - name: cleavage_vmax_2
+    maps_to: V2
+    label: Cleavage VMAX 2
+    description: second cleavage Vmax. Maps to SBML symbol `V2`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: app_cleavage_state
+    maps_to: v
+    label: APP Cleavage State
+    description: APP Cleavage State. Maps to SBML symbol `v`.
+parameters:
+- name: integration_step
+  value: 0.2
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

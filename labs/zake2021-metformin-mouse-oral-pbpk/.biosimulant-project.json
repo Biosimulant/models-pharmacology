@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "12598840-585c-4a38-bf44-99949bd19d67",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "9dd755e9-83b6-4887-aa83-f8bba3919790",
+  "created_at": "2026-05-15T19:31:41.605885742+00:00",
+  "last_synced_at": "2026-05-16T09:40:59.970427+00:00",
+  "hub_manifest_hash": "285820b4c367d80f69fd72c7e1e32efab633bc050ca8aea3ec84265adceaf9dd",
+  "package_name": "zake2021-pbpk-model-of-metformin-in-mice-single-dose-peroral-lab"
+}

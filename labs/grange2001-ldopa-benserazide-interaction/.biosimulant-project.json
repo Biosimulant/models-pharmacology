@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "fcdd58f7-88d4-4ffb-ada3-ffcf7d722c6d",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "62ab7b86-b066-4f76-8238-61ed98cb4b4d",
+  "created_at": "2026-05-15T19:31:40.742675347+00:00",
+  "last_synced_at": "2026-05-16T09:12:50.477311+00:00",
+  "hub_manifest_hash": "ee3907a982cd40826aeb58fbc843151a83b64b3e8a7d25ded33f90b94998e435",
+  "package_name": "grange2001-pk-interaction-of-l-dopa-and-benserazide-lab"
+}

@@ -1,0 +1,98 @@
+schema_version: '2.0'
+title: Mager2005 - Quasi-equilibrium pharmacokinetic model for drugs exhibiting target-mediated
+  drug disposition
+description: This model was developed with the aim of constructing an equilibrium
+  model of the pharmacokinetic behaviour of a drug exhibiting target-mediated drug
+  disposition (TMDD). It can be used to explore dose-response dynamics and compare
+  treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- pharmacokinetics
+- tmdd
+- receptor-binding
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Donald E Mager
+- Wojciech Krzyzanski
+upstream:
+  id: biomodels_ebi:BIOMD0000000765
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000765
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000765
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000765?filename=Mager2005.xml
+  license: CC0
+biosim:
+  entrypoint: src.mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model:Mager2005QuasiEquilibriumPharmacokineticModeBiomd0000000765Model
+  init_kwargs:
+    model_path: data/BIOMD0000000765.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_free_drug_concentration
+    maps_to: C
+    label: Initial Free Drug Concentration
+    description: initial free drug concentration. Maps to SBML symbol `C`.
+  - name: initial_free_target_concentration
+    maps_to: R
+    label: Initial Free Target Concentration
+    description: initial free target concentration. Maps to SBML symbol `R`.
+  - name: target_binding_affinity_kd
+    maps_to: K_D
+    label: Target Binding Affinity Kd
+    description: binding dissociation constant. Maps to SBML symbol `K_D`.
+  - name: drug_elimination_rate
+    maps_to: k_el
+    label: Drug Elimination Rate
+    description: drug elimination rate. Maps to SBML symbol `k_el`.
+  - name: complex_internalization_rate
+    maps_to: k_int
+    label: Complex Internalization Rate
+    description: drug-target complex internalization rate. Maps to SBML symbol `k_int`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: free_drug_concentration
+    maps_to: C
+    label: Free Drug Concentration
+    description: Free Drug Concentration. Maps to SBML symbol `C`.
+  - name: total_target_amount
+    maps_to: A_T
+    label: Total Target Amount
+    description: Total Target Amount. Maps to SBML symbol `A_T`.
+  - name: free_target_concentration
+    maps_to: R
+    label: Free Target Concentration
+    description: Free Target Concentration. Maps to SBML symbol `R`.
+  - name: drug_target_complex
+    maps_to: RC
+    label: Drug Target Complex
+    description: Drug Target Complex. Maps to SBML symbol `RC`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

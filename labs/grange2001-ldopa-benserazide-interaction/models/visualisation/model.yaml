@@ -1,0 +1,64 @@
+schema_version: '2.0'
+title: Grange2001 - PK interaction of L-dopa and benserazide Visualisation
+description: Desktop visualisation for Grange2001 - PK interaction of L-dopa and benserazide.
+standard: other
+tags:
+- pharmacology
+- pharmacokinetics
+- drug-interaction
+- neuroscience
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Grange2001 - PK interaction of L-dopa and benserazide
+    question: How does benserazide coadministration alter L-DOPA exposure and metabolite
+      formation?
+    answer_focus: metabolite labels should stay conservative where source names are
+      abbreviated.
+    sources:
+    - alias: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model
+      title: Grange2001 - PK interaction of L-dopa and benserazide
+      visual_group: pk
+      observables:
+      - id: A_dopa
+        port: l_dopa_amount
+        label: L Dopa Amount
+        group: pk
+      - id: C_dopa
+        port: l_dopa_concentration
+        label: L Dopa Concentration
+        group: pk
+      - id: A_B
+        port: benserazide_amount
+        label: Benserazide Amount
+        group: pk
+      - id: A_M
+        port: metabolite_amount
+        label: Metabolite Amount
+        group: pk
+      - id: C_OMD
+        port: three_omd_concentration
+        label: Three Omd Concentration
+        group: pk
+      - id: C1_M
+        port: metabolite_compartment_1_concentration
+        label: Metabolite Compartment 1 Concentration
+        group: pk
+      - id: C1_B
+        port: benserazide_compartment_1_concentration
+        label: Benserazide Compartment 1 Concentration
+        group: pk
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

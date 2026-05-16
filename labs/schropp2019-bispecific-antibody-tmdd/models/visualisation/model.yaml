@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Schropp2019 - Target-Mediated Drug Disposition Model for Bispecific Antibodies
+  Visualisation
+description: Desktop visualisation for Schropp2019 - Target-Mediated Drug Disposition
+  Model for Bispecific Antibodies.
+standard: other
+tags:
+- pharmacology
+- pharmacokinetics
+- tmdd
+- biologics
+- immunology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Schropp2019 - Target-Mediated Drug Disposition Model for Bispecific
+      Antibodies
+    question: Does bispecific target engagement shape antibody disposition?
+    answer_focus: target A/B are source abstractions; do not name biological targets
+      without paper metadata.
+    sources:
+    - alias: pharmacology_sbml_schropp2019_target_mediated_drug_disposition_mod_biomd0000000788_model
+      title: Schropp2019 - Target-Mediated Drug Disposition Model for Bispecific Antibodies
+      visual_group: binding
+      observables:
+      - id: C_free
+        port: free_bispecific_antibody
+        label: Free Bispecific Antibody
+        group: binding
+      - id: R_A
+        port: free_target_a
+        label: Free Target A
+        group: binding
+      - id: R_B
+        port: free_target_b
+        label: Free Target B
+        group: binding
+      - id: RC_A
+        port: antibody_target_a_complex
+        label: Antibody Target A Complex
+        group: binding
+      - id: RC_B
+        port: antibody_target_b_complex
+        label: Antibody Target B Complex
+        group: binding
+      - id: RC_AB
+        port: bispecific_bridge_complex
+        label: Bispecific Bridge Complex
+        group: binding
+      - id: AP
+        port: peripheral_antibody
+        label: Peripheral Antibody
+        group: binding
+      - id: AD
+        port: depot_antibody
+        label: Depot Antibody
+        group: binding
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

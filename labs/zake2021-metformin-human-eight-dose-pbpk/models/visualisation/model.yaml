@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: Zake2021 - PBPK model of metformin in humans, eight PO administrations with
+  12h interval Visualisation
+description: Desktop visualisation for Zake2021 - PBPK model of metformin in humans,
+  eight PO administrations with 12h interval.
+standard: other
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- endocrine
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Zake2021 - PBPK model of metformin in humans, eight PO administrations
+      with 12h interval
+    question: Does repeated 12-hour metformin dosing accumulate across plasma, liver,
+      and kidney compartments?
+    answer_focus: schedule timing is encoded by the source model; do not expose interval
+      unless it is a source parameter.
+    sources:
+    - alias: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_eight_biomd0000001029_model
+      title: Zake2021 - PBPK model of metformin in humans, eight PO administrations
+        with 12h interval
+      visual_group: physiology
+      observables:
+      - id: mKidneyPlasma
+        port: kidney_plasma_metformin
+        label: Kidney Plasma Metformin
+        group: physiology
+      - id: mLiver
+        port: liver_metformin
+        label: Liver Metformin
+        group: physiology
+      - id: mPlasmaVenous
+        port: venous_plasma_metformin
+        label: Venous Plasma Metformin
+        group: physiology
+      - id: mPlasmaArterial
+        port: arterial_plasma_metformin
+        label: Arterial Plasma Metformin
+        group: physiology
+      - id: mKidneyTissue
+        port: kidney_tissue_metformin
+        label: Kidney Tissue Metformin
+        group: physiology
+      - id: mKidneyTubular
+        port: kidney_tubular_metformin
+        label: Kidney Tubular Metformin
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

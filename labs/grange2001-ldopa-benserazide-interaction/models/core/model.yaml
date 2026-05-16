@@ -1,0 +1,106 @@
+schema_version: '2.0'
+title: Grange2001 - PK interaction of L-dopa and benserazide
+description: Grange2001 - PK interaction of L-dopa and benserazide A pharmacokinetics
+  of L-dopa in rats after administration of L-dopa alone (BIOMD0000000321) or L-dopa
+  combined with a peripheral AADC (amino-acid-. It can be used to explore dose-response
+  dynamics and compare treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- pharmacokinetics
+- drug-interaction
+- neuroscience
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- S Grange
+- N H Holford
+- T W Guentert
+upstream:
+  id: biomodels_ebi:BIOMD0000000320
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000320
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000320
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000320?filename=BIOMD0000000320_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model:Grange2001PkInteractionOfLDopaAndBenserazBiomd0000000320Model
+  init_kwargs:
+    model_path: data/BIOMD0000000320.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: l_dopa_dose_per_kg_rat
+    maps_to: L_Dopa_per_kg_rat
+    label: L Dopa Dose Per Kg Rat
+    description: L-DOPA dose per kg rat. Maps to SBML symbol `L_Dopa_per_kg_rat`.
+  - name: benserazide_dose_per_kg_rat
+    maps_to: Benserazide_per_kg_rat
+    label: Benserazide Dose Per Kg Rat
+    description: benserazide dose per kg rat. Maps to SBML symbol `Benserazide_per_kg_rat`.
+  - name: l_dopa_clearance_rate
+    maps_to: CL_dopa0
+    label: L Dopa Clearance Rate
+    description: baseline L-DOPA clearance rate. Maps to SBML symbol `CL_dopa0`.
+  - name: benserazide_clearance_rate
+    maps_to: CL_B
+    label: Benserazide Clearance Rate
+    description: benserazide clearance rate. Maps to SBML symbol `CL_B`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: l_dopa_amount
+    maps_to: A_dopa
+    label: L Dopa Amount
+    description: L Dopa Amount. Maps to SBML symbol `A_dopa`.
+  - name: l_dopa_concentration
+    maps_to: C_dopa
+    label: L Dopa Concentration
+    description: L Dopa Concentration. Maps to SBML symbol `C_dopa`.
+  - name: benserazide_amount
+    maps_to: A_B
+    label: Benserazide Amount
+    description: Benserazide Amount. Maps to SBML symbol `A_B`.
+  - name: metabolite_amount
+    maps_to: A_M
+    label: Metabolite Amount
+    description: Metabolite Amount. Maps to SBML symbol `A_M`.
+  - name: three_omd_concentration
+    maps_to: C_OMD
+    label: Three Omd Concentration
+    description: Three Omd Concentration. Maps to SBML symbol `C_OMD`.
+  - name: metabolite_compartment_1_concentration
+    maps_to: C1_M
+    label: Metabolite Compartment 1 Concentration
+    description: Metabolite Compartment 1 Concentration. Maps to SBML symbol `C1_M`.
+  - name: benserazide_compartment_1_concentration
+    maps_to: C1_B
+    label: Benserazide Compartment 1 Concentration
+    description: Benserazide Compartment 1 Concentration. Maps to SBML symbol `C1_B`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

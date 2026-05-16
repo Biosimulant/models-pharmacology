@@ -1,0 +1,105 @@
+schema_version: '2.0'
+title: Caldwell2019 - The Vicodin abuse problem
+description: This is a mathematical model of Vicodin use and abuse used to investigate
+  methods of combating Vicodin abuse in a population of patients who have obtained
+  the drug through prescription. It can be used to explore dose-response dynamics
+  and compare treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- systems-biology
+- addiction
+- public-health
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Wendy K Caldwell
+- Benjamin Freedman
+- Luke Settles
+- Michael M Thomas
+- Erika T Camacho
+upstream:
+  id: biomodels_ebi:BIOMD0000000840
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000840
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000840
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000840?filename=Caldwell2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model:Caldwell2019TheVicodinAbuseProblemBiomd0000000840Model
+  init_kwargs:
+    model_path: data/BIOMD0000000840.xml
+    integration_step: 0.05
+  communication_step: 0.5
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_medical_vicodin_population
+    maps_to: M
+    label: Initial Medical Vicodin Population
+    description: initial medically prescribed Vicodin-use population. Maps to SBML
+      symbol `M`.
+  - name: initial_early_chronic_vicodin_population
+    maps_to: C1
+    label: Initial Early Chronic Vicodin Population
+    description: initial early chronic-use population. Maps to SBML symbol `C1`.
+  - name: initial_late_chronic_vicodin_population
+    maps_to: C2
+    label: Initial Late Chronic Vicodin Population
+    description: initial late chronic-use population. Maps to SBML symbol `C2`.
+  - name: initial_vicodin_abuse_population
+    maps_to: A
+    label: Initial Vicodin Abuse Population
+    description: initial abuse population. Maps to SBML symbol `A`.
+  - name: initial_vicodin_treatment_population
+    maps_to: T
+    label: Initial Vicodin Treatment Population
+    description: initial treatment population. Maps to SBML symbol `T`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: medical_vicodin_population
+    maps_to: M
+    label: Medical Vicodin Population
+    description: Medical Vicodin Population. Maps to SBML symbol `M`.
+  - name: early_chronic_vicodin_population
+    maps_to: C1
+    label: Early Chronic Vicodin Population
+    description: Early Chronic Vicodin Population. Maps to SBML symbol `C1`.
+  - name: late_chronic_vicodin_population
+    maps_to: C2
+    label: Late Chronic Vicodin Population
+    description: Late Chronic Vicodin Population. Maps to SBML symbol `C2`.
+  - name: vicodin_abuse_population
+    maps_to: A
+    label: Vicodin Abuse Population
+    description: Vicodin Abuse Population. Maps to SBML symbol `A`.
+  - name: vicodin_treatment_population
+    maps_to: T
+    label: Vicodin Treatment Population
+    description: Vicodin Treatment Population. Maps to SBML symbol `T`.
+parameters:
+- name: integration_step
+  value: 0.05
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

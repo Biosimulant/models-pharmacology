@@ -1,0 +1,103 @@
+schema_version: '2.0'
+title: KaratzaKaralis2020 - CYP mediated losartan metabolism
+description: A four-compartment pharmacokinetic model that describes the disposition
+  of losartan and E-3174 (Karatza and Karalis, 2020). The main objective of this model
+  is to describe the secondary maxima observe.
+standard: sbml
+tags:
+- pharmacology
+- metabolism
+- cyp-metabolism
+- pharmacokinetics
+- cardiovascular
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Eleni Karatza
+- Vangelis Karalis
+upstream:
+  id: biomodels_ebi:MODEL2412180001
+  source_db: biomodels_ebi
+  source_id: MODEL2412180001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2412180001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2412180001?filename=KaratzaKaralis2020
+    - CYP mediated losartan metabolism.xml
+  license: CC0
+biosim:
+  entrypoint: src.karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model:Karatzakaralis2020CypMediatedLosartanMetabolModel2412180001Model
+  init_kwargs:
+    model_path: data/MODEL2412180001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: losartan_oral_dose
+    maps_to: oral_dose
+    label: Losartan Oral Dose
+    description: losartan oral dose parameter. Maps to SBML symbol `oral_dose`.
+  - name: cyp2c9_metabolism_start_time
+    maps_to: start_CYP2C9
+    label: CYP2C9 Metabolism Start Time
+    description: start time for CYP2C9-mediated metabolism. Maps to SBML symbol `start_CYP2C9`.
+  - name: initial_losartan_stomach
+    maps_to: losartan_stm
+    label: Initial Losartan Stomach
+    description: initial stomach losartan state, if dose parameter alone does not
+      drive the simulator. Maps to SBML symbol `losartan_stm`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: losartan_cellular_compartment
+    maps_to: losartan_cc
+    label: Losartan Cellular Compartment
+    description: Losartan Cellular Compartment. Maps to SBML symbol `losartan_cc`.
+  - name: losartan_intracellular
+    maps_to: losartan_int
+    label: Losartan Intracellular
+    description: Losartan Intracellular. Maps to SBML symbol `losartan_int`.
+  - name: losartan_outflow
+    maps_to: losartan_out
+    label: Losartan Outflow
+    description: Losartan Outflow. Maps to SBML symbol `losartan_out`.
+  - name: losartan_portal_compartment
+    maps_to: losartan_pc
+    label: Losartan Portal Compartment
+    description: Losartan Portal Compartment. Maps to SBML symbol `losartan_pc`.
+  - name: losartan_stomach
+    maps_to: losartan_stm
+    label: Losartan Stomach
+    description: Losartan Stomach. Maps to SBML symbol `losartan_stm`.
+  - name: e3174_outflow
+    maps_to: E3174_out
+    label: E3174 Outflow
+    description: E3174 Outflow. Maps to SBML symbol `E3174_out`.
+  - name: e3174_cellular_compartment
+    maps_to: E3174_cc
+    label: E3174 Cellular Compartment
+    description: E3174 Cellular Compartment. Maps to SBML symbol `E3174_cc`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

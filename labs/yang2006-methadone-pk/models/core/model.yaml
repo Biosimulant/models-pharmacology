@@ -1,0 +1,88 @@
+schema_version: '2.0'
+title: Yang2006_Methadone_PKmodel
+description: 'This a model from the article: Population-based analysis of methadone
+  distribution and metabolism using anage-dependent physiologically based pharmacokinetic
+  model. It can be used to explore dose-response dynamics and compare treatment scenarios
+  across conditions.'
+standard: sbml
+tags:
+- pharmacology
+- pharmacokinetics
+- opioid
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Feng Yang
+- Xianping Tong
+- D Gail McCarver
+- Ronald N Hines
+- Daniel A Beard
+upstream:
+  id: biomodels_ebi:MODEL1006230040
+  source_db: biomodels_ebi
+  source_id: MODEL1006230040
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1006230040
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1006230040?filename=MODEL1006230040_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.yang2006_methadone_pkmodel_model1006230040_model:Yang2006MethadonePkmodelModel1006230040Model
+  init_kwargs:
+    model_path: data/MODEL1006230040.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_methadone_absorption_state
+    maps_to: Ca
+    label: Initial Methadone Absorption State
+    description: initial absorption/central source state Ca. Maps to SBML symbol `Ca`.
+  - name: initial_methadone_concentration
+    maps_to: C
+    label: Initial Methadone Concentration
+    description: initial methadone concentration/state C. Maps to SBML symbol `C`.
+  - name: metabolism_vmax
+    maps_to: Vmax
+    label: Metabolism VMAX
+    description: saturable metabolism Vmax. Maps to SBML symbol `Vmax`.
+  - name: metabolism_km
+    maps_to: Km
+    label: Metabolism KM
+    description: saturable metabolism Km. Maps to SBML symbol `Km`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: methadone_absorption_state
+    maps_to: Ca
+    label: Methadone Absorption State
+    description: Methadone Absorption State. Maps to SBML symbol `Ca`.
+  - name: methadone_concentration
+    maps_to: C
+    label: Methadone Concentration
+    description: Methadone Concentration. Maps to SBML symbol `C`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

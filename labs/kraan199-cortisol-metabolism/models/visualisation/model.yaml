@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Kraan199_Kinetics of Cortisol Metabolism and Excretion. Visualisation
+description: Desktop visualisation for Kraan199_Kinetics of Cortisol Metabolism and
+  Excretion..
+standard: other
+tags:
+- pharmacology
+- pharmacokinetics
+- endocrine
+- metabolism
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Kraan199_Kinetics of Cortisol Metabolism and Excretion.
+    question: How is cortisol redistributed between circulation, tissues, gut, and
+      excretion pools?
+    answer_focus: 'Initial-state controls: `FOD` wording comes from the source model;
+      public labels should explain but not overinterpret it.'
+    sources:
+    - alias: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model
+      title: Kraan199_Kinetics of Cortisol Metabolism and Excretion.
+      visual_group: metabolism
+      observables:
+      - id: The_FOD_in_the_circulation__X1
+        port: circulating_cortisol
+        label: Circulating Cortisol
+        group: metabolism
+      - id: The_FOD_in_the_metabolizing_tissues__X4
+        port: metabolizing_tissue_cortisol
+        label: Metabolizing Tissue Cortisol
+        group: metabolism
+      - id: The_cumulative_FOD_excreted_in_the_urine__X2
+        port: urinary_excreted_cortisol
+        label: Urinary Excreted Cortisol
+        group: metabolism
+      - id: The_cumulative_FOD_excreted_in_the_non_urinary_pool__X3
+        port: non_urinary_excreted_cortisol
+        label: Non Urinary Excreted Cortisol
+        group: metabolism
+      - id: The_FOD_in_the_gallbladder___intestinal_lumen__X5
+        port: gallbladder_intestinal_cortisol
+        label: Gallbladder Intestinal Cortisol
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

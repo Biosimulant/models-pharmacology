@@ -1,0 +1,111 @@
+schema_version: '2.0'
+title: Sluka2016 - Acetaminophen PBPK
+description: Basic PBPK (Physiologically Based PharmacoKinetic) model of Acetaminophen.
+  This is a basic model of Acetaminophen (APAP, Paracetamol) pharmacokinetics in humans.
+standard: sbml
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- toxicology
+- liver
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- James P Sluka
+- Xiao Fu
+- Maciej Swat
+- Julio M Belmonte
+- Alin Cosmanescu
+upstream:
+  id: biomodels_ebi:BIOMD0000000619
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000619
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000619
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000619?filename=BIOMD0000000619_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.sluka2016_acetaminophen_pbpk_biomd0000000619_model:Sluka2016AcetaminophenPbpkBiomd0000000619Model
+  init_kwargs:
+    model_path: data/BIOMD0000000619.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: acetaminophen_dose_grams
+    maps_to: APAP_Dose_grams
+    label: Acetaminophen Dose Grams
+    description: acetaminophen dose in grams. Maps to SBML symbol `APAP_Dose_grams`.
+  - name: initial_gut_lumen_acetaminophen
+    maps_to: AGutlumen
+    label: Initial Gut Lumen Acetaminophen
+    description: initial gut-lumen amount. Maps to SBML symbol `AGutlumen`.
+  - name: initial_liver_acetaminophen_concentration
+    maps_to: CLiver
+    label: Initial Liver Acetaminophen Concentration
+    description: initial liver concentration. Maps to SBML symbol `CLiver`.
+  - name: initial_metabolized_acetaminophen
+    maps_to: CMetabolized
+    label: Initial Metabolized Acetaminophen
+    description: initial metabolized pool. Maps to SBML symbol `CMetabolized`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: liver_acetaminophen_concentration
+    maps_to: CLiver
+    label: Liver Acetaminophen Concentration
+    description: Liver Acetaminophen Concentration. Maps to SBML symbol `CLiver`.
+  - name: arterial_acetaminophen_concentration
+    maps_to: CArt
+    label: Arterial Acetaminophen Concentration
+    description: Arterial Acetaminophen Concentration. Maps to SBML symbol `CArt`.
+  - name: gut_acetaminophen_concentration
+    maps_to: CGut
+    label: Gut Acetaminophen Concentration
+    description: Gut Acetaminophen Concentration. Maps to SBML symbol `CGut`.
+  - name: gut_lumen_acetaminophen_amount
+    maps_to: AGutlumen
+    label: Gut Lumen Acetaminophen Amount
+    description: Gut Lumen Acetaminophen Amount. Maps to SBML symbol `AGutlumen`.
+  - name: lung_acetaminophen_concentration
+    maps_to: CLung
+    label: Lung Acetaminophen Concentration
+    description: Lung Acetaminophen Concentration. Maps to SBML symbol `CLung`.
+  - name: venous_acetaminophen_concentration
+    maps_to: CVen
+    label: Venous Acetaminophen Concentration
+    description: Venous Acetaminophen Concentration. Maps to SBML symbol `CVen`.
+  - name: rest_body_acetaminophen_concentration
+    maps_to: CRest
+    label: Rest Body Acetaminophen Concentration
+    description: Rest Body Acetaminophen Concentration. Maps to SBML symbol `CRest`.
+  - name: metabolized_acetaminophen_concentration
+    maps_to: CMetabolized
+    label: Metabolized Acetaminophen Concentration
+    description: Metabolized Acetaminophen Concentration. Maps to SBML symbol `CMetabolized`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

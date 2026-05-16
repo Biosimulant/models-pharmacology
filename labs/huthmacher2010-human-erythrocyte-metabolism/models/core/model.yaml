@@ -1,0 +1,106 @@
+schema_version: '2.0'
+title: Huthmacher2010_HumanErythrocyte_MetabolicNetwork
+description: "This model is from the article: Antimalarial drug targets in Plasmodium\
+  \ falciparum predicted by stage-specific metabolic network analysis. Huthmacher\
+  \ C, Hoppe A, Bulik S, Holzh\xFCtter HG."
+standard: sbml
+tags:
+- pharmacology
+- metabolism
+- systems-biology
+- hematology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Carola Huthmacher
+- Andreas Hoppe
+- Sascha Bulik
+- "Hermann-Georg Holzh\xFCtter"
+upstream:
+  id: biomodels_ebi:MODEL1111240001
+  source_db: biomodels_ebi
+  source_id: MODEL1111240001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1111240001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1111240001?filename=MODEL1111240001_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model:Huthmacher2010HumanerythrocyteMetabolicnetworkModel1111240001Model
+  init_kwargs:
+    model_path: data/MODEL1111240001.xml
+    integration_step: 0.05
+  communication_step: 0.5
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_erythrocyte_atp
+    maps_to: C00002_c_host
+    label: Initial Erythrocyte ATP
+    description: ATP pool. Maps to SBML symbol `C00002_c_host`.
+  - name: initial_erythrocyte_nad
+    maps_to: C00003_c_host
+    label: Initial Erythrocyte NAD
+    description: NAD pool. Maps to SBML symbol `C00003_c_host`.
+  - name: initial_erythrocyte_nadh
+    maps_to: C00004_c_host
+    label: Initial Erythrocyte NADH
+    description: NADH pool. Maps to SBML symbol `C00004_c_host`.
+  - name: initial_pyruvate
+    maps_to: C00022_c_host
+    label: Initial Pyruvate
+    description: pyruvate pool. Maps to SBML symbol `C00022_c_host`.
+  - name: initial_glucose_1_phosphate
+    maps_to: C00103_c_host
+    label: Initial Glucose 1 Phosphate
+    description: glucose-1-phosphate pool. Maps to SBML symbol `C00103_c_host`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: erythrocyte_atp
+    maps_to: C00002_c_host
+    label: Erythrocyte ATP
+    description: Erythrocyte ATP. Maps to SBML symbol `C00002_c_host`.
+  - name: erythrocyte_nad
+    maps_to: C00003_c_host
+    label: Erythrocyte NAD
+    description: Erythrocyte NAD. Maps to SBML symbol `C00003_c_host`.
+  - name: erythrocyte_nadh
+    maps_to: C00004_c_host
+    label: Erythrocyte NADH
+    description: Erythrocyte NADH. Maps to SBML symbol `C00004_c_host`.
+  - name: pyruvate
+    maps_to: C00022_c_host
+    label: Pyruvate
+    description: Pyruvate. Maps to SBML symbol `C00022_c_host`.
+  - name: glucose_1_phosphate
+    maps_to: C00103_c_host
+    label: Glucose 1 Phosphate
+    description: Glucose 1 Phosphate. Maps to SBML symbol `C00103_c_host`.
+  - name: datp
+    maps_to: C00131_c_host
+    label: Datp
+    description: Datp. Maps to SBML symbol `C00131_c_host`.
+parameters:
+- name: integration_step
+  value: 0.05
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f3a10c61-9184-47f6-afef-bee6f7c76773",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "8f9cfb06-74d1-406d-902e-61ca1e798672",
+  "created_at": "2026-05-15T19:31:40.273483855+00:00",
+  "last_synced_at": "2026-05-16T09:20:07.981912+00:00",
+  "hub_manifest_hash": "ca7b954a61f65a8bb0b80af823fadb765b9a01e9c8a8596657751a855f293a25",
+  "package_name": "koschorreck2008-insulinclearance-lab"
+}

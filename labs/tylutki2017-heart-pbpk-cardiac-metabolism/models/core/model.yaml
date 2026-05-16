@@ -1,0 +1,117 @@
+schema_version: '2.0'
+title: Tylutki2017-four-compartment PBPK heart model accounting for cardiac metabolism
+description: In the field of cardiac drug efficacy and safety assessment, information
+  on drug concentration in heart tissue is desirable. Because measuring drug concentrations
+  in human cardiac tissue is challengin.
+standard: sbml
+tags:
+- pharmacology
+- pbpk
+- cardiovascular
+- metabolism
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Zofia Tylutki
+- Sebastian Polak
+upstream:
+  id: biomodels_ebi:MODEL2003190003
+  source_db: biomodels_ebi
+  source_id: MODEL2003190003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003190003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003190003?filename=Tylutki2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model:Tylutki2017FourCompartmentPbpkHeartModelAcModel2003190003Model
+  init_kwargs:
+    model_path: data/MODEL2003190003.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: drug_dose
+    maps_to: D
+    label: Drug Dose
+    description: Initial setting for source dose state. Maps to SBML symbol `D`.
+  - name: fraction_absorbed
+    maps_to: F_abs
+    label: Fraction Absorbed
+    description: absorption fraction. Maps to SBML symbol `F_abs`.
+  - name: absorption_rate
+    maps_to: k_a
+    label: Absorption Rate
+    description: absorption rate. Maps to SBML symbol `k_a`.
+  - name: renal_clearance
+    maps_to: CL_renal
+    label: Renal Clearance
+    description: renal clearance. Maps to SBML symbol `CL_renal`.
+  - name: cyp2c9_expression
+    maps_to: CYP2C9
+    label: CYP2C9 Expression
+    description: CYP2C9 expression/activity amount. Maps to SBML symbol `CYP2C9`.
+  - name: cyp2c8_expression
+    maps_to: CYP2C8
+    label: CYP2C8 Expression
+    description: CYP2C8 expression/activity amount. Maps to SBML symbol `CYP2C8`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: adipose_drug_amount
+    maps_to: A_ad
+    label: Adipose Drug Amount
+    description: Adipose Drug Amount. Maps to SBML symbol `A_ad`.
+  - name: bone_drug_amount
+    maps_to: A_bo
+    label: Bone Drug Amount
+    description: Bone Drug Amount. Maps to SBML symbol `A_bo`.
+  - name: brain_drug_amount
+    maps_to: A_br
+    label: Brain Drug Amount
+    description: Brain Drug Amount. Maps to SBML symbol `A_br`.
+  - name: gut_drug_amount
+    maps_to: A_gu
+    label: Gut Drug Amount
+    description: Gut Drug Amount. Maps to SBML symbol `A_gu`.
+  - name: epicardium_drug_amount
+    maps_to: A_epi
+    label: Epicardium Drug Amount
+    description: Epicardium Drug Amount. Maps to SBML symbol `A_epi`.
+  - name: myocardium_drug_amount
+    maps_to: A_mid
+    label: Myocardium Drug Amount
+    description: Myocardium Drug Amount. Maps to SBML symbol `A_mid`.
+  - name: endocardium_drug_amount
+    maps_to: A_endo
+    label: Endocardium Drug Amount
+    description: Endocardium Drug Amount. Maps to SBML symbol `A_endo`.
+  - name: perfusate_drug_amount
+    maps_to: A_pf
+    label: Perfusate Drug Amount
+    description: Perfusate Drug Amount. Maps to SBML symbol `A_pf`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

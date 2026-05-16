@@ -1,0 +1,114 @@
+schema_version: '2.0'
+title: Elias2025 - Physiologically based pharmacokinetics (PBPK) model glimepiride
+description: Pharmacology Elias2025Physiologically Based Pharmacokinetics Model2510140001Model
+  models core biological dynamics as a OTHER simulation curated from biomodels_ebi
+  (biomodels_ebi:MODEL2510140001), focused on pha. When you run it, you can track
+  state over time and compare response patterns across parameter settings.
+standard: sbml
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- physiology
+- endocrine
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Michelle Elias
+- "Matthias K\xF6nig"
+upstream:
+  id: biomodels_ebi:MODEL2510140001
+  source_db: biomodels_ebi
+  source_id: MODEL2510140001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2510140001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2510140001?filename=glimepiride_body_flat.xml
+  license: CC0
+biosim:
+  entrypoint: src.elias2025_physiologically_based_pharmacokinetics_model2510140001_model:Elias2025PhysiologicallyBasedPharmacokineticsModel2510140001Model
+  init_kwargs:
+    model_path: data/MODEL2510140001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: oral_glimepiride_dose_mg
+    maps_to: PODOSE_gli
+    label: Oral Glimepiride Dose Mg
+    description: oral glimepiride dose. Maps to SBML symbol `PODOSE_gli`.
+  - name: iv_glimepiride_bolus_mg
+    maps_to: IVDOSE_gli
+    label: IV Glimepiride Bolus Mg
+    description: IV glimepiride bolus dose. Maps to SBML symbol `IVDOSE_gli`.
+  - name: glimepiride_infusion_rate_mg_per_min
+    maps_to: Ri_gli
+    label: Glimepiride Infusion Rate Mg Per Min
+    description: glimepiride infusion rate. Maps to SBML symbol `Ri_gli`.
+  - name: cyp2c9_activity_scale
+    maps_to: LI__f_cyp2c9
+    label: CYP2C9 Activity Scale
+    description: CYP2C9 activity scaling factor. Maps to SBML symbol `LI__f_cyp2c9`.
+  - name: intestinal_absorption_scale
+    maps_to: GU__f_absorption
+    label: Intestinal Absorption Scale
+    description: gut absorption-rate scaling factor. Maps to SBML symbol `GU__f_absorption`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: glimepiride_liver_plasma
+    maps_to: Cli_plasma_gli
+    label: Glimepiride Liver Plasma
+    description: Glimepiride Liver Plasma. Maps to SBML symbol `Cli_plasma_gli`.
+  - name: glimepiride_arterial_plasma
+    maps_to: Car_gli
+    label: Glimepiride Arterial Plasma
+    description: Glimepiride Arterial Plasma. Maps to SBML symbol `Car_gli`.
+  - name: glimepiride_venous_plasma
+    maps_to: Cve_gli
+    label: Glimepiride Venous Plasma
+    description: Glimepiride Venous Plasma. Maps to SBML symbol `Cve_gli`.
+  - name: glimepiride_kidney_plasma
+    maps_to: Cki_plasma_gli
+    label: Glimepiride Kidney Plasma
+    description: Glimepiride Kidney Plasma. Maps to SBML symbol `Cki_plasma_gli`.
+  - name: glimepiride_gut_plasma
+    maps_to: Cgu_plasma_gli
+    label: Glimepiride Gut Plasma
+    description: Glimepiride Gut Plasma. Maps to SBML symbol `Cgu_plasma_gli`.
+  - name: m1_liver_plasma
+    maps_to: Cli_plasma_m1
+    label: M1 Liver Plasma
+    description: M1 Liver Plasma. Maps to SBML symbol `Cli_plasma_m1`.
+  - name: m1_arterial_plasma
+    maps_to: Car_m1
+    label: M1 Arterial Plasma
+    description: M1 Arterial Plasma. Maps to SBML symbol `Car_m1`.
+  - name: m1_venous_plasma
+    maps_to: Cve_m1
+    label: M1 Venous Plasma
+    description: M1 Venous Plasma. Maps to SBML symbol `Cve_m1`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

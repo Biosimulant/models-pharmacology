@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Huthmacher2010_HumanErythrocyte_MetabolicNetwork Visualisation
+description: Desktop visualisation for Huthmacher2010_HumanErythrocyte_MetabolicNetwork.
+standard: other
+tags:
+- pharmacology
+- metabolism
+- systems-biology
+- hematology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 0.5
+    lab_title: Huthmacher2010_HumanErythrocyte_MetabolicNetwork
+    question: Which erythrocyte metabolic pools are most perturbed from the selected
+      initial state?
+    answer_focus: 'Initial-state controls: no drug intervention is identified; controls
+      are metabolic initial-state probes.'
+    sources:
+    - alias: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model
+      title: Huthmacher2010_HumanErythrocyte_MetabolicNetwork
+      visual_group: metabolism
+      observables:
+      - id: C00002_c_host
+        port: erythrocyte_atp
+        label: Erythrocyte ATP
+        group: metabolism
+      - id: C00003_c_host
+        port: erythrocyte_nad
+        label: Erythrocyte NAD
+        group: metabolism
+      - id: C00004_c_host
+        port: erythrocyte_nadh
+        label: Erythrocyte NADH
+        group: metabolism
+      - id: C00022_c_host
+        port: pyruvate
+        label: Pyruvate
+        group: metabolism
+      - id: C00103_c_host
+        port: glucose_1_phosphate
+        label: Glucose 1 Phosphate
+        group: metabolism
+      - id: C00131_c_host
+        port: datp
+        label: Datp
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

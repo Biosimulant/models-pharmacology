@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Grange2001 - L Dopa PK model Lab
+description: 'Grange2001 - L-dopa PK model A pharmacokinetics of L-dopa in rats after
+  administration of L-dopa alone (this model: BIOMD0000000321) or L-dopa combined
+  with a peripheral AADC (amino-acid-decarboxylase. It can be used to explore dose-response
+  dynamics and compare treatment scenarios across conditions.'
+models:
+- alias: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000321.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.state
+  to:
+  - visualisation.pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model_state
+- from: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.summary
+  to:
+  - visualisation.pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model_summary
+- from: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pharmacokinetics
+- neuroscience
+- pbpk
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: l_dopa_dose_per_kg_rat
+    maps_to: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.l_dopa_dose_per_kg_rat
+    label: L Dopa Dose Per Kg Rat
+  - name: l_dopa_clearance_rate
+    maps_to: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.l_dopa_clearance_rate
+    label: L Dopa Clearance Rate
+  - name: omd_clearance_rate
+    maps_to: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.omd_clearance_rate
+    label: Omd Clearance Rate
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.species_labels
+    label: Observable labels
+  - name: l_dopa_amount
+    maps_to: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.l_dopa_amount
+    label: L Dopa Amount
+  - name: l_dopa_concentration
+    maps_to: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.l_dopa_concentration
+    label: L Dopa Concentration
+  - name: three_omd_concentration
+    maps_to: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model.three_omd_concentration
+    label: Three Omd Concentration

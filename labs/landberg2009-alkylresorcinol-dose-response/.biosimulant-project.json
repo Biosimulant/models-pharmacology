@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "75bd9d47-77ce-4f98-becd-62d586cd4aed",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "fe60a87e-5d4c-49f9-b294-5adf12c5f607",
+  "created_at": "2026-05-15T19:31:40.944364064+00:00",
+  "last_synced_at": "2026-05-16T09:21:53.410128+00:00",
+  "hub_manifest_hash": "cb712e51ff906233aed4f0741ae6a1f0b98f9ba26a2b7416efffb07ec4fdc746",
+  "package_name": "landberg2009-alkylresorcinol-dose-response-lab"
+}

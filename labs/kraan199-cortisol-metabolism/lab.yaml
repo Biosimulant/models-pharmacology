@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: Kraan199_Kinetics of Cortisol Metabolism and Excretion. Lab
+description: A new model is proposed to study the kinetics of [3H]cortisol metabolism
+  by using urinary data only. It can be used to explore dose-response dynamics and
+  compare treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000916.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.state
+  to:
+  - visualisation.pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model_state
+- from: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.summary
+  to:
+  - visualisation.pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model_summary
+- from: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pharmacokinetics
+- endocrine
+- metabolism
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_circulating_cortisol
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.initial_circulating_cortisol
+    label: Initial Circulating Cortisol
+  - name: initial_urinary_excreted_cortisol
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.initial_urinary_excreted_cortisol
+    label: Initial Urinary Excreted Cortisol
+  - name: initial_non_urinary_excreted_cortisol
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.initial_non_urinary_excreted_cortisol
+    label: Initial Non Urinary Excreted Cortisol
+  - name: initial_metabolizing_tissue_cortisol
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.initial_metabolizing_tissue_cortisol
+    label: Initial Metabolizing Tissue Cortisol
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.species_labels
+    label: Observable labels
+  - name: circulating_cortisol
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.circulating_cortisol
+    label: Circulating Cortisol
+  - name: metabolizing_tissue_cortisol
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.metabolizing_tissue_cortisol
+    label: Metabolizing Tissue Cortisol
+  - name: urinary_excreted_cortisol
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.urinary_excreted_cortisol
+    label: Urinary Excreted Cortisol
+  - name: non_urinary_excreted_cortisol
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.non_urinary_excreted_cortisol
+    label: Non Urinary Excreted Cortisol
+  - name: gallbladder_intestinal_cortisol
+    maps_to: pharmacology_sbml_kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model.gallbladder_intestinal_cortisol
+    label: Gallbladder Intestinal Cortisol

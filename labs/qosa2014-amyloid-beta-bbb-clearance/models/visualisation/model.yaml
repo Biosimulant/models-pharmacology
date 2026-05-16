@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Qosa2014 - Mechanistic modeling that describes amyloid-Beta clearance across
+  BBB Visualisation
+description: Desktop visualisation for Qosa2014 - Mechanistic modeling that describes
+  amyloid-Beta clearance across BBB.
+standard: other
+tags:
+- pharmacology
+- neuroscience
+- pbpk
+- physiology
+- blood-brain-barrier
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Qosa2014 - Mechanistic modeling that describes amyloid-Beta clearance
+      across BBB
+    question: Does the model clear/degrade amyloid-beta across BBB cell systems?
+    answer_focus: 'Initial-state controls: keep cell-line labels explicit; do not
+      generalize directly to whole-brain clearance.'
+    sources:
+    - alias: pharmacology_sbml_qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model
+      title: Qosa2014 - Mechanistic modeling that describes amyloid-Beta clearance
+        across BBB
+      visual_group: physiology
+      observables:
+      - id: IntactAbetahCMEC_D3
+        port: intact_amyloid_beta_hcmec_d3
+        label: Intact Amyloid Beta Hcmec D3
+        group: physiology
+      - id: IntactAbetabEnd3
+        port: intact_amyloid_beta_bend3
+        label: Intact Amyloid Beta Bend3
+        group: physiology
+      - id: CcellhCMEC_D3
+        port: cellular_amyloid_beta_hcmec_d3
+        label: Cellular Amyloid Beta Hcmec D3
+        group: physiology
+      - id: DcellhCMEC_D3
+        port: degraded_amyloid_beta_hcmec_d3
+        label: Degraded Amyloid Beta Hcmec D3
+        group: physiology
+      - id: CcellbEnd3
+        port: cellular_amyloid_beta_bend3
+        label: Cellular Amyloid Beta Bend3
+        group: physiology
+      - id: DcellbEnd3
+        port: degraded_amyloid_beta_bend3
+        label: Degraded Amyloid Beta Bend3
+        group: physiology
+      - id: CmediahCMEC_D3
+        port: media_amyloid_beta_hcmec_d3
+        label: Media Amyloid Beta Hcmec D3
+        group: physiology
+      - id: CmediabEnd3
+        port: media_amyloid_beta_bend3
+        label: Media Amyloid Beta Bend3
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

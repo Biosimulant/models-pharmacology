@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "9a47109e-e667-42b8-a8b1-a141a0559b22",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "bd188bad-016b-4f82-b5f1-8c3dd5006370",
+  "created_at": "2026-05-15T19:31:40.994882913+00:00",
+  "last_synced_at": "2026-05-16T09:25:50.659749+00:00",
+  "hub_manifest_hash": "2a16ada79847d063a80a98607a4ed877e5ef3a7830ea897fd24fd56221872389",
+  "package_name": "qosa2014-mechanistic-modeling-that-describes-amyloid-beta-cleara"
+}

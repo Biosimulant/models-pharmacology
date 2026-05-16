@@ -1,0 +1,84 @@
+schema_version: '2.0'
+title: Sluka2016 - Acetaminophen PBPK Lab
+description: Basic PBPK (Physiologically Based PharmacoKinetic) model of Acetaminophen.
+  This is a basic model of Acetaminophen (APAP, Paracetamol) pharmacokinetics in humans.
+models:
+- alias: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000619.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.state
+  to:
+  - visualisation.pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model_state
+- from: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.summary
+  to:
+  - visualisation.pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model_summary
+- from: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- toxicology
+- liver
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: acetaminophen_dose_grams
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.acetaminophen_dose_grams
+    label: Acetaminophen Dose Grams
+  - name: initial_gut_lumen_acetaminophen
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.initial_gut_lumen_acetaminophen
+    label: Initial Gut Lumen Acetaminophen
+  - name: initial_liver_acetaminophen_concentration
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.initial_liver_acetaminophen_concentration
+    label: Initial Liver Acetaminophen Concentration
+  - name: initial_metabolized_acetaminophen
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.initial_metabolized_acetaminophen
+    label: Initial Metabolized Acetaminophen
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.species_labels
+    label: Observable labels
+  - name: liver_acetaminophen_concentration
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.liver_acetaminophen_concentration
+    label: Liver Acetaminophen Concentration
+  - name: arterial_acetaminophen_concentration
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.arterial_acetaminophen_concentration
+    label: Arterial Acetaminophen Concentration
+  - name: gut_acetaminophen_concentration
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.gut_acetaminophen_concentration
+    label: Gut Acetaminophen Concentration
+  - name: gut_lumen_acetaminophen_amount
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.gut_lumen_acetaminophen_amount
+    label: Gut Lumen Acetaminophen Amount
+  - name: lung_acetaminophen_concentration
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.lung_acetaminophen_concentration
+    label: Lung Acetaminophen Concentration
+  - name: venous_acetaminophen_concentration
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.venous_acetaminophen_concentration
+    label: Venous Acetaminophen Concentration
+  - name: rest_body_acetaminophen_concentration
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.rest_body_acetaminophen_concentration
+    label: Rest Body Acetaminophen Concentration
+  - name: metabolized_acetaminophen_concentration
+    maps_to: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model.metabolized_acetaminophen_concentration
+    label: Metabolized Acetaminophen Concentration

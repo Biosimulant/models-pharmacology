@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Bucher2011_Atorvastatin_Metabolism Lab
+description: 'This is the model of atorvastatin metabolism in hepaitc cells described
+  in the article: A systems biology approach to dynamic modeling and inter-subject
+  variability of statin pharmacokinetics in human. It can be used to explore dose-response
+  dynamics and compare treatment scenarios across conditions.'
+models:
+- alias: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000328.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.state
+  to:
+  - visualisation.pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model_state
+- from: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.summary
+  to:
+  - visualisation.pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model_summary
+- from: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- metabolism
+- pharmacokinetics
+- cardiovascular
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: cyp3a4_para_hydroxylation_capacity
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.cyp3a4_para_hydroxylation_capacity
+    label: CYP3A4 Para Hydroxylation Capacity
+  - name: cyp3a4_ortho_hydroxylation_capacity
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.cyp3a4_ortho_hydroxylation_capacity
+    label: CYP3A4 Ortho Hydroxylation Capacity
+  - name: ugt1a3_lactonization_capacity
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.ugt1a3_lactonization_capacity
+    label: UGT1A3 Lactonization Capacity
+  - name: pon_lactone_hydrolysis_rate
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.pon_lactone_hydrolysis_rate
+    label: Pon Lactone Hydrolysis Rate
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.species_labels
+    label: Observable labels
+  - name: mitochondrial_atorvastatin_acid
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.mitochondrial_atorvastatin_acid
+    label: Mitochondrial Atorvastatin Acid
+  - name: mitochondrial_atorvastatin_lactone
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.mitochondrial_atorvastatin_lactone
+    label: Mitochondrial Atorvastatin Lactone
+  - name: mitochondrial_para_hydroxy_atorvastatin
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.mitochondrial_para_hydroxy_atorvastatin
+    label: Mitochondrial Para Hydroxy Atorvastatin
+  - name: mitochondrial_ortho_hydroxy_atorvastatin
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.mitochondrial_ortho_hydroxy_atorvastatin
+    label: Mitochondrial Ortho Hydroxy Atorvastatin
+  - name: cytosolic_atorvastatin_acid
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.cytosolic_atorvastatin_acid
+    label: Cytosolic Atorvastatin Acid
+  - name: cytosolic_atorvastatin_lactone
+    maps_to: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model.cytosolic_atorvastatin_lactone
+    label: Cytosolic Atorvastatin Lactone

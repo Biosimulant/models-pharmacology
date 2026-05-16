@@ -1,0 +1,94 @@
+schema_version: '2.0'
+title: Gulati2014 - Simplified model of fibrinogen recovery following brown snake
+  bite_1
+description: "Bridging systems biology and pharmacokinetics\u2013pharmacodynamics\
+  \ has resulted in models that are highly complex and complicated. They usually contain\
+  \ large numbers of states and parameters and describe."
+standard: sbml
+tags:
+- pharmacology
+- toxicology
+- physiology
+- coagulation
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- A Gulati
+- G K Isbister
+- S B Duffull
+upstream:
+  id: biomodels_ebi:MODEL1805090001
+  source_db: biomodels_ebi
+  source_id: MODEL1805090001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1805090001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1805090001?filename=Gulati2014.xml
+  license: CC0
+biosim:
+  entrypoint: src.gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model:Gulati2014SimplifiedModelOfFibrinogenRecoveModel1805090001Model
+  init_kwargs:
+    model_path: data/MODEL1805090001.xml
+    integration_step: 0.05
+  communication_step: 0.5
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: brown_snake_venom_fraction
+    maps_to: BSV_F_venom
+    label: Brown Snake Venom Fraction
+    description: venom fraction parameter. Maps to SBML symbol `BSV_F_venom`.
+  - name: initial_plasma_venom
+    maps_to: Venom_plasma1
+    label: Initial Plasma Venom
+    description: initial plasma venom state. Maps to SBML symbol `Venom_plasma1`.
+  - name: initial_thrombin_activity
+    maps_to: IIa1
+    label: Initial Thrombin Activity
+    description: initial thrombin activity state. Maps to SBML symbol `IIa1`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: plasma_venom
+    maps_to: Venom_plasma1
+    label: Plasma Venom
+    description: Plasma Venom. Maps to SBML symbol `Venom_plasma1`.
+  - name: fibrinogen_g_per_l
+    maps_to: Fibrinogen_g_l
+    label: Fibrinogen G Per L
+    description: Fibrinogen G Per L. Maps to SBML symbol `Fibrinogen_g_l`.
+  - name: fibrinogen_pool
+    maps_to: Fibrinogen1
+    label: Fibrinogen Pool
+    description: Fibrinogen Pool. Maps to SBML symbol `Fibrinogen1`.
+  - name: venom_absorption
+    maps_to: Venom_Absorption1
+    label: Venom Absorption
+    description: Venom Absorption. Maps to SBML symbol `Venom_Absorption1`.
+  - name: thrombin_activity
+    maps_to: IIa1
+    label: Thrombin Activity
+    description: Thrombin Activity. Maps to SBML symbol `IIa1`.
+parameters:
+- name: integration_step
+  value: 0.05
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

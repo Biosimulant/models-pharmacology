@@ -1,0 +1,63 @@
+schema_version: '2.0'
+title: Koschorreck2008_InsulinClearance Visualisation
+description: Desktop visualisation for Koschorreck2008_InsulinClearance.
+standard: other
+tags:
+- pharmacology
+- pharmacokinetics
+- endocrine
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Koschorreck2008_InsulinClearance
+    question: Does liver clearance shift insulin receptor states toward internalized/cleared
+      pools?
+    answer_focus: source abbreviations do not expose a direct insulin dose control.
+    sources:
+    - alias: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model
+      title: Koschorreck2008_InsulinClearance
+      visual_group: physiology
+      observables:
+      - id: R
+        port: free_receptor
+        label: Free Receptor
+        group: physiology
+      - id: IR
+        port: insulin_receptor_complex
+        label: Insulin Receptor Complex
+        group: physiology
+      - id: I2R
+        port: two_insulin_receptor_complex
+        label: Two Insulin Receptor Complex
+        group: physiology
+      - id: Rp
+        port: phosphorylated_receptor
+        label: Phosphorylated Receptor
+        group: physiology
+      - id: IRp
+        port: phosphorylated_insulin_receptor_complex
+        label: Phosphorylated Insulin Receptor Complex
+        group: physiology
+      - id: Ren
+        port: endosomal_receptor
+        label: Endosomal Receptor
+        group: physiology
+      - id: IRen
+        port: endosomal_insulin_receptor_complex
+        label: Endosomal Insulin Receptor Complex
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

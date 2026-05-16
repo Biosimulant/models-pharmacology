@@ -1,0 +1,39 @@
+schema_version: '2.0'
+title: Tabak2007_dopamine Visualisation
+description: Desktop visualisation for Tabak2007_dopamine.
+standard: other
+tags:
+- pharmacology
+- neuroscience
+- pharmacodynamics
+- signaling
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 2.0
+    lab_title: Tabak2007_dopamine
+    question: How does the selected conductance state affect calcium dynamics?
+    answer_focus: despite the lab title, the exposed SBML output currently supports
+      calcium dynamics more directly than a dopamine concentration readout.
+    sources:
+    - alias: pharmacology_sbml_tabak2007_dopamine_biomd0000000138_model
+      title: Tabak2007_dopamine
+      visual_group: signaling
+      observables:
+      - id: c
+        port: calcium_concentration
+        label: Calcium Concentration
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

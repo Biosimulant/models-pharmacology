@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "ad8ffcb2-aef4-4637-b4f5-ddf41ca2130e",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "cf1895b9-9052-4867-a435-2b2e9d554273",
+  "created_at": "2026-05-15T19:13:24.061507658+00:00",
+  "last_synced_at": "2026-05-16T09:19:24.112558+00:00",
+  "hub_manifest_hash": "72aa1c408523ccb440a3c5dc81d887a3c1dbfd1eb7f622ff7bddbbdb7f0535eb",
+  "package_name": "koeller2021-pbpk-model-of-icg-liver-function-tests-lab"
+}

@@ -1,0 +1,81 @@
+schema_version: '2.0'
+title: Koschorreck2008_InsulinClearance Lab
+description: 'This model is from the article: Mathematical modeling and analysis of
+  insulin clearance in vivo. It can be used to explore dose-response dynamics and
+  compare treatment scenarios across conditions.'
+models:
+- alias: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000345.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.state
+  to:
+  - visualisation.pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model_state
+- from: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.summary
+  to:
+  - visualisation.pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model_summary
+- from: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pharmacokinetics
+- endocrine
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: liver_insulin_clearance_density
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.liver_insulin_clearance_density
+    label: Liver Insulin Clearance Density
+  - name: initial_free_receptor
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.initial_free_receptor
+    label: Initial Free Receptor
+  - name: initial_insulin_receptor_complex
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.initial_insulin_receptor_complex
+    label: Initial Insulin Receptor Complex
+  - name: initial_internalized_receptor
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.initial_internalized_receptor
+    label: Initial Internalized Receptor
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.species_labels
+    label: Observable labels
+  - name: free_receptor
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.free_receptor
+    label: Free Receptor
+  - name: insulin_receptor_complex
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.insulin_receptor_complex
+    label: Insulin Receptor Complex
+  - name: two_insulin_receptor_complex
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.two_insulin_receptor_complex
+    label: Two Insulin Receptor Complex
+  - name: phosphorylated_receptor
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.phosphorylated_receptor
+    label: Phosphorylated Receptor
+  - name: phosphorylated_insulin_receptor_complex
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.phosphorylated_insulin_receptor_complex
+    label: Phosphorylated Insulin Receptor Complex
+  - name: endosomal_receptor
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.endosomal_receptor
+    label: Endosomal Receptor
+  - name: endosomal_insulin_receptor_complex
+    maps_to: pharmacology_sbml_koschorreck2008_insulinclearance_biomd0000000345_model.endosomal_insulin_receptor_complex
+    label: Endosomal Insulin Receptor Complex

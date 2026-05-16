@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Telesco2011_HER3-ErbB3-RTK_SignalingNetwork Lab
+description: 'This model is from the article: A multiscale modeling approach to investigate
+  molecular mechanisms of pseudokinase activation and drug resistance in the HER3/ErbB3
+  receptor tyrosine kinase signaling n. It can be used to explore dose-response dynamics
+  and compare treatment scenarios across conditions.'
+models:
+- alias: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1102210001.xml
+    integration_step: 0.2
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.state
+  to:
+  - visualisation.pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model_state
+- from: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.summary
+  to:
+  - visualisation.pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model_summary
+- from: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model_species_labels
+runtime:
+  duration: 60.0
+  communication_step: 2.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- signaling
+- oncology
+- receptor-tyrosine-kinase
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_total_her3_receptor
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.initial_total_her3_receptor
+    label: Initial Total HER3 Receptor
+  - name: initial_her3_neuregulin_complex
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.initial_her3_neuregulin_complex
+    label: Initial HER3 Neuregulin Complex
+  - name: initial_phosphorylated_her3_neuregulin_pi3k_complex
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.initial_phosphorylated_her3_neuregulin_pi3k_complex
+    label: Initial Phosphorylated HER3 Neuregulin PI3K Complex
+  - name: initial_internalized_phosphorylated_her3_pi3k_complex
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.initial_internalized_phosphorylated_her3_pi3k_complex
+    label: Initial Internalized Phosphorylated HER3 PI3K Complex
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.species_labels
+    label: Observable labels
+  - name: phosphorylated_her3_neuregulin_pi3k_complex
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.phosphorylated_her3_neuregulin_pi3k_complex
+    label: Phosphorylated HER3 Neuregulin PI3K Complex
+  - name: phosphorylated_her3_1_neuregulin_pi3k_complex
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.phosphorylated_her3_1_neuregulin_pi3k_complex
+    label: Phosphorylated HER3 1 Neuregulin PI3K Complex
+  - name: phosphorylated_her3_neuregulin_pi3k_pip2_complex
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.phosphorylated_her3_neuregulin_pi3k_pip2_complex
+    label: Phosphorylated HER3 Neuregulin PI3K PIP2 Complex
+  - name: internalized_phosphorylated_her3_neuregulin_pi3k_complex
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.internalized_phosphorylated_her3_neuregulin_pi3k_complex
+    label: Internalized Phosphorylated HER3 Neuregulin PI3K Complex
+  - name: internalized_phosphorylated_her3_neuregulin_pi3k_pip2_complex
+    maps_to: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model.internalized_phosphorylated_her3_neuregulin_pi3k_pip2_complex
+    label: Internalized Phosphorylated HER3 Neuregulin PI3K PIP2 Complex

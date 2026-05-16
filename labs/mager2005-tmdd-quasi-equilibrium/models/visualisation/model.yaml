@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Mager2005 - Quasi-equilibrium pharmacokinetic model for drugs exhibiting target-mediated
+  drug disposition Visualisation
+description: Desktop visualisation for Mager2005 - Quasi-equilibrium pharmacokinetic
+  model for drugs exhibiting target-mediated drug disposition.
+standard: other
+tags:
+- pharmacology
+- pharmacokinetics
+- tmdd
+- receptor-binding
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Mager2005 - Quasi-equilibrium pharmacokinetic model for drugs exhibiting
+      target-mediated drug disposition
+    question: Does target binding dominate drug disposition under the selected affinity
+      and target abundance?
+    answer_focus: quasi-equilibrium assumptions should be visible in the lab summary.
+    sources:
+    - alias: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model
+      title: Mager2005 - Quasi-equilibrium pharmacokinetic model for drugs exhibiting
+        target-mediated drug disposition
+      visual_group: binding
+      observables:
+      - id: C
+        port: free_drug_concentration
+        label: Free Drug Concentration
+        group: binding
+      - id: A_T
+        port: total_target_amount
+        label: Total Target Amount
+        group: binding
+      - id: R
+        port: free_target_concentration
+        label: Free Target Concentration
+        group: binding
+      - id: RC
+        port: drug_target_complex
+        label: Drug Target Complex
+        group: binding
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Chang2010_Reduced_Kidney_FBA
+description: This is the reduced kidney metabolic network described in the article
+  Drug off-target effects predicted using structural analysis in the context of a
+  metabolic network model. It can be used to explore dose-response dynamics and compare
+  treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- metabolism
+- kidney
+- systems-biology
+- fba
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Roger L Chang
+- Li Xie
+- Lei Xie
+- Philip E Bourne
+- "Bernhard \xD8 Palsson"
+upstream:
+  id: biomodels_ebi:MODEL1011080004
+  source_db: biomodels_ebi
+  source_id: MODEL1011080004
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1011080004
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1011080004?filename=MODEL1011080004_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.chang2010_reduced_kidney_fba_model1011080004_model:Chang2010ReducedKidneyFbaModel1011080004Model
+  init_kwargs:
+    model_path: data/MODEL1011080004.xml
+    integration_step: 0.05
+  communication_step: 0.5
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_cytosolic_atp
+    maps_to: M_atp_c
+    label: Initial Cytosolic ATP
+    description: initial cytosolic ATP pool. Maps to SBML symbol `M_atp_c`.
+  - name: initial_mitochondrial_atp
+    maps_to: M_atp_m
+    label: Initial Mitochondrial ATP
+    description: initial mitochondrial ATP pool. Maps to SBML symbol `M_atp_m`.
+  - name: initial_extracellular_glucose
+    maps_to: M_glc_DASH_D_e
+    label: Initial Extracellular Glucose
+    description: initial extracellular D-glucose pool. Maps to SBML symbol `M_glc_DASH_D_e`.
+  - name: initial_cytosolic_lactate
+    maps_to: M_lac_DASH_L_c
+    label: Initial Cytosolic Lactate
+    description: initial cytosolic L-lactate pool. Maps to SBML symbol `M_lac_DASH_L_c`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: cytosolic_atp
+    maps_to: M_atp_c
+    label: Cytosolic ATP
+    description: Cytosolic ATP. Maps to SBML symbol `M_atp_c`.
+  - name: mitochondrial_atp
+    maps_to: M_atp_m
+    label: Mitochondrial ATP
+    description: Mitochondrial ATP. Maps to SBML symbol `M_atp_m`.
+  - name: cytosolic_glucose
+    maps_to: M_glc_DASH_D_c
+    label: Cytosolic Glucose
+    description: Cytosolic Glucose. Maps to SBML symbol `M_glc_DASH_D_c`.
+  - name: extracellular_glucose
+    maps_to: M_glc_DASH_D_e
+    label: Extracellular Glucose
+    description: Extracellular Glucose. Maps to SBML symbol `M_glc_DASH_D_e`.
+  - name: cytosolic_lactate
+    maps_to: M_lac_DASH_L_c
+    label: Cytosolic Lactate
+    description: Cytosolic Lactate. Maps to SBML symbol `M_lac_DASH_L_c`.
+  - name: extracellular_lactate
+    maps_to: M_lac_DASH_L_e
+    label: Extracellular Lactate
+    description: Extracellular Lactate. Maps to SBML symbol `M_lac_DASH_L_e`.
+  - name: cytosolic_urea
+    maps_to: M_urea_c
+    label: Cytosolic Urea
+    description: Cytosolic Urea. Maps to SBML symbol `M_urea_c`.
+parameters:
+- name: integration_step
+  value: 0.05
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

@@ -1,0 +1,64 @@
+schema_version: '2.0'
+title: Grignard2022 - Detyrosination/Tyrosination Model in neurons and proliferative
+  cells Visualisation
+description: Desktop visualisation for Grignard2022 - Detyrosination/Tyrosination
+  Model in neurons and proliferative cells.
+standard: other
+tags:
+- pharmacology
+- cell-biology
+- neuroscience
+- systems-biology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 0.5
+    lab_title: Grignard2022 - Detyrosination/Tyrosination Model in neurons and proliferative
+      cells
+    question: Does the model favor detyrosinated or tyrosinated tubulin under the
+      selected enzyme state?
+    answer_focus: parameters named only `p8`, `p11`, `p13` need conservative labels
+      unless source annotations confirm reaction assignments.
+    sources:
+    - alias: pharmacology_sbml_grignard2022_detyrosination_tyrosination_model_i_model2209260001_model
+      title: Grignard2022 - Detyrosination/Tyrosination Model in neurons and proliferative
+        cells
+      visual_group: pk
+      observables:
+      - id: s0
+        port: detyrosinated_tubulin
+        label: Detyrosinated Tubulin
+        group: pk
+      - id: s1
+        port: detyrosinated_microtubules
+        label: Detyrosinated Microtubules
+        group: pk
+      - id: s2
+        port: tyrosinated_tubulin
+        label: Tyrosinated Tubulin
+        group: pk
+      - id: s3
+        port: tyrosinated_microtubules
+        label: Tyrosinated Microtubules
+        group: pk
+      - id: s4
+        port: tcp_enzyme_pool
+        label: Tcp Enzyme Pool
+        group: pk
+      - id: s5
+        port: ttl_enzyme_pool
+        label: Ttl Enzyme Pool
+        group: pk
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

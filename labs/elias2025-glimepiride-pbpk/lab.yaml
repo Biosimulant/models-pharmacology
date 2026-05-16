@@ -1,0 +1,90 @@
+schema_version: '2.0'
+title: Elias2025 - Physiologically based pharmacokinetics (PBPK) model glimepiride
+  Lab
+description: Pharmacology Elias2025Physiologically Based Pharmacokinetics Model2510140001Model
+  models core biological dynamics as a OTHER simulation curated from biomodels_ebi
+  (biomodels_ebi:MODEL2510140001), focused on pha. When you run it, you can track
+  state over time and compare response patterns across parameter settings.
+models:
+- alias: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL2510140001.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.state
+  to:
+  - visualisation.pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model_state
+- from: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.summary
+  to:
+  - visualisation.pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model_summary
+- from: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- physiology
+- endocrine
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: oral_glimepiride_dose_mg
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.oral_glimepiride_dose_mg
+    label: Oral Glimepiride Dose Mg
+  - name: iv_glimepiride_bolus_mg
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.iv_glimepiride_bolus_mg
+    label: IV Glimepiride Bolus Mg
+  - name: glimepiride_infusion_rate_mg_per_min
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.glimepiride_infusion_rate_mg_per_min
+    label: Glimepiride Infusion Rate Mg Per Min
+  - name: cyp2c9_activity_scale
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.cyp2c9_activity_scale
+    label: CYP2C9 Activity Scale
+  - name: intestinal_absorption_scale
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.intestinal_absorption_scale
+    label: Intestinal Absorption Scale
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.species_labels
+    label: Observable labels
+  - name: glimepiride_liver_plasma
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.glimepiride_liver_plasma
+    label: Glimepiride Liver Plasma
+  - name: glimepiride_arterial_plasma
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.glimepiride_arterial_plasma
+    label: Glimepiride Arterial Plasma
+  - name: glimepiride_venous_plasma
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.glimepiride_venous_plasma
+    label: Glimepiride Venous Plasma
+  - name: glimepiride_kidney_plasma
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.glimepiride_kidney_plasma
+    label: Glimepiride Kidney Plasma
+  - name: glimepiride_gut_plasma
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.glimepiride_gut_plasma
+    label: Glimepiride Gut Plasma
+  - name: m1_liver_plasma
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.m1_liver_plasma
+    label: M1 Liver Plasma
+  - name: m1_arterial_plasma
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.m1_arterial_plasma
+    label: M1 Arterial Plasma
+  - name: m1_venous_plasma
+    maps_to: pharmacology_sbml_elias2025_physiologically_based_pharmacokinetics_model2510140001_model.m1_venous_plasma
+    label: M1 Venous Plasma

@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Singh2006_TCA_mtu_model2
+description: 'This a model from the article: Kinetic modeling of tricarboxylic acid
+  cycle and glyoxylate bypass in Mycobacterium tuberculosis, and its application to
+  assessment of drug targets. It can be used to explore dose-response dynamics and
+  compare treatment scenarios across conditions.'
+standard: sbml
+tags:
+- pharmacology
+- antimicrobial
+- tuberculosis
+- metabolism
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Vivek Kumar Singh
+- Indira Ghosh
+upstream:
+  id: biomodels_ebi:BIOMD0000000218
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000218
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000218
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000218?filename=BIOMD0000000218_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.singh2006_tca_mtu_model2_biomd0000000218_model:Singh2006TcaMtuModel2Biomd0000000218Model
+  init_kwargs:
+    model_path: data/BIOMD0000000218.xml
+    integration_step: 0.05
+  communication_step: 0.5
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_coa_pool
+    maps_to: coa
+    label: Initial Coa Pool
+    description: CoA pool. Maps to SBML symbol `coa`.
+  - name: initial_acetate_or_acetyl_pool
+    maps_to: aca
+    label: Initial Acetate Or Acetyl Pool
+    description: acetate/acetyl source pool. Maps to SBML symbol `aca`.
+  - name: initial_oxaloacetate_pool
+    maps_to: oaa
+    label: Initial Oxaloacetate Pool
+    description: oxaloacetate pool. Maps to SBML symbol `oaa`.
+  - name: initial_citrate_pool
+    maps_to: cit
+    label: Initial Citrate Pool
+    description: citrate pool. Maps to SBML symbol `cit`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: coa_pool
+    maps_to: coa
+    label: Coa Pool
+    description: Coa Pool. Maps to SBML symbol `coa`.
+  - name: acetate_or_acetyl_pool
+    maps_to: aca
+    label: Acetate Or Acetyl Pool
+    description: Acetate Or Acetyl Pool. Maps to SBML symbol `aca`.
+  - name: oxaloacetate_pool
+    maps_to: oaa
+    label: Oxaloacetate Pool
+    description: Oxaloacetate Pool. Maps to SBML symbol `oaa`.
+  - name: citrate_pool
+    maps_to: cit
+    label: Citrate Pool
+    description: Citrate Pool. Maps to SBML symbol `cit`.
+  - name: isocitrate_pool
+    maps_to: icit
+    label: Isocitrate Pool
+    description: Isocitrate Pool. Maps to SBML symbol `icit`.
+  - name: alpha_ketoglutarate_pool
+    maps_to: akg
+    label: Alpha Ketoglutarate Pool
+    description: Alpha Ketoglutarate Pool. Maps to SBML symbol `akg`.
+  - name: succinate_semialdehyde_pool
+    maps_to: ssa
+    label: Succinate Semialdehyde Pool
+    description: Succinate Semialdehyde Pool. Maps to SBML symbol `ssa`.
+  - name: succinate_pool
+    maps_to: suc
+    label: Succinate Pool
+    description: Succinate Pool. Maps to SBML symbol `suc`.
+parameters:
+- name: integration_step
+  value: 0.05
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

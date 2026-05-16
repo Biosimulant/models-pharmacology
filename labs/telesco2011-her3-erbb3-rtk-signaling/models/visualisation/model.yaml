@@ -1,0 +1,55 @@
+schema_version: '2.0'
+title: Telesco2011_HER3-ErbB3-RTK_SignalingNetwork Visualisation
+description: Desktop visualisation for Telesco2011_HER3-ErbB3-RTK_SignalingNetwork.
+standard: other
+tags:
+- pharmacology
+- signaling
+- oncology
+- receptor-tyrosine-kinase
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 2.0
+    lab_title: Telesco2011_HER3-ErbB3-RTK_SignalingNetwork
+    question: Which HER3/PI3K signaling complexes dominate receptor activation/internalization?
+    answer_focus: 'Initial-state controls: there is no clean public ligand-dose parameter
+      in the current SBML surface; use initial complex/receptor states conservatively.'
+    sources:
+    - alias: pharmacology_sbml_telesco2011_her3_erbb3_rtk_signalingnetwork_model1102210001_model
+      title: Telesco2011_HER3-ErbB3-RTK_SignalingNetwork
+      visual_group: signaling
+      observables:
+      - id: pHer3_2_Nrg_Pi3k
+        port: phosphorylated_her3_neuregulin_pi3k_complex
+        label: Phosphorylated HER3 Neuregulin PI3K Complex
+        group: signaling
+      - id: pHer3_1_Nrg_Pi3k
+        port: phosphorylated_her3_1_neuregulin_pi3k_complex
+        label: Phosphorylated HER3 1 Neuregulin PI3K Complex
+        group: signaling
+      - id: pHer3_2_Nrg_Pi3k_Pip2
+        port: phosphorylated_her3_neuregulin_pi3k_pip2_complex
+        label: Phosphorylated HER3 Neuregulin PI3K PIP2 Complex
+        group: signaling
+      - id: ipHer3_2_Nrg_Pi3k
+        port: internalized_phosphorylated_her3_neuregulin_pi3k_complex
+        label: Internalized Phosphorylated HER3 Neuregulin PI3K Complex
+        group: signaling
+      - id: ipHer3_2_Nrg_Pi3k_Pip2
+        port: internalized_phosphorylated_her3_neuregulin_pi3k_pip2_complex
+        label: Internalized Phosphorylated HER3 Neuregulin PI3K PIP2 Complex
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

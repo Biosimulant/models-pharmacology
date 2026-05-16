@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "07c97647-3112-4833-8dea-af67182b383d",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "108b36c1-e418-45ec-9981-db8c78fe0ff7",
+  "created_at": "2026-05-15T19:31:40.413230214+00:00",
+  "last_synced_at": "2026-05-16T09:25:05.992999+00:00",
+  "hub_manifest_hash": "03b60e29cb6a09c639a9ab258321b814c475aaf9453efe0b88836b072fc08362",
+  "package_name": "petrov2018-c-547-a-6-methyluracil-derivative-with-long-lasting-b"
+}

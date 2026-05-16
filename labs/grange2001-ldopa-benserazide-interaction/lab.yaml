@@ -1,0 +1,82 @@
+schema_version: '2.0'
+title: Grange2001 - PK interaction of L-dopa and benserazide Lab
+description: Grange2001 - PK interaction of L-dopa and benserazide A pharmacokinetics
+  of L-dopa in rats after administration of L-dopa alone (BIOMD0000000321) or L-dopa
+  combined with a peripheral AADC (amino-acid-. It can be used to explore dose-response
+  dynamics and compare treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000320.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.state
+  to:
+  - visualisation.pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model_state
+- from: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.summary
+  to:
+  - visualisation.pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model_summary
+- from: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pharmacokinetics
+- drug-interaction
+- neuroscience
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: l_dopa_dose_per_kg_rat
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.l_dopa_dose_per_kg_rat
+    label: L Dopa Dose Per Kg Rat
+  - name: benserazide_dose_per_kg_rat
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.benserazide_dose_per_kg_rat
+    label: Benserazide Dose Per Kg Rat
+  - name: l_dopa_clearance_rate
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.l_dopa_clearance_rate
+    label: L Dopa Clearance Rate
+  - name: benserazide_clearance_rate
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.benserazide_clearance_rate
+    label: Benserazide Clearance Rate
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.species_labels
+    label: Observable labels
+  - name: l_dopa_amount
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.l_dopa_amount
+    label: L Dopa Amount
+  - name: l_dopa_concentration
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.l_dopa_concentration
+    label: L Dopa Concentration
+  - name: benserazide_amount
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.benserazide_amount
+    label: Benserazide Amount
+  - name: metabolite_amount
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.metabolite_amount
+    label: Metabolite Amount
+  - name: three_omd_concentration
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.three_omd_concentration
+    label: Three Omd Concentration
+  - name: metabolite_compartment_1_concentration
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.metabolite_compartment_1_concentration
+    label: Metabolite Compartment 1 Concentration
+  - name: benserazide_compartment_1_concentration
+    maps_to: pharmacology_sbml_grange2001_pk_interaction_of_l_dopa_and_benseraz_biomd0000000320_model.benserazide_compartment_1_concentration
+    label: Benserazide Compartment 1 Concentration

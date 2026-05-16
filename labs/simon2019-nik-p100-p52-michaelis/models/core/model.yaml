@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Simon2019 - NIK-dependent p100 processing into p52, Michaelis-Menten, SBML
+  2v4
+description: This model represents NIK-dependent p100 processing into p52 with Michaelis-Menten
+  kinetics. While this model shows identical dose-response to the mass action representation,
+  when IkBd degradation is.
+standard: sbml
+tags:
+- pharmacology
+- signaling
+- immunology
+- nfkb
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Simon Mitchell
+- Alexander Hoffmann
+upstream:
+  id: biomodels_ebi:BIOMD0000000866
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000866
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000866
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000866?filename=Simon2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model:Simon2019NikDependentP100ProcessingIntoP52Biomd0000000866Model
+  init_kwargs:
+    model_path: data/BIOMD0000000866.xml
+    integration_step: 0.2
+  communication_step: 2.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_p100_pool
+    maps_to: p100
+    label: Initial P100 Pool
+    description: initial p100 pool. Maps to SBML symbol `p100`.
+  - name: initial_nik_pool
+    maps_to: NIK
+    label: Initial NIK Pool
+    description: initial NIK pool. Maps to SBML symbol `NIK`.
+  - name: total_p100_boundary_pool
+    maps_to: p100t
+    label: Total P100 Boundary Pool
+    description: Initial setting for total/boundary p100 pool. Maps to SBML symbol
+      `p100t`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: p100_pool
+    maps_to: p100
+    label: P100 Pool
+    description: P100 Pool. Maps to SBML symbol `p100`.
+  - name: p52_pool
+    maps_to: p52
+    label: P52 Pool
+    description: P52 Pool. Maps to SBML symbol `p52`.
+  - name: nik_pool
+    maps_to: NIK
+    label: NIK Pool
+    description: NIK Pool. Maps to SBML symbol `NIK`.
+parameters:
+- name: integration_step
+  value: 0.2
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

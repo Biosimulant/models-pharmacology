@@ -1,0 +1,91 @@
+schema_version: '2.0'
+title: Parton2018 - A model of Atherosclerosis and atheroma formation. Lab
+description: 'SBML and SBGN-ML models of atherosclerosis and atheroma formation. This
+  model is described in the publication: New models of atherosclerosis and multi-drug
+  therapeutic interventions.'
+models:
+- alias: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1812100001.xml
+    integration_step: 0.05
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.state
+  to:
+  - visualisation.pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model_state
+- from: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.summary
+  to:
+  - visualisation.pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model_summary
+- from: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 0.5
+  initial_inputs: {}
+tags:
+- pharmacology
+- cardiovascular
+- physiology
+- inflammation
+- systems-biology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_ldl
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.initial_ldl
+    label: Initial LDL
+  - name: initial_hdl
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.initial_hdl
+    label: Initial HDL
+  - name: initial_free_oxygen_radicals
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.initial_free_oxygen_radicals
+    label: Initial Free Oxygen Radicals
+  - name: initial_monocytes
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.initial_monocytes
+    label: Initial Monocytes
+  - name: initial_t_cells
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.initial_t_cells
+    label: Initial T Cells
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.species_labels
+    label: Observable labels
+  - name: hdl
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.hdl
+    label: HDL
+  - name: ldl
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.ldl
+    label: LDL
+  - name: blood_ldl
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.blood_ldl
+    label: Blood LDL
+  - name: blood_hdl
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.blood_hdl
+    label: Blood HDL
+  - name: oxidized_ldl
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.oxidized_ldl
+    label: Oxidized LDL
+  - name: oxidized_hdl
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.oxidized_hdl
+    label: Oxidized HDL
+  - name: monocytes
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.monocytes
+    label: Monocytes
+  - name: macrophages
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.macrophages
+    label: Macrophages
+  - name: foam_cells
+    maps_to: pharmacology_sbml_parton2018_a_model_of_atherosclerosis_and_athero_model1812100001_model.foam_cells
+    label: Foam Cells

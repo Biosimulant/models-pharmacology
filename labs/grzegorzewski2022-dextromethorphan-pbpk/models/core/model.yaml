@@ -1,0 +1,110 @@
+schema_version: '2.0'
+title: Grzegorzewski2022 - PBPK model of dextromethorphan
+description: Physiologically based pharmacokinetic (PBPK) modeling of the role of
+  CYP2D6 polymorphism for metabolic phenotyping with dextromethorphan. It can be used
+  to explore dose-response dynamics and compare treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- physiology
+- cyp-metabolism
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Jan Grzegorzewski
+- Janosch Brandhorst
+- "Matthias K\xF6nig"
+upstream:
+  id: biomodels_ebi:MODEL2301090002
+  source_db: biomodels_ebi
+  source_id: MODEL2301090002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2301090002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2301090002?filename=dextromethorphan_body_flat.xml
+  license: CC0
+biosim:
+  entrypoint: src.grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model:Grzegorzewski2022PbpkModelOfDextromethorphanModel2301090002Model
+  init_kwargs:
+    model_path: data/MODEL2301090002.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: oral_dextromethorphan_dose_mg
+    maps_to: PODOSE_dxm
+    label: Oral Dextromethorphan Dose Mg
+    description: oral dextromethorphan dose. Maps to SBML symbol `PODOSE_dxm`.
+  - name: iv_dextromethorphan_bolus_mg
+    maps_to: IVDOSE_dxm
+    label: IV Dextromethorphan Bolus Mg
+    description: IV dextromethorphan bolus dose. Maps to SBML symbol `IVDOSE_dxm`.
+  - name: dextromethorphan_infusion_rate_mg_per_min
+    maps_to: Ri_dxm
+    label: Dextromethorphan Infusion Rate Mg Per Min
+    description: infusion rate. Maps to SBML symbol `Ri_dxm`.
+  - name: cyp2d6_custom_activity
+    maps_to: LI__cyp2d6_ac
+    label: CYP2D6 Custom Activity
+    description: custom CYP2D6 activity. Maps to SBML symbol `LI__cyp2d6_ac`.
+  - name: cyp2d6_vmax
+    maps_to: LI__DXMCYP2D6_Vmax
+    label: CYP2D6 VMAX
+    description: CYP2D6 Vmax for DXM metabolism. Maps to SBML symbol `LI__DXMCYP2D6_Vmax`.
+  - name: cyp3a4_vmax
+    maps_to: LI__DXMCYP3A4_Vmax
+    label: CYP3A4 VMAX
+    description: minor CYP3A4 pathway Vmax. Maps to SBML symbol `LI__DXMCYP3A4_Vmax`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: dextromethorphan_liver_plasma
+    maps_to: Cli_plasma_dxm
+    label: Dextromethorphan Liver Plasma
+    description: Dextromethorphan Liver Plasma. Maps to SBML symbol `Cli_plasma_dxm`.
+  - name: dextromethorphan_gut_plasma
+    maps_to: Cgu_plasma_dxm
+    label: Dextromethorphan Gut Plasma
+    description: Dextromethorphan Gut Plasma. Maps to SBML symbol `Cgu_plasma_dxm`.
+  - name: dextromethorphan_kidney_plasma
+    maps_to: Cki_plasma_dxm
+    label: Dextromethorphan Kidney Plasma
+    description: Dextromethorphan Kidney Plasma. Maps to SBML symbol `Cki_plasma_dxm`.
+  - name: dextromethorphan_lung_plasma
+    maps_to: Clu_plasma_dxm
+    label: Dextromethorphan Lung Plasma
+    description: Dextromethorphan Lung Plasma. Maps to SBML symbol `Clu_plasma_dxm`.
+  - name: dextorphan_liver_plasma
+    maps_to: Cli_plasma_dxo
+    label: Dextorphan Liver Plasma
+    description: Dextorphan Liver Plasma. Maps to SBML symbol `Cli_plasma_dxo`.
+  - name: dextorphan_glucuronide_liver_plasma
+    maps_to: Cli_plasma_dxo_glu
+    label: Dextorphan Glucuronide Liver Plasma
+    description: Dextorphan Glucuronide Liver Plasma. Maps to SBML symbol `Cli_plasma_dxo_glu`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

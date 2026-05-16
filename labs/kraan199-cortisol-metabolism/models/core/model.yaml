@@ -1,0 +1,97 @@
+schema_version: '2.0'
+title: Kraan199_Kinetics of Cortisol Metabolism and Excretion.
+description: A new model is proposed to study the kinetics of [3H]cortisol metabolism
+  by using urinary data only. It can be used to explore dose-response dynamics and
+  compare treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- pharmacokinetics
+- endocrine
+- metabolism
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- G P Kraan
+- N M Drayer
+- R de Bruin
+upstream:
+  id: biomodels_ebi:BIOMD0000000916
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000916
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000916
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000916?filename=Kraan1992.xml
+  license: CC0
+biosim:
+  entrypoint: src.kraan199_kinetics_of_cortisol_metabolism_and_exc_biomd0000000916_model:Kraan199KineticsOfCortisolMetabolismAndExcBiomd0000000916Model
+  init_kwargs:
+    model_path: data/BIOMD0000000916.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_circulating_cortisol
+    maps_to: The_FOD_in_the_circulation__X1
+    label: Initial Circulating Cortisol
+    description: initial circulating cortisol/FOD state. Maps to SBML symbol `The_FOD_in_the_circulation__X1`.
+  - name: initial_urinary_excreted_cortisol
+    maps_to: The_cumulative_FOD_excreted_in_the_urine__X2
+    label: Initial Urinary Excreted Cortisol
+    description: initial urinary excreted pool. Maps to SBML symbol `The_cumulative_FOD_excreted_in_the_urine__X2`.
+  - name: initial_non_urinary_excreted_cortisol
+    maps_to: The_cumulative_FOD_excreted_in_the_non_urinary_pool__X3
+    label: Initial Non Urinary Excreted Cortisol
+    description: initial non-urinary excreted pool. Maps to SBML symbol `The_cumulative_FOD_excreted_in_the_non_urinary_pool__X3`.
+  - name: initial_metabolizing_tissue_cortisol
+    maps_to: The_FOD_in_the_metabolizing_tissues__X4
+    label: Initial Metabolizing Tissue Cortisol
+    description: initial metabolizing tissue pool. Maps to SBML symbol `The_FOD_in_the_metabolizing_tissues__X4`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: circulating_cortisol
+    maps_to: The_FOD_in_the_circulation__X1
+    label: Circulating Cortisol
+    description: Circulating Cortisol. Maps to SBML symbol `The_FOD_in_the_circulation__X1`.
+  - name: metabolizing_tissue_cortisol
+    maps_to: The_FOD_in_the_metabolizing_tissues__X4
+    label: Metabolizing Tissue Cortisol
+    description: Metabolizing Tissue Cortisol. Maps to SBML symbol `The_FOD_in_the_metabolizing_tissues__X4`.
+  - name: urinary_excreted_cortisol
+    maps_to: The_cumulative_FOD_excreted_in_the_urine__X2
+    label: Urinary Excreted Cortisol
+    description: Urinary Excreted Cortisol. Maps to SBML symbol `The_cumulative_FOD_excreted_in_the_urine__X2`.
+  - name: non_urinary_excreted_cortisol
+    maps_to: The_cumulative_FOD_excreted_in_the_non_urinary_pool__X3
+    label: Non Urinary Excreted Cortisol
+    description: Non Urinary Excreted Cortisol. Maps to SBML symbol `The_cumulative_FOD_excreted_in_the_non_urinary_pool__X3`.
+  - name: gallbladder_intestinal_cortisol
+    maps_to: The_FOD_in_the_gallbladder___intestinal_lumen__X5
+    label: Gallbladder Intestinal Cortisol
+    description: Gallbladder Intestinal Cortisol. Maps to SBML symbol `The_FOD_in_the_gallbladder___intestinal_lumen__X5`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

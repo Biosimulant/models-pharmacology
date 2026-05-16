@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Caldwell2019 - The Vicodin abuse problem Lab
+description: This is a mathematical model of Vicodin use and abuse used to investigate
+  methods of combating Vicodin abuse in a population of patients who have obtained
+  the drug through prescription. It can be used to explore dose-response dynamics
+  and compare treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000840.xml
+    integration_step: 0.05
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.state
+  to:
+  - visualisation.pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model_state
+- from: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.summary
+  to:
+  - visualisation.pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model_summary
+- from: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 0.5
+  initial_inputs: {}
+tags:
+- pharmacology
+- systems-biology
+- addiction
+- public-health
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_medical_vicodin_population
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.initial_medical_vicodin_population
+    label: Initial Medical Vicodin Population
+  - name: initial_early_chronic_vicodin_population
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.initial_early_chronic_vicodin_population
+    label: Initial Early Chronic Vicodin Population
+  - name: initial_late_chronic_vicodin_population
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.initial_late_chronic_vicodin_population
+    label: Initial Late Chronic Vicodin Population
+  - name: initial_vicodin_abuse_population
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.initial_vicodin_abuse_population
+    label: Initial Vicodin Abuse Population
+  - name: initial_vicodin_treatment_population
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.initial_vicodin_treatment_population
+    label: Initial Vicodin Treatment Population
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.species_labels
+    label: Observable labels
+  - name: medical_vicodin_population
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.medical_vicodin_population
+    label: Medical Vicodin Population
+  - name: early_chronic_vicodin_population
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.early_chronic_vicodin_population
+    label: Early Chronic Vicodin Population
+  - name: late_chronic_vicodin_population
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.late_chronic_vicodin_population
+    label: Late Chronic Vicodin Population
+  - name: vicodin_abuse_population
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.vicodin_abuse_population
+    label: Vicodin Abuse Population
+  - name: vicodin_treatment_population
+    maps_to: pharmacology_sbml_caldwell2019_the_vicodin_abuse_problem_biomd0000000840_model.vicodin_treatment_population
+    label: Vicodin Treatment Population

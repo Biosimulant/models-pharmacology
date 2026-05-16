@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Mager2005 - Quasi-equilibrium pharmacokinetic model for drugs exhibiting target-mediated
+  drug disposition Lab
+description: This model was developed with the aim of constructing an equilibrium
+  model of the pharmacokinetic behaviour of a drug exhibiting target-mediated drug
+  disposition (TMDD). It can be used to explore dose-response dynamics and compare
+  treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000765.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.state
+  to:
+  - visualisation.pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model_state
+- from: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.summary
+  to:
+  - visualisation.pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model_summary
+- from: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pharmacokinetics
+- tmdd
+- receptor-binding
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_free_drug_concentration
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.initial_free_drug_concentration
+    label: Initial Free Drug Concentration
+  - name: initial_free_target_concentration
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.initial_free_target_concentration
+    label: Initial Free Target Concentration
+  - name: target_binding_affinity_kd
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.target_binding_affinity_kd
+    label: Target Binding Affinity Kd
+  - name: drug_elimination_rate
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.drug_elimination_rate
+    label: Drug Elimination Rate
+  - name: complex_internalization_rate
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.complex_internalization_rate
+    label: Complex Internalization Rate
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.species_labels
+    label: Observable labels
+  - name: free_drug_concentration
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.free_drug_concentration
+    label: Free Drug Concentration
+  - name: total_target_amount
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.total_target_amount
+    label: Total Target Amount
+  - name: free_target_concentration
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.free_target_concentration
+    label: Free Target Concentration
+  - name: drug_target_complex
+    maps_to: pharmacology_sbml_mager2005_quasi_equilibrium_pharmacokinetic_mode_biomd0000000765_model.drug_target_complex
+    label: Drug Target Complex

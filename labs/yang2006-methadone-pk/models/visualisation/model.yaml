@@ -1,0 +1,44 @@
+schema_version: '2.0'
+title: Yang2006_Methadone_PKmodel Visualisation
+description: Desktop visualisation for Yang2006_Methadone_PKmodel.
+standard: other
+tags:
+- pharmacology
+- pharmacokinetics
+- opioid
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Yang2006_Methadone_PKmodel
+    question: What methadone exposure trajectory is produced by the selected initial
+      state and metabolism parameters?
+    answer_focus: source does not expose a clearly named dose parameter; avoid labeling
+      `Ca` as dose.
+    sources:
+    - alias: pharmacology_sbml_yang2006_methadone_pkmodel_model1006230040_model
+      title: Yang2006_Methadone_PKmodel
+      visual_group: physiology
+      observables:
+      - id: Ca
+        port: methadone_absorption_state
+        label: Methadone Absorption State
+        group: physiology
+      - id: C
+        port: methadone_concentration
+        label: Methadone Concentration
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

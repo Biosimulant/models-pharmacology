@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Walsh2014 - Inhibition kinetics of DAPT on APP Cleavage Lab
+description: 'Walsh2014 - Inhibition kinetics of DAPT onAPP Cleavage This model is
+  described in the article: Are improper kinetic models hampering drug development?
+  It can be used to explore dose-response dynamics and compare treatment scenarios
+  across conditions.'
+models:
+- alias: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000617.xml
+    integration_step: 0.2
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.state
+  to:
+  - visualisation.pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model_state
+- from: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.summary
+  to:
+  - visualisation.pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model_summary
+- from: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model_species_labels
+runtime:
+  duration: 60.0
+  communication_step: 2.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- neuroscience
+- enzyme-inhibition
+- amyloid
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: dapt_inhibitor_concentration
+    maps_to: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.dapt_inhibitor_concentration
+    label: Dapt Inhibitor Concentration
+  - name: substrate_concentration
+    maps_to: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.substrate_concentration
+    label: Substrate Concentration
+  - name: cleavage_state
+    maps_to: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.cleavage_state
+    label: Cleavage State
+  - name: cleavage_vmax_1
+    maps_to: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.cleavage_vmax_1
+    label: Cleavage VMAX 1
+  - name: cleavage_vmax_2
+    maps_to: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.cleavage_vmax_2
+    label: Cleavage VMAX 2
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.species_labels
+    label: Observable labels
+  - name: app_cleavage_state
+    maps_to: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model.app_cleavage_state
+    label: APP Cleavage State

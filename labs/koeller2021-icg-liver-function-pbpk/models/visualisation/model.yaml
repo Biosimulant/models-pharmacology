@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: Koeller2021 - PBPK model of ICG liver function tests Visualisation
+description: Desktop visualisation for Koeller2021 - PBPK model of ICG liver function
+  tests.
+standard: other
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- liver
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Koeller2021 - PBPK model of ICG liver function tests
+    question: Does the selected liver impairment pattern slow ICG clearance?
+    answer_focus: physiology parameters are meaningful but should be bounded to source-valid
+      ranges.
+    sources:
+    - alias: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model
+      title: Koeller2021 - PBPK model of ICG liver function tests
+      visual_group: physiology
+      observables:
+      - id: Cli_plasma_icg
+        port: icg_liver_plasma
+        label: ICG Liver Plasma
+        group: physiology
+      - id: Cve_icg
+        port: icg_venous_plasma
+        label: ICG Venous Plasma
+        group: physiology
+      - id: Car_icg
+        port: icg_arterial_plasma
+        label: ICG Arterial Plasma
+        group: physiology
+      - id: Cgi_plasma_icg
+        port: icg_gastrointestinal_plasma
+        label: ICG Gastrointestinal Plasma
+        group: physiology
+      - id: Clu_plasma_icg
+        port: icg_lung_plasma
+        label: ICG Lung Plasma
+        group: physiology
+      - id: Cpo_icg
+        port: icg_portal_vein
+        label: ICG Portal Vein
+        group: physiology
+      - id: LI__icg
+        port: icg_liver_amount
+        label: ICG Liver Amount
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

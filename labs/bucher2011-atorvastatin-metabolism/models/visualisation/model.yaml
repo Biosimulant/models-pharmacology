@@ -1,0 +1,60 @@
+schema_version: '2.0'
+title: Bucher2011_Atorvastatin_Metabolism Visualisation
+description: Desktop visualisation for Bucher2011_Atorvastatin_Metabolism.
+standard: other
+tags:
+- pharmacology
+- metabolism
+- pharmacokinetics
+- cardiovascular
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Bucher2011_Atorvastatin_Metabolism
+    question: Does CYP3A4/UGT/PON balance favor parent atorvastatin, lactone, or hydroxy
+      metabolites?
+    answer_focus: proposed inputs are enzyme kinetic capacities/rates, not clinical
+      dose controls.
+    sources:
+    - alias: pharmacology_sbml_bucher2011_atorvastatin_metabolism_biomd0000000328_model
+      title: Bucher2011_Atorvastatin_Metabolism
+      visual_group: metabolism
+      observables:
+      - id: AS_m
+        port: mitochondrial_atorvastatin_acid
+        label: Mitochondrial Atorvastatin Acid
+        group: metabolism
+      - id: ASL_m
+        port: mitochondrial_atorvastatin_lactone
+        label: Mitochondrial Atorvastatin Lactone
+        group: metabolism
+      - id: ASpOH_m
+        port: mitochondrial_para_hydroxy_atorvastatin
+        label: Mitochondrial Para Hydroxy Atorvastatin
+        group: metabolism
+      - id: ASoOH_m
+        port: mitochondrial_ortho_hydroxy_atorvastatin
+        label: Mitochondrial Ortho Hydroxy Atorvastatin
+        group: metabolism
+      - id: AS_c
+        port: cytosolic_atorvastatin_acid
+        label: Cytosolic Atorvastatin Acid
+        group: metabolism
+      - id: ASL_c
+        port: cytosolic_atorvastatin_lactone
+        label: Cytosolic Atorvastatin Lactone
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

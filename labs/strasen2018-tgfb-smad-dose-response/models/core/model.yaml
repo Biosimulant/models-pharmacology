@@ -1,0 +1,114 @@
+schema_version: '2.0'
+title: Strasen2018 - TGFb SMAD Signalling - Dose dependent dynamics upon TGFb stimulation
+description: This model simulates TGFb dose dependent kinetics of The SMADs. TGFb
+  ligand dose applied are 1pM, 2.5pM, 5pM, 25pM, and 100pM as explained in the manuscript.
+standard: sbml
+tags:
+- pharmacology
+- signaling
+- oncology
+- dose-response
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Strasen J
+- Sarma U
+- Jentsch M
+- Bohn S
+- Sheng C
+upstream:
+  id: biomodels_ebi:BIOMD0000000989
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000989
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000989
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000989?filename=MODEL1712050001.xml
+  license: CC0
+biosim:
+  entrypoint: src.strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model:Strasen2018TgfbSmadSignallingDoseDependentBiomd0000000989Model
+  init_kwargs:
+    model_path: data/BIOMD0000000989.xml
+    integration_step: 0.2
+  communication_step: 2.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: tgfb_ligand_dose
+    maps_to: TGFb_LIGAND_Dose
+    label: TGFB Ligand Dose
+    description: TGF-beta ligand dose. Maps to SBML symbol `TGFb_LIGAND_Dose`.
+  - name: initial_surface_tgf_beta_receptor_1
+    maps_to: TGFb_R1_surface
+    label: Initial Surface TGF Beta Receptor 1
+    description: initial surface receptor 1 pool. Maps to SBML symbol `TGFb_R1_surface`.
+  - name: initial_surface_tgf_beta_receptor_2
+    maps_to: TGFb_R2_surface
+    label: Initial Surface TGF Beta Receptor 2
+    description: initial surface receptor 2 pool. Maps to SBML symbol `TGFb_R2_surface`.
+  - name: receptor_phosphorylation_rate
+    maps_to: k_phosphorylation
+    label: Receptor Phosphorylation Rate
+    description: receptor/SMAD phosphorylation rate. Maps to SBML symbol `k_phosphorylation`.
+  - name: ligand_degradation_rate
+    maps_to: kin_deg_Ligand
+    label: Ligand Degradation Rate
+    description: ligand degradation rate. Maps to SBML symbol `kin_deg_Ligand`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: surface_tgf_beta_receptor_1
+    maps_to: TGFb_R1_surface
+    label: Surface TGF Beta Receptor 1
+    description: Surface TGF Beta Receptor 1. Maps to SBML symbol `TGFb_R1_surface`.
+  - name: surface_tgf_beta_receptor_2
+    maps_to: TGFb_R2_surface
+    label: Surface TGF Beta Receptor 2
+    description: Surface TGF Beta Receptor 2. Maps to SBML symbol `TGFb_R2_surface`.
+  - name: endosomal_tgf_beta_receptor_1
+    maps_to: TGFb_R1_endo
+    label: Endosomal TGF Beta Receptor 1
+    description: Endosomal TGF Beta Receptor 1. Maps to SBML symbol `TGFb_R1_endo`.
+  - name: endosomal_tgf_beta_receptor_2
+    maps_to: TGFb_R2_endo
+    label: Endosomal TGF Beta Receptor 2
+    description: Endosomal TGF Beta Receptor 2. Maps to SBML symbol `TGFb_R2_endo`.
+  - name: tgf_beta_ligand
+    maps_to: TGFb
+    label: TGF Beta Ligand
+    description: TGF Beta Ligand. Maps to SBML symbol `TGFb`.
+  - name: internalized_tgf_beta
+    maps_to: TGFb_In
+    label: Internalized TGF Beta
+    description: Internalized TGF Beta. Maps to SBML symbol `TGFb_In`.
+  - name: active_receptor_2
+    maps_to: Active_R2
+    label: Active Receptor 2
+    description: Active Receptor 2. Maps to SBML symbol `Active_R2`.
+  - name: active_tgf_beta_receptor_complex
+    maps_to: Active_Rec
+    label: Active TGF Beta Receptor Complex
+    description: Active TGF Beta Receptor Complex. Maps to SBML symbol `Active_Rec`.
+parameters:
+- name: integration_step
+  value: 0.2
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

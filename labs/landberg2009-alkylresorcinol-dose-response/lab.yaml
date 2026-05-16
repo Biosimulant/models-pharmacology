@@ -1,0 +1,81 @@
+schema_version: '2.0'
+title: Landberg2009 - Alkylresorcinol Dose Response Lab
+description: Pharmacokinetic model of alkylresorcinols. Both plasma AR concentrations
+  and urinary metabolites in 24-h samples showed a dose-response relation to increased
+  AR intake, which strongly supports the hyp.
+models:
+- alias: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000948.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.state
+  to:
+  - visualisation.pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model_state
+- from: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.summary
+  to:
+  - visualisation.pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model_summary
+- from: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pharmacokinetics
+- nutrition
+- dose-response
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: alkylresorcinol_dose
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.alkylresorcinol_dose
+    label: Alkylresorcinol Dose
+  - name: fast_absorption_rate
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.fast_absorption_rate
+    label: Fast Absorption Rate
+  - name: slow_absorption_rate
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.slow_absorption_rate
+    label: Slow Absorption Rate
+  - name: clearance_over_volume
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.clearance_over_volume
+    label: Clearance Over Volume
+  - name: baseline_concentration
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.baseline_concentration
+    label: Baseline Concentration
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.species_labels
+    label: Observable labels
+  - name: alkylresorcinol_dose_pool
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.alkylresorcinol_dose_pool
+    label: Alkylresorcinol Dose Pool
+  - name: alkylresorcinol_absorption_pool_1
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.alkylresorcinol_absorption_pool_1
+    label: Alkylresorcinol Absorption Pool 1
+  - name: alkylresorcinol_absorption_pool_2
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.alkylresorcinol_absorption_pool_2
+    label: Alkylresorcinol Absorption Pool 2
+  - name: alkylresorcinol_central_concentration
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.alkylresorcinol_central_concentration
+    label: Alkylresorcinol Central Concentration
+  - name: bioavailability_fraction_1
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.bioavailability_fraction_1
+    label: Bioavailability Fraction 1
+  - name: bioavailability_fraction_2
+    maps_to: pharmacology_sbml_landberg2009_alkylresorcinol_dose_response_biomd0000000948_model.bioavailability_fraction_2
+    label: Bioavailability Fraction 2

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "26f1abc6-4fed-4ace-a90e-44f12076e6c7",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "283af274-567a-4e68-929a-9e098d06a79f",
+  "created_at": "2026-05-15T19:31:40.452954364+00:00",
+  "last_synced_at": "2026-05-16T09:27:33.260070+00:00",
+  "hub_manifest_hash": "3117896cbb8908340970b22238dc3e67324d5e5412b937abbeb41e3ffcf09cb7",
+  "package_name": "schropp2019-target-mediated-drug-disposition-model-for-bispecifi"
+}

@@ -1,0 +1,73 @@
+schema_version: '2.0'
+title: Gulati2014 - Simplified model of fibrinogen recovery following brown snake
+  bite_1 Lab
+description: "Bridging systems biology and pharmacokinetics\u2013pharmacodynamics\
+  \ has resulted in models that are highly complex and complicated. They usually contain\
+  \ large numbers of states and parameters and describe."
+models:
+- alias: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1805090001.xml
+    integration_step: 0.05
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.state
+  to:
+  - visualisation.pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model_state
+- from: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.summary
+  to:
+  - visualisation.pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model_summary
+- from: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 0.5
+  initial_inputs: {}
+tags:
+- pharmacology
+- toxicology
+- physiology
+- coagulation
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: brown_snake_venom_fraction
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.brown_snake_venom_fraction
+    label: Brown Snake Venom Fraction
+  - name: initial_plasma_venom
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.initial_plasma_venom
+    label: Initial Plasma Venom
+  - name: initial_thrombin_activity
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.initial_thrombin_activity
+    label: Initial Thrombin Activity
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.species_labels
+    label: Observable labels
+  - name: plasma_venom
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.plasma_venom
+    label: Plasma Venom
+  - name: fibrinogen_g_per_l
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.fibrinogen_g_per_l
+    label: Fibrinogen G Per L
+  - name: fibrinogen_pool
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.fibrinogen_pool
+    label: Fibrinogen Pool
+  - name: venom_absorption
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.venom_absorption
+    label: Venom Absorption
+  - name: thrombin_activity
+    maps_to: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model.thrombin_activity
+    label: Thrombin Activity

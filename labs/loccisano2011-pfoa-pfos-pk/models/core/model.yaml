@@ -1,0 +1,116 @@
+schema_version: '2.0'
+title: Loccisano2011-pharmacokinetics of PFOA and PFOS in the monkey
+description: Perfluoroalkyl acid carboxylates and sulfonates (PFAAs) have many consumer
+  and industrial applications. The persistence and widespread distribution of these
+  compounds in humans have brought them under.
+standard: sbml
+tags:
+- pharmacology
+- toxicology
+- pharmacokinetics
+- pbpk
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Anne E Loccisano
+- Jerry L Campbell
+- Melvin E Andersen
+- Harvey J Clewell
+upstream:
+  id: biomodels_ebi:MODEL2003190002
+  source_db: biomodels_ebi
+  source_id: MODEL2003190002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003190002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003190002?filename=Loccisano2011.xml
+  license: CC0
+biosim:
+  entrypoint: src.loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model:Loccisano2011PharmacokineticsOfPfoaAndPfosModel2003190002Model
+  init_kwargs:
+    model_path: data/MODEL2003190002.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: oral_toxicant_input
+    maps_to: input
+    label: Oral Toxicant Input
+    description: oral input amount/rate as defined by source. Maps to SBML symbol
+      `input`.
+  - name: iv_toxicant_input
+    maps_to: inputIV
+    label: IV Toxicant Input
+    description: IV input amount/rate as defined by source. Maps to SBML symbol `inputIV`.
+  - name: initial_plasma_toxicant_burden
+    maps_to: Plasma_0
+    label: Initial Plasma Toxicant Burden
+    description: initial plasma burden. Maps to SBML symbol `Plasma_0`.
+  - name: urinary_elimination_rate
+    maps_to: kurinec
+    label: Urinary Elimination Rate
+    description: urinary elimination parameter. Maps to SBML symbol `kurinec`.
+  - name: free_fraction
+    maps_to: Free
+    label: Free Fraction
+    description: free toxicant fraction. Maps to SBML symbol `Free`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: plasma_toxicant_burden
+    maps_to: Plasma_0
+    label: Plasma Toxicant Burden
+    description: Plasma Toxicant Burden. Maps to SBML symbol `Plasma_0`.
+  - name: liver_toxicant_burden
+    maps_to: Liver_0
+    label: Liver Toxicant Burden
+    description: Liver Toxicant Burden. Maps to SBML symbol `Liver_0`.
+  - name: kidney_toxicant_burden
+    maps_to: Kidney_0
+    label: Kidney Toxicant Burden
+    description: Kidney Toxicant Burden. Maps to SBML symbol `Kidney_0`.
+  - name: gut_toxicant_burden
+    maps_to: Gut_0
+    label: Gut Toxicant Burden
+    description: Gut Toxicant Burden. Maps to SBML symbol `Gut_0`.
+  - name: fat_toxicant_burden
+    maps_to: Fat_0
+    label: Fat Toxicant Burden
+    description: Fat Toxicant Burden. Maps to SBML symbol `Fat_0`.
+  - name: skin_toxicant_burden
+    maps_to: Skin_0
+    label: Skin Toxicant Burden
+    description: Skin Toxicant Burden. Maps to SBML symbol `Skin_0`.
+  - name: urine_toxicant_burden
+    maps_to: Urine
+    label: Urine Toxicant Burden
+    description: Urine Toxicant Burden. Maps to SBML symbol `Urine`.
+  - name: filtrate_toxicant_burden
+    maps_to: FIltrate
+    label: Filtrate Toxicant Burden
+    description: Filtrate Toxicant Burden. Maps to SBML symbol `FIltrate`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

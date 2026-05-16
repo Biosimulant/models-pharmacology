@@ -1,0 +1,62 @@
+schema_version: '2.0'
+title: 'Zake2021 - PBPK model of metformin in mice: single dose intavenous Visualisation'
+description: 'Desktop visualisation for Zake2021 - PBPK model of metformin in mice:
+  single dose intavenous.'
+standard: other
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- endocrine
+- mouse
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: 'Zake2021 - PBPK model of metformin in mice: single dose intavenous'
+    question: How does IV metformin distribute across mouse plasma, liver, and kidney
+      compartments?
+    answer_focus: keep route-specific defaults; lumen dose should be visible but defaulted
+      to zero for IV runs.
+    sources:
+    - alias: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_mice_single_biomd0000001039_model
+      title: 'Zake2021 - PBPK model of metformin in mice: single dose intavenous'
+      visual_group: pk
+      observables:
+      - id: mKidneyPlasma
+        port: kidney_plasma_metformin
+        label: Kidney Plasma Metformin
+        group: pk
+      - id: mLiver
+        port: liver_metformin
+        label: Liver Metformin
+        group: pk
+      - id: mPlasmaVenous
+        port: venous_plasma_metformin
+        label: Venous Plasma Metformin
+        group: pk
+      - id: mPlasmaArterial
+        port: arterial_plasma_metformin
+        label: Arterial Plasma Metformin
+        group: pk
+      - id: mKidneyTissue
+        port: kidney_tissue_metformin
+        label: Kidney Tissue Metformin
+        group: pk
+      - id: mKidneyTubular
+        port: kidney_tubular_metformin
+        label: Kidney Tubular Metformin
+        group: pk
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

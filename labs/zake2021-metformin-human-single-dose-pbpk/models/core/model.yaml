@@ -1,0 +1,105 @@
+schema_version: '2.0'
+title: Zake2021 - PBPK model of metformin in humans, single PO dose
+description: This model is supplementary material of publication 'Physiologically
+  based metformin pharmacokinetics model of mice and scale-up to humans for the estimation
+  of concentrations in various tissues'by Da. It can be used to explore dose-response
+  dynamics and compare treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- endocrine
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Darta Maija Zake
+- Janis Kurlovics
+- Linda Zaharenko
+- Vitalijs Komasilovs
+- Janis Klovins
+upstream:
+  id: biomodels_ebi:BIOMD0000001028
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001028
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001028
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001028?filename=Zake2021_Metformin_Human_single_PO_dose.xml
+  license: CC0
+biosim:
+  entrypoint: src.zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model:Zake2021PbpkModelOfMetforminInHumansSinglBiomd0000001028Model
+  init_kwargs:
+    model_path: data/BIOMD0000001028.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: metformin_lumen_dose_mg
+    maps_to: Metformin_Dose_in_Lumen_in_mg
+    label: Metformin Lumen Dose Mg
+    description: oral/lumen metformin dose. Maps to SBML symbol `Metformin_Dose_in_Lumen_in_mg`.
+  - name: body_weight_g
+    maps_to: ModelValue_1
+    label: Body Weight G
+    description: body weight initial value. Maps to SBML symbol `ModelValue_1`.
+  - name: cardiac_output_ml_per_min
+    maps_to: ModelValue_2
+    label: Cardiac Output Ml Per Min
+    description: cardiac output initial value. Maps to SBML symbol `ModelValue_2`.
+  - name: kidney_partition_coefficient
+    maps_to: ModelValue_56
+    label: Kidney Partition Coefficient
+    description: kidney coefficient. Maps to SBML symbol `ModelValue_56`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: kidney_plasma_metformin
+    maps_to: mKidneyPlasma
+    label: Kidney Plasma Metformin
+    description: Kidney Plasma Metformin. Maps to SBML symbol `mKidneyPlasma`.
+  - name: liver_metformin
+    maps_to: mLiver
+    label: Liver Metformin
+    description: Liver Metformin. Maps to SBML symbol `mLiver`.
+  - name: venous_plasma_metformin
+    maps_to: mPlasmaVenous
+    label: Venous Plasma Metformin
+    description: Venous Plasma Metformin. Maps to SBML symbol `mPlasmaVenous`.
+  - name: arterial_plasma_metformin
+    maps_to: mPlasmaArterial
+    label: Arterial Plasma Metformin
+    description: Arterial Plasma Metformin. Maps to SBML symbol `mPlasmaArterial`.
+  - name: kidney_tissue_metformin
+    maps_to: mKidneyTissue
+    label: Kidney Tissue Metformin
+    description: Kidney Tissue Metformin. Maps to SBML symbol `mKidneyTissue`.
+  - name: kidney_tubular_metformin
+    maps_to: mKidneyTubular
+    label: Kidney Tubular Metformin
+    description: Kidney Tubular Metformin. Maps to SBML symbol `mKidneyTubular`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

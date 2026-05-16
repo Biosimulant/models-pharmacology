@@ -1,0 +1,40 @@
+schema_version: '2.0'
+title: Walsh2014 - Inhibition kinetics of DAPT on APP Cleavage Visualisation
+description: Desktop visualisation for Walsh2014 - Inhibition kinetics of DAPT on
+  APP Cleavage.
+standard: other
+tags:
+- pharmacology
+- neuroscience
+- enzyme-inhibition
+- amyloid
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 2.0
+    lab_title: Walsh2014 - Inhibition kinetics of DAPT on APP Cleavage
+    question: Does DAPT suppress the APP cleavage state under the selected inhibitor
+      concentration?
+    answer_focus: output is a reduced cleavage state, not amyloid-beta concentration.
+    sources:
+    - alias: pharmacology_sbml_walsh2014_inhibition_kinetics_of_dapt_on_app_cle_biomd0000000617_model
+      title: Walsh2014 - Inhibition kinetics of DAPT on APP Cleavage
+      visual_group: pk
+      observables:
+      - id: v
+        port: app_cleavage_state
+        label: APP Cleavage State
+        group: pk
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

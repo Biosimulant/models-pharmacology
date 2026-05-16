@@ -1,0 +1,47 @@
+schema_version: '2.0'
+title: Grange2001 - L Dopa PK model Visualisation
+description: Desktop visualisation for Grange2001 - L Dopa PK model.
+standard: other
+tags:
+- pharmacology
+- pharmacokinetics
+- neuroscience
+- pbpk
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Grange2001 - L Dopa PK model
+    question: What L-DOPA exposure profile follows the selected dose and clearance?
+    answer_focus: route should remain as defined by the source model; do not label
+      it as oral/IV unless source metadata confirms it.
+    sources:
+    - alias: pharmacology_sbml_grange2001_l_dopa_pk_model_biomd0000000321_model
+      title: Grange2001 - L Dopa PK model
+      visual_group: pk
+      observables:
+      - id: A_dopa
+        port: l_dopa_amount
+        label: L Dopa Amount
+        group: pk
+      - id: C_dopa
+        port: l_dopa_concentration
+        label: L Dopa Concentration
+        group: pk
+      - id: C_OMD
+        port: three_omd_concentration
+        label: Three Omd Concentration
+        group: pk
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

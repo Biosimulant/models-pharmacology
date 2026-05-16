@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "90d511f8-4162-4699-bd9d-dcb724048ed7",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "84b9f133-0da6-474e-9ade-71c321f8647d",
+  "created_at": "2026-05-15T19:31:41.509952073+00:00",
+  "last_synced_at": "2026-05-16T09:39:31.499338+00:00",
+  "hub_manifest_hash": "8562dea66039ec91298f960a1e5b2e651cf06b97606556e3aa5af7102869be3a",
+  "package_name": "zake2021-pbpk-model-of-metformin-in-humans-single-po-dose-lab"
+}

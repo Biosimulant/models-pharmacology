@@ -1,0 +1,85 @@
+schema_version: '2.0'
+title: Grzegorzewski2022 - PBPK model of dextromethorphan Lab
+description: Physiologically based pharmacokinetic (PBPK) modeling of the role of
+  CYP2D6 polymorphism for metabolic phenotyping with dextromethorphan. It can be used
+  to explore dose-response dynamics and compare treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL2301090002.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.state
+  to:
+  - visualisation.pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model_state
+- from: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.summary
+  to:
+  - visualisation.pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model_summary
+- from: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- physiology
+- cyp-metabolism
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: oral_dextromethorphan_dose_mg
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.oral_dextromethorphan_dose_mg
+    label: Oral Dextromethorphan Dose Mg
+  - name: iv_dextromethorphan_bolus_mg
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.iv_dextromethorphan_bolus_mg
+    label: IV Dextromethorphan Bolus Mg
+  - name: dextromethorphan_infusion_rate_mg_per_min
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.dextromethorphan_infusion_rate_mg_per_min
+    label: Dextromethorphan Infusion Rate Mg Per Min
+  - name: cyp2d6_custom_activity
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.cyp2d6_custom_activity
+    label: CYP2D6 Custom Activity
+  - name: cyp2d6_vmax
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.cyp2d6_vmax
+    label: CYP2D6 VMAX
+  - name: cyp3a4_vmax
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.cyp3a4_vmax
+    label: CYP3A4 VMAX
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.species_labels
+    label: Observable labels
+  - name: dextromethorphan_liver_plasma
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.dextromethorphan_liver_plasma
+    label: Dextromethorphan Liver Plasma
+  - name: dextromethorphan_gut_plasma
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.dextromethorphan_gut_plasma
+    label: Dextromethorphan Gut Plasma
+  - name: dextromethorphan_kidney_plasma
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.dextromethorphan_kidney_plasma
+    label: Dextromethorphan Kidney Plasma
+  - name: dextromethorphan_lung_plasma
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.dextromethorphan_lung_plasma
+    label: Dextromethorphan Lung Plasma
+  - name: dextorphan_liver_plasma
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.dextorphan_liver_plasma
+    label: Dextorphan Liver Plasma
+  - name: dextorphan_glucuronide_liver_plasma
+    maps_to: pharmacology_sbml_grzegorzewski2022_pbpk_model_of_dextromethorphan_model2301090002_model.dextorphan_glucuronide_liver_plasma
+    label: Dextorphan Glucuronide Liver Plasma

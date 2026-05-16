@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Petrov2018 - C-547 a 6-methyluracil derivative with long-lasting binding and
+  rebinding on acetylcholinesterase Lab
+description: C-547, a candidate drug, is a potent slow-binding inhibitor of acetyl-cholinesterase,
+  and the focus of this PK/PD model, which investigates the metabolism and clinical
+  effect of C-547 when it is no lo. It can be used to explore dose-response dynamics
+  and compare treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1910240001.xml
+    integration_step: 0.2
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.state
+  to:
+  - visualisation.pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model_state
+- from: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.summary
+  to:
+  - visualisation.pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model_summary
+- from: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model_species_labels
+runtime:
+  duration: 60.0
+  communication_step: 2.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- receptor-binding
+- neuroscience
+- toxicology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_c547_binding_state_y1
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.initial_c547_binding_state_y1
+    label: Initial C547 Binding State Y1
+  - name: initial_c547_binding_state_y2
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.initial_c547_binding_state_y2
+    label: Initial C547 Binding State Y2
+  - name: initial_c547_binding_state_y3
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.initial_c547_binding_state_y3
+    label: Initial C547 Binding State Y3
+  - name: initial_c547_binding_state_y4
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.initial_c547_binding_state_y4
+    label: Initial C547 Binding State Y4
+  - name: initial_c547_binding_state_y5
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.initial_c547_binding_state_y5
+    label: Initial C547 Binding State Y5
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.species_labels
+    label: Observable labels
+  - name: c547_binding_state_y1
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.c547_binding_state_y1
+    label: C547 Binding State Y1
+  - name: c547_binding_state_y2
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.c547_binding_state_y2
+    label: C547 Binding State Y2
+  - name: c547_binding_state_y3
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.c547_binding_state_y3
+    label: C547 Binding State Y3
+  - name: c547_binding_state_y4
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.c547_binding_state_y4
+    label: C547 Binding State Y4
+  - name: c547_binding_state_y5
+    maps_to: pharmacology_sbml_petrov2018_c_547_a_6_methyluracil_derivative_wit_model1910240001_model.c547_binding_state_y5
+    label: C547 Binding State Y5

@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Strasen2018 - TGFb SMAD Signalling - Dose dependent dynamics upon TGFb stimulation
+  Visualisation
+description: Desktop visualisation for Strasen2018 - TGFb SMAD Signalling - Dose dependent
+  dynamics upon TGFb stimulation.
+standard: other
+tags:
+- pharmacology
+- signaling
+- oncology
+- dose-response
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 2.0
+    lab_title: Strasen2018 - TGFb SMAD Signalling - Dose dependent dynamics upon TGFb
+      stimulation
+    question: Does TGF-beta dose amplify receptor activation and internalization?
+    answer_focus: pathway outputs are receptor/signaling states, not downstream gene-expression
+      endpoints unless explicitly added.
+    sources:
+    - alias: pharmacology_sbml_strasen2018_tgfb_smad_signalling_dose_dependent_biomd0000000989_model
+      title: Strasen2018 - TGFb SMAD Signalling - Dose dependent dynamics upon TGFb
+        stimulation
+      visual_group: signaling
+      observables:
+      - id: TGFb_R1_surface
+        port: surface_tgf_beta_receptor_1
+        label: Surface TGF Beta Receptor 1
+        group: signaling
+      - id: TGFb_R2_surface
+        port: surface_tgf_beta_receptor_2
+        label: Surface TGF Beta Receptor 2
+        group: signaling
+      - id: TGFb_R1_endo
+        port: endosomal_tgf_beta_receptor_1
+        label: Endosomal TGF Beta Receptor 1
+        group: signaling
+      - id: TGFb_R2_endo
+        port: endosomal_tgf_beta_receptor_2
+        label: Endosomal TGF Beta Receptor 2
+        group: signaling
+      - id: TGFb
+        port: tgf_beta_ligand
+        label: TGF Beta Ligand
+        group: signaling
+      - id: TGFb_In
+        port: internalized_tgf_beta
+        label: Internalized TGF Beta
+        group: signaling
+      - id: Active_R2
+        port: active_receptor_2
+        label: Active Receptor 2
+        group: signaling
+      - id: Active_Rec
+        port: active_tgf_beta_receptor_complex
+        label: Active TGF Beta Receptor Complex
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

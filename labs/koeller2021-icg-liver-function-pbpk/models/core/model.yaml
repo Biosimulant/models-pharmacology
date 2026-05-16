@@ -1,0 +1,115 @@
+schema_version: '2.0'
+title: Koeller2021 - PBPK model of ICG liver function tests
+description: Physiollogically based pharmacokinetic (PBPK) model of indocyanine-green
+  (ICG) liver function tests. It can be used to explore dose-response dynamics and
+  compare treatment scenarios across conditions.
+standard: sbml
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- liver
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- "Adrian K\xF6ller"
+- Jan Grzegorzewski
+- Hans-Michael Tautenhahn
+- "Matthias K\xF6nig"
+upstream:
+  id: biomodels_ebi:MODEL2301090001
+  source_db: biomodels_ebi
+  source_id: MODEL2301090001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2301090001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2301090001?filename=icg_body_flat.xml
+  license: CC0
+biosim:
+  entrypoint: src.koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model:Koeller2021PbpkModelOfIcgLiverFunctionTesModel2301090001Model
+  init_kwargs:
+    model_path: data/MODEL2301090001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: icg_infusion_rate_mg_per_min
+    maps_to: Ri_icg
+    label: ICG Infusion Rate Mg Per Min
+    description: ICG infusion rate. Maps to SBML symbol `Ri_icg`.
+  - name: icg_injection_time_seconds
+    maps_to: ti_icg
+    label: ICG Injection Time Seconds
+    description: injection duration. Maps to SBML symbol `ti_icg`.
+  - name: liver_shunt_fraction
+    maps_to: f_shunts
+    label: Liver Shunt Fraction
+    description: portal venous blood shunted by liver. Maps to SBML symbol `f_shunts`.
+  - name: liver_tissue_loss_fraction
+    maps_to: f_tissue_loss
+    label: Liver Tissue Loss Fraction
+    description: lost parenchymal liver volume fraction. Maps to SBML symbol `f_tissue_loss`.
+  - name: hepatic_blood_flow_scale
+    maps_to: f_bloodflow
+    label: Hepatic Blood Flow Scale
+    description: hepatic blood-flow scaling factor. Maps to SBML symbol `f_bloodflow`.
+  - name: oatp1b3_activity_scale
+    maps_to: LI__f_oatp1b3
+    label: Oatp1b3 Activity Scale
+    description: hepatic uptake transporter activity scale. Maps to SBML symbol `LI__f_oatp1b3`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: icg_liver_plasma
+    maps_to: Cli_plasma_icg
+    label: ICG Liver Plasma
+    description: ICG Liver Plasma. Maps to SBML symbol `Cli_plasma_icg`.
+  - name: icg_venous_plasma
+    maps_to: Cve_icg
+    label: ICG Venous Plasma
+    description: ICG Venous Plasma. Maps to SBML symbol `Cve_icg`.
+  - name: icg_arterial_plasma
+    maps_to: Car_icg
+    label: ICG Arterial Plasma
+    description: ICG Arterial Plasma. Maps to SBML symbol `Car_icg`.
+  - name: icg_gastrointestinal_plasma
+    maps_to: Cgi_plasma_icg
+    label: ICG Gastrointestinal Plasma
+    description: ICG Gastrointestinal Plasma. Maps to SBML symbol `Cgi_plasma_icg`.
+  - name: icg_lung_plasma
+    maps_to: Clu_plasma_icg
+    label: ICG Lung Plasma
+    description: ICG Lung Plasma. Maps to SBML symbol `Clu_plasma_icg`.
+  - name: icg_portal_vein
+    maps_to: Cpo_icg
+    label: ICG Portal Vein
+    description: ICG Portal Vein. Maps to SBML symbol `Cpo_icg`.
+  - name: icg_liver_amount
+    maps_to: LI__icg
+    label: ICG Liver Amount
+    description: ICG Liver Amount. Maps to SBML symbol `LI__icg`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

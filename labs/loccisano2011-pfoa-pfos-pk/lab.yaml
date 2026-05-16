@@ -1,0 +1,88 @@
+schema_version: '2.0'
+title: Loccisano2011-pharmacokinetics of PFOA and PFOS in the monkey Lab
+description: Perfluoroalkyl acid carboxylates and sulfonates (PFAAs) have many consumer
+  and industrial applications. The persistence and widespread distribution of these
+  compounds in humans have brought them under.
+models:
+- alias: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL2003190002.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.state
+  to:
+  - visualisation.pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model_state
+- from: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.summary
+  to:
+  - visualisation.pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model_summary
+- from: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- toxicology
+- pharmacokinetics
+- pbpk
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: oral_toxicant_input
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.oral_toxicant_input
+    label: Oral Toxicant Input
+  - name: iv_toxicant_input
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.iv_toxicant_input
+    label: IV Toxicant Input
+  - name: initial_plasma_toxicant_burden
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.initial_plasma_toxicant_burden
+    label: Initial Plasma Toxicant Burden
+  - name: urinary_elimination_rate
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.urinary_elimination_rate
+    label: Urinary Elimination Rate
+  - name: free_fraction
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.free_fraction
+    label: Free Fraction
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.species_labels
+    label: Observable labels
+  - name: plasma_toxicant_burden
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.plasma_toxicant_burden
+    label: Plasma Toxicant Burden
+  - name: liver_toxicant_burden
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.liver_toxicant_burden
+    label: Liver Toxicant Burden
+  - name: kidney_toxicant_burden
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.kidney_toxicant_burden
+    label: Kidney Toxicant Burden
+  - name: gut_toxicant_burden
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.gut_toxicant_burden
+    label: Gut Toxicant Burden
+  - name: fat_toxicant_burden
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.fat_toxicant_burden
+    label: Fat Toxicant Burden
+  - name: skin_toxicant_burden
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.skin_toxicant_burden
+    label: Skin Toxicant Burden
+  - name: urine_toxicant_burden
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.urine_toxicant_burden
+    label: Urine Toxicant Burden
+  - name: filtrate_toxicant_burden
+    maps_to: pharmacology_sbml_loccisano2011_pharmacokinetics_of_pfoa_and_pfos_model2003190002_model.filtrate_toxicant_burden
+    label: Filtrate Toxicant Burden

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "0e4c5784-aef8-4586-9ae5-ccd1582f1326",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "0a237e15-b195-4ce3-b80f-d359dc68c36c",
+  "created_at": "2026-05-15T19:13:24.319085807+00:00",
+  "last_synced_at": "2026-05-16T09:34:44.694623+00:00",
+  "hub_manifest_hash": "78a557e592bacc46d88e7703760ba00fb771fa28aaaaf0139c74f6f6bcbe13d0",
+  "package_name": "tabak2007-dopamine-lab"
+}

@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Simon2019 - NIK-dependent p100 processing into p52, Michaelis-Menten, SBML
+  2v4 Lab
+description: This model represents NIK-dependent p100 processing into p52 with Michaelis-Menten
+  kinetics. While this model shows identical dose-response to the mass action representation,
+  when IkBd degradation is.
+models:
+- alias: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000866.xml
+    integration_step: 0.2
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.state
+  to:
+  - visualisation.pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model_state
+- from: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.summary
+  to:
+  - visualisation.pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model_summary
+- from: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model_species_labels
+runtime:
+  duration: 60.0
+  communication_step: 2.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- signaling
+- immunology
+- nfkb
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_p100_pool
+    maps_to: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.initial_p100_pool
+    label: Initial P100 Pool
+  - name: initial_nik_pool
+    maps_to: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.initial_nik_pool
+    label: Initial NIK Pool
+  - name: total_p100_boundary_pool
+    maps_to: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.total_p100_boundary_pool
+    label: Total P100 Boundary Pool
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.species_labels
+    label: Observable labels
+  - name: p100_pool
+    maps_to: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.p100_pool
+    label: P100 Pool
+  - name: p52_pool
+    maps_to: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.p52_pool
+    label: P52 Pool
+  - name: nik_pool
+    maps_to: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000866_model.nik_pool
+    label: NIK Pool

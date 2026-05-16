@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Simon2019 - NIK-dependent p100 processing into p52, Mass Action, SBML 2v4 Visualisation
+description: Desktop visualisation for Simon2019 - NIK-dependent p100 processing into
+  p52, Mass Action, SBML 2v4.
+standard: other
+tags:
+- pharmacology
+- signaling
+- immunology
+- nfkb
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 2.0
+    lab_title: Simon2019 - NIK-dependent p100 processing into p52, Mass Action, SBML
+      2v4
+    question: Does mass-action NIK binding drive p100-to-p52 processing?
+    answer_focus: variant label must be explicit in the visual title.
+    sources:
+    - alias: pharmacology_sbml_simon2019_nik_dependent_p100_processing_into_p52_biomd0000000868_model
+      title: Simon2019 - NIK-dependent p100 processing into p52, Mass Action, SBML
+        2v4
+      visual_group: signaling
+      observables:
+      - id: p100_NIK
+        port: p100_nik_complex
+        label: P100 NIK Complex
+        group: signaling
+      - id: p100
+        port: p100_pool
+        label: P100 Pool
+        group: signaling
+      - id: p52
+        port: p52_pool
+        label: P52 Pool
+        group: signaling
+      - id: NIK
+        port: nik_pool
+        label: NIK Pool
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

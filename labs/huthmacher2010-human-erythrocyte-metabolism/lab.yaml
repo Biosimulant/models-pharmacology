@@ -1,0 +1,81 @@
+schema_version: '2.0'
+title: Huthmacher2010_HumanErythrocyte_MetabolicNetwork Lab
+description: "This model is from the article: Antimalarial drug targets in Plasmodium\
+  \ falciparum predicted by stage-specific metabolic network analysis. Huthmacher\
+  \ C, Hoppe A, Bulik S, Holzh\xFCtter HG."
+models:
+- alias: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1111240001.xml
+    integration_step: 0.05
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.state
+  to:
+  - visualisation.pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model_state
+- from: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.summary
+  to:
+  - visualisation.pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model_summary
+- from: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model_species_labels
+runtime:
+  duration: 5.0
+  communication_step: 0.5
+  initial_inputs: {}
+tags:
+- pharmacology
+- metabolism
+- systems-biology
+- hematology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_erythrocyte_atp
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.initial_erythrocyte_atp
+    label: Initial Erythrocyte ATP
+  - name: initial_erythrocyte_nad
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.initial_erythrocyte_nad
+    label: Initial Erythrocyte NAD
+  - name: initial_erythrocyte_nadh
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.initial_erythrocyte_nadh
+    label: Initial Erythrocyte NADH
+  - name: initial_pyruvate
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.initial_pyruvate
+    label: Initial Pyruvate
+  - name: initial_glucose_1_phosphate
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.initial_glucose_1_phosphate
+    label: Initial Glucose 1 Phosphate
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.species_labels
+    label: Observable labels
+  - name: erythrocyte_atp
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.erythrocyte_atp
+    label: Erythrocyte ATP
+  - name: erythrocyte_nad
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.erythrocyte_nad
+    label: Erythrocyte NAD
+  - name: erythrocyte_nadh
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.erythrocyte_nadh
+    label: Erythrocyte NADH
+  - name: pyruvate
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.pyruvate
+    label: Pyruvate
+  - name: glucose_1_phosphate
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.glucose_1_phosphate
+    label: Glucose 1 Phosphate
+  - name: datp
+    maps_to: pharmacology_sbml_huthmacher2010_humanerythrocyte_metabolicnetwork_model1111240001_model.datp
+    label: Datp

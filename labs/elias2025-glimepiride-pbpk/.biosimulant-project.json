@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "b8740171-bc76-445f-9531-52c1c559d825",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "1c4a3c22-f264-403d-99c3-814b19becb3e",
+  "created_at": "2026-05-15T19:13:23.941782159+00:00",
+  "last_synced_at": "2026-05-16T09:11:26.234632+00:00",
+  "hub_manifest_hash": "c3aa848e3380c30ed045b4b8dcd1faedc0f2da448ba81b3ab1b3f62cb95247d8",
+  "package_name": "elias2025-physiologically-based-pharmacokinetics-pbpk-model-glim"
+}

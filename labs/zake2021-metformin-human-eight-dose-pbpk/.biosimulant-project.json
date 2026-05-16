@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "2c7c38c8-139b-4cee-bc9a-2a0a07b46cf4",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "e359afd4-a021-4b58-8c5a-bff5214a1126",
+  "created_at": "2026-05-15T19:31:41.459837944+00:00",
+  "last_synced_at": "2026-05-16T09:38:33.915577+00:00",
+  "hub_manifest_hash": "000ce2408a907fa4a94f59b845d89f4148ca3ebd130fb6f9113e67c86c1c8193",
+  "package_name": "zake2021-pbpk-model-of-metformin-in-humans-eight-po-administrati"
+}

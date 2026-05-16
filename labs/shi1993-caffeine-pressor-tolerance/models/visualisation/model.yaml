@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Shi1993_Caffeine_pressor_tolerance Visualisation
+description: Desktop visualisation for Shi1993_Caffeine_pressor_tolerance.
+standard: other
+tags:
+- pharmacology
+- pharmacodynamics
+- cardiovascular
+- physiology
+- tolerance
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 2.0
+    lab_title: Shi1993_Caffeine_pressor_tolerance
+    question: Does tolerance attenuate the modeled caffeine pressor response over
+      time?
+    answer_focus: "Initial-state controls: if no explicit blood-pressure output exists,\
+      \ visual text must say \u201Ctolerance state,\u201D not measured pressure."
+    sources:
+    - alias: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model
+      title: Shi1993_Caffeine_pressor_tolerance
+      visual_group: physiology
+      observables:
+      - id: X_gut
+        port: gut_caffeine_amount
+        label: Gut Caffeine Amount
+        group: physiology
+      - id: C_p
+        port: plasma_caffeine_concentration
+        label: Plasma Caffeine Concentration
+        group: physiology
+      - id: C_per
+        port: peripheral_caffeine_concentration
+        label: Peripheral Caffeine Concentration
+        group: physiology
+      - id: C_e
+        port: effect_site_caffeine_concentration
+        label: Effect Site Caffeine Concentration
+        group: physiology
+      - id: C_t
+        port: tolerance_state
+        label: Tolerance State
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

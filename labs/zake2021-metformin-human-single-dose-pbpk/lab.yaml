@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Zake2021 - PBPK model of metformin in humans, single PO dose Lab
+description: This model is supplementary material of publication 'Physiologically
+  based metformin pharmacokinetics model of mice and scale-up to humans for the estimation
+  of concentrations in various tissues'by Da. It can be used to explore dose-response
+  dynamics and compare treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000001028.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.state
+  to:
+  - visualisation.pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model_state
+- from: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.summary
+  to:
+  - visualisation.pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model_summary
+- from: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- endocrine
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: metformin_lumen_dose_mg
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.metformin_lumen_dose_mg
+    label: Metformin Lumen Dose Mg
+  - name: body_weight_g
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.body_weight_g
+    label: Body Weight G
+  - name: cardiac_output_ml_per_min
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.cardiac_output_ml_per_min
+    label: Cardiac Output Ml Per Min
+  - name: kidney_partition_coefficient
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.kidney_partition_coefficient
+    label: Kidney Partition Coefficient
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.species_labels
+    label: Observable labels
+  - name: kidney_plasma_metformin
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.kidney_plasma_metformin
+    label: Kidney Plasma Metformin
+  - name: liver_metformin
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.liver_metformin
+    label: Liver Metformin
+  - name: venous_plasma_metformin
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.venous_plasma_metformin
+    label: Venous Plasma Metformin
+  - name: arterial_plasma_metformin
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.arterial_plasma_metformin
+    label: Arterial Plasma Metformin
+  - name: kidney_tissue_metformin
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.kidney_tissue_metformin
+    label: Kidney Tissue Metformin
+  - name: kidney_tubular_metformin
+    maps_to: pharmacology_sbml_zake2021_pbpk_model_of_metformin_in_humans_singl_biomd0000001028_model.kidney_tubular_metformin
+    label: Kidney Tubular Metformin

@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Singh2006_TCA_mtu_model2 Visualisation
+description: Desktop visualisation for Singh2006_TCA_mtu_model2.
+standard: other
+tags:
+- pharmacology
+- antimicrobial
+- tuberculosis
+- metabolism
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 0.5
+    lab_title: Singh2006_TCA_mtu_model2
+    question: Which TCA intermediates dominate MTB model variant 2?
+    answer_focus: 'Initial-state controls: keep variant identity visible; do not merge
+      with model 1.'
+    sources:
+    - alias: pharmacology_sbml_singh2006_tca_mtu_model2_biomd0000000218_model
+      title: Singh2006_TCA_mtu_model2
+      visual_group: metabolism
+      observables:
+      - id: coa
+        port: coa_pool
+        label: Coa Pool
+        group: metabolism
+      - id: aca
+        port: acetate_or_acetyl_pool
+        label: Acetate Or Acetyl Pool
+        group: metabolism
+      - id: oaa
+        port: oxaloacetate_pool
+        label: Oxaloacetate Pool
+        group: metabolism
+      - id: cit
+        port: citrate_pool
+        label: Citrate Pool
+        group: metabolism
+      - id: icit
+        port: isocitrate_pool
+        label: Isocitrate Pool
+        group: metabolism
+      - id: akg
+        port: alpha_ketoglutarate_pool
+        label: Alpha Ketoglutarate Pool
+        group: metabolism
+      - id: ssa
+        port: succinate_semialdehyde_pool
+        label: Succinate Semialdehyde Pool
+        group: metabolism
+      - id: suc
+        port: succinate_pool
+        label: Succinate Pool
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Chang2010_Reduced_Kidney_FBA Lab
+description: This is the reduced kidney metabolic network described in the article
+  Drug off-target effects predicted using structural analysis in the context of a
+  metabolic network model. It can be used to explore dose-response dynamics and compare
+  treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL1011080004.xml
+    integration_step: 0.05
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.state
+  to:
+  - visualisation.pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model_state
+- from: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.summary
+  to:
+  - visualisation.pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model_summary
+- from: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model_species_labels
+runtime:
+  duration: 5.0
+  communication_step: 0.5
+  initial_inputs: {}
+tags:
+- pharmacology
+- metabolism
+- kidney
+- systems-biology
+- fba
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_cytosolic_atp
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.initial_cytosolic_atp
+    label: Initial Cytosolic ATP
+  - name: initial_mitochondrial_atp
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.initial_mitochondrial_atp
+    label: Initial Mitochondrial ATP
+  - name: initial_extracellular_glucose
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.initial_extracellular_glucose
+    label: Initial Extracellular Glucose
+  - name: initial_cytosolic_lactate
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.initial_cytosolic_lactate
+    label: Initial Cytosolic Lactate
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.species_labels
+    label: Observable labels
+  - name: cytosolic_atp
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.cytosolic_atp
+    label: Cytosolic ATP
+  - name: mitochondrial_atp
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.mitochondrial_atp
+    label: Mitochondrial ATP
+  - name: cytosolic_glucose
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.cytosolic_glucose
+    label: Cytosolic Glucose
+  - name: extracellular_glucose
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.extracellular_glucose
+    label: Extracellular Glucose
+  - name: cytosolic_lactate
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.cytosolic_lactate
+    label: Cytosolic Lactate
+  - name: extracellular_lactate
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.extracellular_lactate
+    label: Extracellular Lactate
+  - name: cytosolic_urea
+    maps_to: pharmacology_sbml_chang2010_reduced_kidney_fba_model1011080004_model.cytosolic_urea
+    label: Cytosolic Urea

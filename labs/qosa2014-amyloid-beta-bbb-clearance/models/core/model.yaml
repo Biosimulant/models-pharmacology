@@ -1,0 +1,116 @@
+schema_version: '2.0'
+title: Qosa2014 - Mechanistic modeling that describes amyloid-Beta clearance across
+  BBB
+description: "Qosa2014 - Mechanistic modeling thatdescribes A\u03B2 clearance across\
+  \ BBB Qosa2014 - Mechanistic modeling thatdescribes A\u03B2 clearance across BBB.\
+  \ It can be used to explore dose-response dynamics and compare treatment scenarios\
+  \ across conditions."
+standard: sbml
+tags:
+- pharmacology
+- neuroscience
+- pbpk
+- physiology
+- blood-brain-barrier
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Hisham Qosa
+- Bilal S Abuasal
+- Ignacio A Romero
+- Babette Weksler
+- Pierre-Oliver Couraud
+upstream:
+  id: biomodels_ebi:MODEL1409240002
+  source_db: biomodels_ebi
+  source_id: MODEL1409240002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1409240002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1409240002?filename=MODEL1409240002_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.qosa2014_mechanistic_modeling_that_describes_amy_model1409240002_model:Qosa2014MechanisticModelingThatDescribesAmyModel1409240002Model
+  init_kwargs:
+    model_path: data/MODEL1409240002.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: initial_cellular_amyloid_beta_hcmec_d3
+    maps_to: CcellhCMEC_D3
+    label: Initial Cellular Amyloid Beta Hcmec D3
+    description: initial cellular amyloid-beta in HCMEC-D3 cells. Maps to SBML symbol
+      `CcellhCMEC_D3`.
+  - name: initial_cellular_amyloid_beta_bend3
+    maps_to: CcellbEnd3
+    label: Initial Cellular Amyloid Beta Bend3
+    description: initial cellular amyloid-beta in bEnd3 cells. Maps to SBML symbol
+      `CcellbEnd3`.
+  - name: initial_media_amyloid_beta_hcmec_d3
+    maps_to: CmediahCMEC_D3
+    label: Initial Media Amyloid Beta Hcmec D3
+    description: initial media concentration for HCMEC-D3. Maps to SBML symbol `CmediahCMEC_D3`.
+  - name: initial_media_amyloid_beta_bend3
+    maps_to: CmediabEnd3
+    label: Initial Media Amyloid Beta Bend3
+    description: initial media concentration for bEnd3. Maps to SBML symbol `CmediabEnd3`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: intact_amyloid_beta_hcmec_d3
+    maps_to: IntactAbetahCMEC_D3
+    label: Intact Amyloid Beta Hcmec D3
+    description: Intact Amyloid Beta Hcmec D3. Maps to SBML symbol `IntactAbetahCMEC_D3`.
+  - name: intact_amyloid_beta_bend3
+    maps_to: IntactAbetabEnd3
+    label: Intact Amyloid Beta Bend3
+    description: Intact Amyloid Beta Bend3. Maps to SBML symbol `IntactAbetabEnd3`.
+  - name: cellular_amyloid_beta_hcmec_d3
+    maps_to: CcellhCMEC_D3
+    label: Cellular Amyloid Beta Hcmec D3
+    description: Cellular Amyloid Beta Hcmec D3. Maps to SBML symbol `CcellhCMEC_D3`.
+  - name: degraded_amyloid_beta_hcmec_d3
+    maps_to: DcellhCMEC_D3
+    label: Degraded Amyloid Beta Hcmec D3
+    description: Degraded Amyloid Beta Hcmec D3. Maps to SBML symbol `DcellhCMEC_D3`.
+  - name: cellular_amyloid_beta_bend3
+    maps_to: CcellbEnd3
+    label: Cellular Amyloid Beta Bend3
+    description: Cellular Amyloid Beta Bend3. Maps to SBML symbol `CcellbEnd3`.
+  - name: degraded_amyloid_beta_bend3
+    maps_to: DcellbEnd3
+    label: Degraded Amyloid Beta Bend3
+    description: Degraded Amyloid Beta Bend3. Maps to SBML symbol `DcellbEnd3`.
+  - name: media_amyloid_beta_hcmec_d3
+    maps_to: CmediahCMEC_D3
+    label: Media Amyloid Beta Hcmec D3
+    description: Media Amyloid Beta Hcmec D3. Maps to SBML symbol `CmediahCMEC_D3`.
+  - name: media_amyloid_beta_bend3
+    maps_to: CmediabEnd3
+    label: Media Amyloid Beta Bend3
+    description: Media Amyloid Beta Bend3. Maps to SBML symbol `CmediabEnd3`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

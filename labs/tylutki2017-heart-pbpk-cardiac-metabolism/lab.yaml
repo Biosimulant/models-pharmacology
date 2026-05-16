@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: Tylutki2017-four-compartment PBPK heart model accounting for cardiac metabolism
+  Lab
+description: In the field of cardiac drug efficacy and safety assessment, information
+  on drug concentration in heart tissue is desirable. Because measuring drug concentrations
+  in human cardiac tissue is challengin.
+models:
+- alias: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL2003190003.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.state
+  to:
+  - visualisation.pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model_state
+- from: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.summary
+  to:
+  - visualisation.pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model_summary
+- from: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pbpk
+- cardiovascular
+- metabolism
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: drug_dose
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.drug_dose
+    label: Drug Dose
+  - name: fraction_absorbed
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.fraction_absorbed
+    label: Fraction Absorbed
+  - name: absorption_rate
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.absorption_rate
+    label: Absorption Rate
+  - name: renal_clearance
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.renal_clearance
+    label: Renal Clearance
+  - name: cyp2c9_expression
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.cyp2c9_expression
+    label: CYP2C9 Expression
+  - name: cyp2c8_expression
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.cyp2c8_expression
+    label: CYP2C8 Expression
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.species_labels
+    label: Observable labels
+  - name: adipose_drug_amount
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.adipose_drug_amount
+    label: Adipose Drug Amount
+  - name: bone_drug_amount
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.bone_drug_amount
+    label: Bone Drug Amount
+  - name: brain_drug_amount
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.brain_drug_amount
+    label: Brain Drug Amount
+  - name: gut_drug_amount
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.gut_drug_amount
+    label: Gut Drug Amount
+  - name: epicardium_drug_amount
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.epicardium_drug_amount
+    label: Epicardium Drug Amount
+  - name: myocardium_drug_amount
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.myocardium_drug_amount
+    label: Myocardium Drug Amount
+  - name: endocardium_drug_amount
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.endocardium_drug_amount
+    label: Endocardium Drug Amount
+  - name: perfusate_drug_amount
+    maps_to: pharmacology_sbml_tylutki2017_four_compartment_pbpk_heart_model_ac_model2003190003_model.perfusate_drug_amount
+    label: Perfusate Drug Amount

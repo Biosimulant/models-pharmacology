@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: Koschorreck2008_InsulinClearance
+description: 'This model is from the article: Mathematical modeling and analysis of
+  insulin clearance in vivo. It can be used to explore dose-response dynamics and
+  compare treatment scenarios across conditions.'
+standard: sbml
+tags:
+- pharmacology
+- pharmacokinetics
+- endocrine
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+authors:
+- Biosimulant Team
+- Markus Koschorreck
+- Ernst Dieter Gilles
+upstream:
+  id: biomodels_ebi:BIOMD0000000345
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000345
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000345
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000345?filename=BIOMD0000000345_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.koschorreck2008_insulinclearance_biomd0000000345_model:Koschorreck2008InsulinclearanceBiomd0000000345Model
+  init_kwargs:
+    model_path: data/BIOMD0000000345.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+io:
+  inputs:
+  - name: liver_insulin_clearance_density
+    maps_to: rholiver
+    label: Liver Insulin Clearance Density
+    description: liver clearance density parameter. Maps to SBML symbol `rholiver`.
+  - name: initial_free_receptor
+    maps_to: R
+    label: Initial Free Receptor
+    description: initial free receptor state. Maps to SBML symbol `R`.
+  - name: initial_insulin_receptor_complex
+    maps_to: IR
+    label: Initial Insulin Receptor Complex
+    description: initial insulin-receptor complex. Maps to SBML symbol `IR`.
+  - name: initial_internalized_receptor
+    maps_to: Ren
+    label: Initial Internalized Receptor
+    description: initial endosomal receptor state. Maps to SBML symbol `Ren`.
+  outputs:
+  - name: state
+    maps_to: state
+    label: Tracked source state
+    description: Tracked SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    maps_to: summary
+    label: Simulation summary
+    description: Largest-change and peak summary across tracked observables.
+  - name: species_labels
+    maps_to: species_labels
+    label: Observable labels
+    description: Mapping from raw SBML observable symbols to display labels.
+  - name: free_receptor
+    maps_to: R
+    label: Free Receptor
+    description: Free Receptor. Maps to SBML symbol `R`.
+  - name: insulin_receptor_complex
+    maps_to: IR
+    label: Insulin Receptor Complex
+    description: Insulin Receptor Complex. Maps to SBML symbol `IR`.
+  - name: two_insulin_receptor_complex
+    maps_to: I2R
+    label: Two Insulin Receptor Complex
+    description: Two Insulin Receptor Complex. Maps to SBML symbol `I2R`.
+  - name: phosphorylated_receptor
+    maps_to: Rp
+    label: Phosphorylated Receptor
+    description: Phosphorylated Receptor. Maps to SBML symbol `Rp`.
+  - name: phosphorylated_insulin_receptor_complex
+    maps_to: IRp
+    label: Phosphorylated Insulin Receptor Complex
+    description: Phosphorylated Insulin Receptor Complex. Maps to SBML symbol `IRp`.
+  - name: endosomal_receptor
+    maps_to: Ren
+    label: Endosomal Receptor
+    description: Endosomal Receptor. Maps to SBML symbol `Ren`.
+  - name: endosomal_insulin_receptor_complex
+    maps_to: IRen
+    label: Endosomal Insulin Receptor Complex
+    description: Endosomal Insulin Receptor Complex. Maps to SBML symbol `IRen`.
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.

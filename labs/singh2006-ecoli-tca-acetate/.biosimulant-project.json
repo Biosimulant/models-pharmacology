@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "f6d69142-6d0b-4bf4-a29d-08b8eec33f2c",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "5a1b6417-5ff8-4911-bb8e-a10d47967c24",
+  "created_at": "2026-05-15T19:31:41.108246564+00:00",
+  "last_synced_at": "2026-05-16T09:30:39.877590+00:00",
+  "hub_manifest_hash": "6f7fb0b59c8718b5d45bf31ee2416e2e0033040a5dec5c37865bc14c6094db03",
+  "package_name": "singh2006-tca-ecoli-acetate-lab"
+}

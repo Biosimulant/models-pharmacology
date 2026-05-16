@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Shi1993_Caffeine_pressor_tolerance Lab
+description: 'described in: Pharmacokinetic-pharmacodynamic modeling of caffeine:
+  Tolerance to pressor effects Shi J, Benowitz NL, Denaro CP and Sheiner LB. It can
+  be used to explore dose-response dynamics and compare treatment scenarios across
+  conditions.'
+models:
+- alias: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000241.xml
+    integration_step: 0.2
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.state
+  to:
+  - visualisation.pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model_state
+- from: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.summary
+  to:
+  - visualisation.pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model_summary
+- from: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model_species_labels
+runtime:
+  duration: 60.0
+  communication_step: 2.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pharmacodynamics
+- cardiovascular
+- physiology
+- tolerance
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: initial_gut_caffeine_amount
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.initial_gut_caffeine_amount
+    label: Initial Gut Caffeine Amount
+  - name: initial_plasma_caffeine_concentration
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.initial_plasma_caffeine_concentration
+    label: Initial Plasma Caffeine Concentration
+  - name: initial_effect_site_caffeine
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.initial_effect_site_caffeine
+    label: Initial Effect Site Caffeine
+  - name: initial_tolerance_state
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.initial_tolerance_state
+    label: Initial Tolerance State
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.species_labels
+    label: Observable labels
+  - name: gut_caffeine_amount
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.gut_caffeine_amount
+    label: Gut Caffeine Amount
+  - name: plasma_caffeine_concentration
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.plasma_caffeine_concentration
+    label: Plasma Caffeine Concentration
+  - name: peripheral_caffeine_concentration
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.peripheral_caffeine_concentration
+    label: Peripheral Caffeine Concentration
+  - name: effect_site_caffeine_concentration
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.effect_site_caffeine_concentration
+    label: Effect Site Caffeine Concentration
+  - name: tolerance_state
+    maps_to: pharmacology_sbml_shi1993_caffeine_pressor_tolerance_biomd0000000241_model.tolerance_state
+    label: Tolerance State

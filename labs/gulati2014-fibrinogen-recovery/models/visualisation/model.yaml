@@ -1,0 +1,58 @@
+schema_version: '2.0'
+title: Gulati2014 - Simplified model of fibrinogen recovery following brown snake
+  bite_1 Visualisation
+description: Desktop visualisation for Gulati2014 - Simplified model of fibrinogen
+  recovery following brown snake bite_1.
+standard: other
+tags:
+- pharmacology
+- toxicology
+- physiology
+- coagulation
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 0.5
+    lab_title: Gulati2014 - Simplified model of fibrinogen recovery following brown
+      snake bite_1
+    question: How quickly does fibrinogen recover after the selected venom burden?
+    answer_focus: venom fraction is model-specific, not a clinical dose unit.
+    sources:
+    - alias: pharmacology_sbml_gulati2014_simplified_model_of_fibrinogen_recove_model1805090001_model
+      title: Gulati2014 - Simplified model of fibrinogen recovery following brown
+        snake bite_1
+      visual_group: physiology
+      observables:
+      - id: Venom_plasma1
+        port: plasma_venom
+        label: Plasma Venom
+        group: physiology
+      - id: Fibrinogen_g_l
+        port: fibrinogen_g_per_l
+        label: Fibrinogen G Per L
+        group: physiology
+      - id: Fibrinogen1
+        port: fibrinogen_pool
+        label: Fibrinogen Pool
+        group: physiology
+      - id: Venom_Absorption1
+        port: venom_absorption
+        label: Venom Absorption
+        group: physiology
+      - id: IIa1
+        port: thrombin_activity
+        label: Thrombin Activity
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

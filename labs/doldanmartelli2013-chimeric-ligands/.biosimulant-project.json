@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "ab169bf7-aca1-4413-9b24-f63f323033d2",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "e03056ac-cc98-46da-a306-ed1a1fce8132",
+  "created_at": "2026-05-15T19:31:40.074929565+00:00",
+  "last_synced_at": "2026-05-16T09:10:44.262299+00:00",
+  "hub_manifest_hash": "9e7b3b477ebcc2b32a549d23dab1104a9d67acc24552edaf9c1b1cfbb4b045cb",
+  "package_name": "dold-nmartelli2013-a-mathematical-model-for-the-rational-design"
+}

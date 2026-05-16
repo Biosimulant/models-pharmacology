@@ -1,0 +1,88 @@
+schema_version: '2.0'
+title: Koeller2021 - PBPK model of ICG liver function tests Lab
+description: Physiollogically based pharmacokinetic (PBPK) model of indocyanine-green
+  (ICG) liver function tests. It can be used to explore dose-response dynamics and
+  compare treatment scenarios across conditions.
+models:
+- alias: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL2301090001.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.state
+  to:
+  - visualisation.pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model_state
+- from: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.summary
+  to:
+  - visualisation.pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model_summary
+- from: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- liver
+- physiology
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: icg_infusion_rate_mg_per_min
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.icg_infusion_rate_mg_per_min
+    label: ICG Infusion Rate Mg Per Min
+  - name: icg_injection_time_seconds
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.icg_injection_time_seconds
+    label: ICG Injection Time Seconds
+  - name: liver_shunt_fraction
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.liver_shunt_fraction
+    label: Liver Shunt Fraction
+  - name: liver_tissue_loss_fraction
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.liver_tissue_loss_fraction
+    label: Liver Tissue Loss Fraction
+  - name: hepatic_blood_flow_scale
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.hepatic_blood_flow_scale
+    label: Hepatic Blood Flow Scale
+  - name: oatp1b3_activity_scale
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.oatp1b3_activity_scale
+    label: Oatp1b3 Activity Scale
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.species_labels
+    label: Observable labels
+  - name: icg_liver_plasma
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.icg_liver_plasma
+    label: ICG Liver Plasma
+  - name: icg_venous_plasma
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.icg_venous_plasma
+    label: ICG Venous Plasma
+  - name: icg_arterial_plasma
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.icg_arterial_plasma
+    label: ICG Arterial Plasma
+  - name: icg_gastrointestinal_plasma
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.icg_gastrointestinal_plasma
+    label: ICG Gastrointestinal Plasma
+  - name: icg_lung_plasma
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.icg_lung_plasma
+    label: ICG Lung Plasma
+  - name: icg_portal_vein
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.icg_portal_vein
+    label: ICG Portal Vein
+  - name: icg_liver_amount
+    maps_to: pharmacology_sbml_koeller2021_pbpk_model_of_icg_liver_function_tes_model2301090001_model.icg_liver_amount
+    label: ICG Liver Amount

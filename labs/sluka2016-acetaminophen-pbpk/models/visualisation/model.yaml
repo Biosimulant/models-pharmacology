@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Sluka2016 - Acetaminophen PBPK Visualisation
+description: Desktop visualisation for Sluka2016 - Acetaminophen PBPK.
+standard: other
+tags:
+- pharmacology
+- pbpk
+- pharmacokinetics
+- toxicology
+- liver
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+- visualisation
+biosim:
+  communication_step: 1.0
+  entrypoint: src.pharmacology_visualisation:PharmacologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Sluka2016 - Acetaminophen PBPK
+    question: Which compartments carry acetaminophen burden after the selected dose?
+    answer_focus: do not label metabolized pool as a specific toxic metabolite unless
+      the SBML/source names it.
+    sources:
+    - alias: pharmacology_sbml_sluka2016_acetaminophen_pbpk_biomd0000000619_model
+      title: Sluka2016 - Acetaminophen PBPK
+      visual_group: physiology
+      observables:
+      - id: CLiver
+        port: liver_acetaminophen_concentration
+        label: Liver Acetaminophen Concentration
+        group: physiology
+      - id: CArt
+        port: arterial_acetaminophen_concentration
+        label: Arterial Acetaminophen Concentration
+        group: physiology
+      - id: CGut
+        port: gut_acetaminophen_concentration
+        label: Gut Acetaminophen Concentration
+        group: physiology
+      - id: AGutlumen
+        port: gut_lumen_acetaminophen_amount
+        label: Gut Lumen Acetaminophen Amount
+        group: physiology
+      - id: CLung
+        port: lung_acetaminophen_concentration
+        label: Lung Acetaminophen Concentration
+        group: physiology
+      - id: CVen
+        port: venous_acetaminophen_concentration
+        label: Venous Acetaminophen Concentration
+        group: physiology
+      - id: CRest
+        port: rest_body_acetaminophen_concentration
+        label: Rest Body Acetaminophen Concentration
+        group: physiology
+      - id: CMetabolized
+        port: metabolized_acetaminophen_concentration
+        label: Metabolized Acetaminophen Concentration
+        group: physiology
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages: []
+io:
+  inputs: []
+  outputs: []

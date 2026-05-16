@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: KaratzaKaralis2020 - CYP mediated losartan metabolism Lab
+description: A four-compartment pharmacokinetic model that describes the disposition
+  of losartan and E-3174 (Karatza and Karalis, 2020). The main objective of this model
+  is to describe the secondary maxima observe.
+models:
+- alias: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model
+  path: models/core
+  parameters:
+    model_path: data/MODEL2412180001.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.state
+  to:
+  - visualisation.pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model_state
+- from: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.summary
+  to:
+  - visualisation.pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model_summary
+- from: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.species_labels
+  to:
+  - visualisation.pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model_species_labels
+runtime:
+  duration: 24.0
+  communication_step: 1.0
+  initial_inputs: {}
+tags:
+- pharmacology
+- metabolism
+- cyp-metabolism
+- pharmacokinetics
+- cardiovascular
+- sbml
+- tellurium
+- faithful
+- biomodels_ebi
+io:
+  inputs:
+  - name: losartan_oral_dose
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.losartan_oral_dose
+    label: Losartan Oral Dose
+  - name: cyp2c9_metabolism_start_time
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.cyp2c9_metabolism_start_time
+    label: CYP2C9 Metabolism Start Time
+  - name: initial_losartan_stomach
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.initial_losartan_stomach
+    label: Initial Losartan Stomach
+  outputs:
+  - name: state
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.state
+    label: Tracked source state
+  - name: summary
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.summary
+    label: Simulation summary
+  - name: species_labels
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.species_labels
+    label: Observable labels
+  - name: losartan_cellular_compartment
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.losartan_cellular_compartment
+    label: Losartan Cellular Compartment
+  - name: losartan_intracellular
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.losartan_intracellular
+    label: Losartan Intracellular
+  - name: losartan_outflow
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.losartan_outflow
+    label: Losartan Outflow
+  - name: losartan_portal_compartment
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.losartan_portal_compartment
+    label: Losartan Portal Compartment
+  - name: losartan_stomach
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.losartan_stomach
+    label: Losartan Stomach
+  - name: e3174_outflow
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.e3174_outflow
+    label: E3174 Outflow
+  - name: e3174_cellular_compartment
+    maps_to: pharmacology_sbml_karatzakaralis2020_cyp_mediated_losartan_metabol_model2412180001_model.e3174_cellular_compartment
+    label: E3174 Cellular Compartment
