@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: landberg2009-alkylresorcinol-dose-response
+version: 1.0.0
 title: Landberg2009 - Alkylresorcinol Dose Response Lab
 description: Pharmacokinetic model of alkylresorcinols. Both plasma AR concentrations
   and urinary metabolites in 24-h samples showed a dose-response relation to increased

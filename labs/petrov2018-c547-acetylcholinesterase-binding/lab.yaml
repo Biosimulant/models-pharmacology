@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: petrov2018-c547-acetylcholinesterase-binding
+version: 1.0.0
 title: Petrov2018 - C-547 a 6-methyluracil derivative with long-lasting binding and
   rebinding on acetylcholinesterase Lab
 description: C-547, a candidate drug, is a potent slow-binding inhibitor of acetyl-cholinesterase,

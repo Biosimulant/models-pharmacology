@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: schropp2019-bispecific-antibody-tmdd
+version: 1.0.0
 title: Schropp2019 - Target-Mediated Drug Disposition Model for Bispecific Antibodies
   Lab
 description: This model presents a general target-mediated drug disposition (TMDD)

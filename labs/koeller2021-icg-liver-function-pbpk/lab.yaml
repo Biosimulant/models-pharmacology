@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: koeller2021-icg-liver-function-pbpk
+version: 1.0.0
 title: Koeller2021 - PBPK model of ICG liver function tests Lab
 description: Physiollogically based pharmacokinetic (PBPK) model of indocyanine-green
   (ICG) liver function tests. It can be used to explore dose-response dynamics and

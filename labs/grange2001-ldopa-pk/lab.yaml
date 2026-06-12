@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: grange2001-ldopa-pk
+version: 1.0.0
 title: Grange2001 - L Dopa PK model Lab
 description: 'Grange2001 - L-dopa PK model A pharmacokinetics of L-dopa in rats after
   administration of L-dopa alone (this model: BIOMD0000000321) or L-dopa combined

@@ -1,0 +1,238 @@
+schema_version: "1"
+namespace: demi
+default_visibility: public
+packages:
+  - id: bucher2011-atorvastatin-metabolism-lab
+    package: bucher2011-atorvastatin-metabolism
+    version: 1.0.0
+    type: lab
+    path: labs/bucher2011-atorvastatin-metabolism
+    visibility: public
+  - id: caldwell2019-vicodin-abuse-lab
+    package: caldwell2019-vicodin-abuse
+    version: 1.0.0
+    type: lab
+    path: labs/caldwell2019-vicodin-abuse
+    visibility: public
+  - id: chang2010-kidney-fba-lab
+    package: chang2010-kidney-fba
+    version: 1.0.0
+    type: lab
+    path: labs/chang2010-kidney-fba
+    visibility: public
+  - id: doldanmartelli2013-chimeric-ligands-lab
+    package: doldanmartelli2013-chimeric-ligands
+    version: 1.0.0
+    type: lab
+    path: labs/doldanmartelli2013-chimeric-ligands
+    visibility: public
+  - id: elias2025-glimepiride-pbpk-lab
+    package: elias2025-glimepiride-pbpk
+    version: 1.0.0
+    type: lab
+    path: labs/elias2025-glimepiride-pbpk
+    visibility: public
+  - id: grange2001-ldopa-benserazide-interaction-lab
+    package: grange2001-ldopa-benserazide-interaction
+    version: 1.0.0
+    type: lab
+    path: labs/grange2001-ldopa-benserazide-interaction
+    visibility: public
+  - id: grange2001-ldopa-pk-lab
+    package: grange2001-ldopa-pk
+    version: 1.0.0
+    type: lab
+    path: labs/grange2001-ldopa-pk
+    visibility: public
+  - id: grignard2022-tubulin-detyrosination-lab
+    package: grignard2022-tubulin-detyrosination
+    version: 1.0.0
+    type: lab
+    path: labs/grignard2022-tubulin-detyrosination
+    visibility: public
+  - id: grzegorzewski2022-dextromethorphan-pbpk-lab
+    package: grzegorzewski2022-dextromethorphan-pbpk
+    version: 1.0.0
+    type: lab
+    path: labs/grzegorzewski2022-dextromethorphan-pbpk
+    visibility: public
+  - id: gulati2014-fibrinogen-recovery-lab
+    package: gulati2014-fibrinogen-recovery
+    version: 1.0.0
+    type: lab
+    path: labs/gulati2014-fibrinogen-recovery
+    visibility: public
+  - id: huthmacher2010-human-erythrocyte-metabolism-lab
+    package: huthmacher2010-human-erythrocyte-metabolism
+    version: 1.0.0
+    type: lab
+    path: labs/huthmacher2010-human-erythrocyte-metabolism
+    visibility: public
+  - id: karatzakaralis2020-losartan-cyp-metabolism-lab
+    package: karatzakaralis2020-losartan-cyp-metabolism
+    version: 1.0.0
+    type: lab
+    path: labs/karatzakaralis2020-losartan-cyp-metabolism
+    visibility: public
+  - id: koeller2021-icg-liver-function-pbpk-lab
+    package: koeller2021-icg-liver-function-pbpk
+    version: 1.0.0
+    type: lab
+    path: labs/koeller2021-icg-liver-function-pbpk
+    visibility: public
+  - id: koschorreck2008-insulin-clearance-lab
+    package: koschorreck2008-insulin-clearance
+    version: 1.0.0
+    type: lab
+    path: labs/koschorreck2008-insulin-clearance
+    visibility: public
+  - id: kraan199-cortisol-metabolism-lab
+    package: kraan199-cortisol-metabolism
+    version: 1.0.0
+    type: lab
+    path: labs/kraan199-cortisol-metabolism
+    visibility: public
+  - id: landberg2009-alkylresorcinol-dose-response-lab
+    package: landberg2009-alkylresorcinol-dose-response
+    version: 1.0.0
+    type: lab
+    path: labs/landberg2009-alkylresorcinol-dose-response
+    visibility: public
+  - id: loccisano2011-pfoa-pfos-pk-lab
+    package: loccisano2011-pfoa-pfos-pk
+    version: 1.0.0
+    type: lab
+    path: labs/loccisano2011-pfoa-pfos-pk
+    visibility: public
+  - id: mager2005-tmdd-quasi-equilibrium-lab
+    package: mager2005-tmdd-quasi-equilibrium
+    version: 1.0.0
+    type: lab
+    path: labs/mager2005-tmdd-quasi-equilibrium
+    visibility: public
+  - id: parton2018-atherosclerosis-atheroma-lab
+    package: parton2018-atherosclerosis-atheroma
+    version: 1.0.0
+    type: lab
+    path: labs/parton2018-atherosclerosis-atheroma
+    visibility: public
+  - id: petrov2018-c547-acetylcholinesterase-binding-lab
+    package: petrov2018-c547-acetylcholinesterase-binding
+    version: 1.0.0
+    type: lab
+    path: labs/petrov2018-c547-acetylcholinesterase-binding
+    visibility: public
+  - id: qosa2014-amyloid-beta-bbb-clearance-lab
+    package: qosa2014-amyloid-beta-bbb-clearance
+    version: 1.0.0
+    type: lab
+    path: labs/qosa2014-amyloid-beta-bbb-clearance
+    visibility: public
+  - id: schropp2019-bispecific-antibody-tmdd-lab
+    package: schropp2019-bispecific-antibody-tmdd
+    version: 1.0.0
+    type: lab
+    path: labs/schropp2019-bispecific-antibody-tmdd
+    visibility: public
+  - id: shi1993-caffeine-pressor-tolerance-lab
+    package: shi1993-caffeine-pressor-tolerance
+    version: 1.0.0
+    type: lab
+    path: labs/shi1993-caffeine-pressor-tolerance
+    visibility: public
+  - id: simon2019-nik-p100-p52-mass-action-lab
+    package: simon2019-nik-p100-p52-mass-action
+    version: 1.0.0
+    type: lab
+    path: labs/simon2019-nik-p100-p52-mass-action
+    visibility: public
+  - id: simon2019-nik-p100-p52-michaelis-lab
+    package: simon2019-nik-p100-p52-michaelis
+    version: 1.0.0
+    type: lab
+    path: labs/simon2019-nik-p100-p52-michaelis
+    visibility: public
+  - id: singh2006-ecoli-tca-acetate-lab
+    package: singh2006-ecoli-tca-acetate
+    version: 1.0.0
+    type: lab
+    path: labs/singh2006-ecoli-tca-acetate
+    visibility: public
+  - id: singh2006-mtb-tca-model1-lab
+    package: singh2006-mtb-tca-model1
+    version: 1.0.0
+    type: lab
+    path: labs/singh2006-mtb-tca-model1
+    visibility: public
+  - id: singh2006-mtb-tca-model2-lab
+    package: singh2006-mtb-tca-model2
+    version: 1.0.0
+    type: lab
+    path: labs/singh2006-mtb-tca-model2
+    visibility: public
+  - id: sluka2016-acetaminophen-pbpk-lab
+    package: sluka2016-acetaminophen-pbpk
+    version: 1.0.0
+    type: lab
+    path: labs/sluka2016-acetaminophen-pbpk
+    visibility: public
+  - id: strasen2018-tgfb-smad-dose-response-lab
+    package: strasen2018-tgfb-smad-dose-response
+    version: 1.0.0
+    type: lab
+    path: labs/strasen2018-tgfb-smad-dose-response
+    visibility: public
+  - id: tabak2007-dopamine-lab
+    package: tabak2007-dopamine
+    version: 1.0.0
+    type: lab
+    path: labs/tabak2007-dopamine
+    visibility: public
+  - id: telesco2011-her3-erbb3-rtk-signaling-lab
+    package: telesco2011-her3-erbb3-rtk-signaling
+    version: 1.0.0
+    type: lab
+    path: labs/telesco2011-her3-erbb3-rtk-signaling
+    visibility: public
+  - id: tylutki2017-heart-pbpk-cardiac-metabolism-lab
+    package: tylutki2017-heart-pbpk-cardiac-metabolism
+    version: 1.0.0
+    type: lab
+    path: labs/tylutki2017-heart-pbpk-cardiac-metabolism
+    visibility: public
+  - id: walsh2014-dapt-app-cleavage-lab
+    package: walsh2014-dapt-app-cleavage
+    version: 1.0.0
+    type: lab
+    path: labs/walsh2014-dapt-app-cleavage
+    visibility: public
+  - id: yang2006-methadone-pk-lab
+    package: yang2006-methadone-pk
+    version: 1.0.0
+    type: lab
+    path: labs/yang2006-methadone-pk
+    visibility: public
+  - id: zake2021-metformin-human-eight-dose-pbpk-lab
+    package: zake2021-metformin-human-eight-dose-pbpk
+    version: 1.0.0
+    type: lab
+    path: labs/zake2021-metformin-human-eight-dose-pbpk
+    visibility: public
+  - id: zake2021-metformin-human-single-dose-pbpk-lab
+    package: zake2021-metformin-human-single-dose-pbpk
+    version: 1.0.0
+    type: lab
+    path: labs/zake2021-metformin-human-single-dose-pbpk
+    visibility: public
+  - id: zake2021-metformin-mouse-iv-pbpk-lab
+    package: zake2021-metformin-mouse-iv-pbpk
+    version: 1.0.0
+    type: lab
+    path: labs/zake2021-metformin-mouse-iv-pbpk
+    visibility: public
+  - id: zake2021-metformin-mouse-oral-pbpk-lab
+    package: zake2021-metformin-mouse-oral-pbpk
+    version: 1.0.0
+    type: lab
+    path: labs/zake2021-metformin-mouse-oral-pbpk
+    visibility: public

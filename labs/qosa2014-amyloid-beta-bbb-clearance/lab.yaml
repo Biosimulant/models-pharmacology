@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: qosa2014-amyloid-beta-bbb-clearance
+version: 1.0.0
 title: Qosa2014 - Mechanistic modeling that describes amyloid-Beta clearance across
   BBB Lab
 description: "Qosa2014 - Mechanistic modeling thatdescribes A\u03B2 clearance across\

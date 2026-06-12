@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: strasen2018-tgfb-smad-dose-response
+version: 1.0.0
 title: Strasen2018 - TGFb SMAD Signalling - Dose dependent dynamics upon TGFb stimulation
   Lab
 description: This model simulates TGFb dose dependent kinetics of The SMADs. TGFb

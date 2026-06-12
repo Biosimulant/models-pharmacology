@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: sluka2016-acetaminophen-pbpk
+version: 1.0.0
 title: Sluka2016 - Acetaminophen PBPK Lab
 description: Basic PBPK (Physiologically Based PharmacoKinetic) model of Acetaminophen.
   This is a basic model of Acetaminophen (APAP, Paracetamol) pharmacokinetics in humans.

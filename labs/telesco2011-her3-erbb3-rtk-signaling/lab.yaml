@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: telesco2011-her3-erbb3-rtk-signaling
+version: 1.0.0
 title: Telesco2011_HER3-ErbB3-RTK_SignalingNetwork Lab
 description: 'This model is from the article: A multiscale modeling approach to investigate
   molecular mechanisms of pseudokinase activation and drug resistance in the HER3/ErbB3

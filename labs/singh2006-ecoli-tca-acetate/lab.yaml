@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: singh2006-ecoli-tca-acetate
+version: 1.0.0
 title: Singh2006_TCA_Ecoli_acetate Lab
 description: 'This a model from the article: Kinetic modeling of tricarboxylic acid
   cycle and glyoxylate bypass in Mycobacterium tuberculosis, and its application to

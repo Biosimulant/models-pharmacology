@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: zake2021-metformin-human-eight-dose-pbpk
+version: 1.0.0
 title: Zake2021 - PBPK model of metformin in humans, eight PO administrations with
   12h interval Lab
 description: This model is supplementary material of publication 'Physiologically

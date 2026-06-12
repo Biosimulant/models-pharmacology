@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: yang2006-methadone-pk
+version: 1.0.0
 title: Yang2006_Methadone_PKmodel Lab
 description: 'This a model from the article: Population-based analysis of methadone
   distribution and metabolism using anage-dependent physiologically based pharmacokinetic

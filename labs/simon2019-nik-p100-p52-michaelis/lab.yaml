@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: simon2019-nik-p100-p52-michaelis
+version: 1.0.0
 title: Simon2019 - NIK-dependent p100 processing into p52, Michaelis-Menten, SBML
   2v4 Lab
 description: This model represents NIK-dependent p100 processing into p52 with Michaelis-Menten

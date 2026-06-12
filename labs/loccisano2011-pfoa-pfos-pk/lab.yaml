@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: loccisano2011-pfoa-pfos-pk
+version: 1.0.0
 title: Loccisano2011-pharmacokinetics of PFOA and PFOS in the monkey Lab
 description: Perfluoroalkyl acid carboxylates and sulfonates (PFAAs) have many consumer
   and industrial applications. The persistence and widespread distribution of these

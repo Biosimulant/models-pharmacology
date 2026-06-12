@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: kraan199-cortisol-metabolism
+version: 1.0.0
 title: Kraan199_Kinetics of Cortisol Metabolism and Excretion. Lab
 description: A new model is proposed to study the kinetics of [3H]cortisol metabolism
   by using urinary data only. It can be used to explore dose-response dynamics and

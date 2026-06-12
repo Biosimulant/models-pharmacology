@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: tylutki2017-heart-pbpk-cardiac-metabolism
+version: 1.0.0
 title: Tylutki2017-four-compartment PBPK heart model accounting for cardiac metabolism
   Lab
 description: In the field of cardiac drug efficacy and safety assessment, information

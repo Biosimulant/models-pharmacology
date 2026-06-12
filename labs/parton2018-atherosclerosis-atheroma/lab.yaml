@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: parton2018-atherosclerosis-atheroma
+version: 1.0.0
 title: Parton2018 - A model of Atherosclerosis and atheroma formation. Lab
 description: 'SBML and SBGN-ML models of atherosclerosis and atheroma formation. This
   model is described in the publication: New models of atherosclerosis and multi-drug

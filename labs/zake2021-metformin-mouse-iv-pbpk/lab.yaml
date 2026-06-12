@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: zake2021-metformin-mouse-iv-pbpk
+version: 1.0.0
 title: 'Zake2021 - PBPK model of metformin in mice: single dose intavenous Lab'
 description: This model is supplementary material of publication 'Physiologically
   based metformin pharmacokinetics model of mice and scale-up to humans for the estimation

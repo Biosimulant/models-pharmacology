@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: grange2001-ldopa-benserazide-interaction
+version: 1.0.0
 title: Grange2001 - PK interaction of L-dopa and benserazide Lab
 description: Grange2001 - PK interaction of L-dopa and benserazide A pharmacokinetics
   of L-dopa in rats after administration of L-dopa alone (BIOMD0000000321) or L-dopa

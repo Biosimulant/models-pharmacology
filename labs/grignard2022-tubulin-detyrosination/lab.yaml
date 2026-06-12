@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: grignard2022-tubulin-detyrosination
+version: 1.0.0
 title: Grignard2022 - Detyrosination/Tyrosination Model in neurons and proliferative
   cells Lab
 description: SBML files for the mathematical model from the publication 'Mathematical

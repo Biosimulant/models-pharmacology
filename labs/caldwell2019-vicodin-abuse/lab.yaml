@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: caldwell2019-vicodin-abuse
+version: 1.0.0
 title: Caldwell2019 - The Vicodin abuse problem Lab
 description: This is a mathematical model of Vicodin use and abuse used to investigate
   methods of combating Vicodin abuse in a population of patients who have obtained

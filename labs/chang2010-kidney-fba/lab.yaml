@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: chang2010-kidney-fba
+version: 1.0.0
 title: Chang2010_Reduced_Kidney_FBA Lab
 description: This is the reduced kidney metabolic network described in the article
   Drug off-target effects predicted using structural analysis in the context of a

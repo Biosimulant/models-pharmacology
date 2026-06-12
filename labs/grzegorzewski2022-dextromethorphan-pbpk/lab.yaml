@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: grzegorzewski2022-dextromethorphan-pbpk
+version: 1.0.0
 title: Grzegorzewski2022 - PBPK model of dextromethorphan Lab
 description: Physiologically based pharmacokinetic (PBPK) modeling of the role of
   CYP2D6 polymorphism for metabolic phenotyping with dextromethorphan. It can be used

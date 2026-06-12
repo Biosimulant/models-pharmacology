@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: mager2005-tmdd-quasi-equilibrium
+version: 1.0.0
 title: Mager2005 - Quasi-equilibrium pharmacokinetic model for drugs exhibiting target-mediated
   drug disposition Lab
 description: This model was developed with the aim of constructing an equilibrium

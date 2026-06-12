@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: doldanmartelli2013-chimeric-ligands
+version: 1.0.0
 title: "Dold\xE1nMartelli2013 - A Mathematical Model for the Rational Design of Chimeric\
   \ Ligands in Selective Drug Therapies Lab"
 description: This model attempts to provide a mathematical framework for describing

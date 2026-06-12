@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: bucher2011-atorvastatin-metabolism
+version: 1.0.0
 title: Bucher2011_Atorvastatin_Metabolism Lab
 description: 'This is the model of atorvastatin metabolism in hepaitc cells described
   in the article: A systems biology approach to dynamic modeling and inter-subject
